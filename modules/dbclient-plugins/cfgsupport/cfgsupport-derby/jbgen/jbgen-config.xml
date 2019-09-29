@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jbgen>
+  <source>
+    <jdbc-connection>
+      <driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
+      <url>
+      jdbc:derby:/home/vpc/xprojects/apps/dbclient/runtime/config/derbycfg;create=true
+      </url>
+      <user>DBCLIENT</user>
+      <password>dbclient</password>
+      <schema>DBCLIENT</schema>
+    </jdbc-connection>
+  </source>
+  <options>
+    <option-reference-folder>
+    /home/vpc/xprojects/apps/dbclient/plugins/cfgsupport/cfgsupport-derby/src
+    </option-reference-folder>
+    <option-check-queries/>
+    <option-entity-optimize-getAll/>
+    <option-accept-column-names/>
+    <option-user-code-comments-if-found/>
+    <option-user-code-comments-if-not-found/>
+    <option-log name="info-if-found-table-file"/>
+    <option-log name="warn-if-missing-table-file"/>
+    <option-log name="info-if-found-do-file"/>
+    <option-log name="warn-if-missing-do-file"/>
+    <option-log name="info-if-found-bo-file"/>
+    <option-log name="warn-if-missing-bo-file"/>
+  </options>
+  <codestyle>
+    <object-name type="do">{TableName:class}</object-name>
+    <object-name type="bo">{BeanName}BO</object-name>
+    <object-name type="dto-package">{ModulePackage}.{TableName:package}</object-name>
+    <object-name type="dto-data">{TableName:class}DTO</object-name>
+    <object-name type="dto-property-list">{TableName:class}PropertyList</object-name>
+    <object-name type="dto-order-list">{TableName:class}OrderList</object-name>
+    <object-name type="dto-key">{TableName:class}Key</object-name>
+    <object-name type="dto-filter">{TableName:class}Filter</object-name>
+    <object-name type="dao">{TableName:class}DAO</object-name>
+    <object-name type="dao-package">{ModulePackage}.{TableName:package}</object-name>
+    <object-name type="table-prefix"/>
+    <object-name type="table-sequence">{TableName:upper}_SEQ</object-name>
+    <object-name type="entity-bean">{TableName:class}Bean</object-name>
+    <object-name type="entity-remote">{TableName:class}Remote</object-name>
+    <object-name type="entity-home">{TableName:class}Home</object-name>
+    <object-name type="entity-local-home">{TableName:class}LocalHome</object-name>
+    <object-name type="entity-local">{TableName:class}Local</object-name>
+    <object-name type="entity-package">
+    {ModulePackage}.server.ejb.{TableName:package}
+    </object-name>
+    <object-name type="session">{SessionName:class}</object-name>
+    <object-name type="session-bean">{SessionName:class}Bean</object-name>
+    <object-name type="session-remote">{SessionName:class}Remote</object-name>
+    <object-name type="session-home">{SessionName:class}Home</object-name>
+    <object-name type="session-local-home">{SessionName:class}LocalHome</object-name>
+    <object-name type="session-local">{SessionName:class}Local</object-name>
+    <object-name type="session-package">
+    {ModulePackage}.server.ejb.{SessionName:package}
+    </object-name>
+    <object-name type="ejb-business-delegate">{SessionName:class}BD</object-name>
+    <object-name type="ejb-business-delegate-package">{ModulePackage}.bd.{SessionName:package}</object-name>
+  </codestyle>
+  <target>
+    <java-dao-zerolib-target name="DBClientDerbyConfig">
+      <package>
+      org.vpc.dbclient.plugin.cfgsupport.cfgderby.dbimpl
+      </package>
+      <log-generation enable="false" api="none"/>
+      <dto-module/>
+      <dao-module/>
+    </java-dao-zerolib-target>
+  </target>
+</jbgen>

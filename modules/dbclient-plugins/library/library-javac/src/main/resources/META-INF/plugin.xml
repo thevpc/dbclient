@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="library-javac">
+
+    <category>library</category>
+
+    <title>Sun Tools Javac</title>
+    <version>1.6.0.24</version>
+    <url>http://java.sun.com</url>
+    <author>Sun Micro Systems</author>
+    <contributors>Taha BEN SALAH (Packager)</contributors>
+    <description>
+        Javac support
+    </description>
+</plugin>

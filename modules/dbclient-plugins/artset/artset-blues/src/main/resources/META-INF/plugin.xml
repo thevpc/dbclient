@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="dbclient-artset-blues">
+    <category>artset</category>
+
+    <title>Blues ArtSet</title>
+    <version> 0.5.3 </version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <description>
+           Default Blue based ArtSet (splash screen, icons, banners, ...)
+    </description>
+</plugin>

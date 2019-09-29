@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="dbdriver-derby">
+    <category>dbdriver</category>
+    <title>Derby Jdbc Drivers</title>
+    <version>10.7.1.1</version>
+    <url>http://db.apache.org/derby</url>
+    <author>Apache Derby Team</author>
+    <contributors>Taha BEN SALAH (Packager)</contributors>
+    <description>
+        Apache Derby Driver Library
+    </description>
+</plugin>

@@ -1,0 +1,20 @@
+name=Olive16
+
+black=0,0,102
+white=253,255,241
+primary3=215,228,201
+secondary3=233,234,221
+primary2=175,207,182
+secondary2=207,213,187
+primary1=153,181,124
+secondary1=158,162,104
+
+menuSelectedBackground=@primary3
+controlTextFont=Arial, PLAIN, 16
+menuTextFont=Arial, PLAIN, 16
+focusColor=@secondary2
+highlightedTextColor=@white
+menuItemSelectedBackground=@textHighlightColor
+menuItemSelectedForeground=@white
+menuSelectedBackground=@secondary2
+textHighlightColor=@primary1

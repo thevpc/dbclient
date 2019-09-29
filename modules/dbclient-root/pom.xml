@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>net.vpc.app.dbclient</groupId>
+  <artifactId>net.vpc.app.dbclient.dbclient-root</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+	<properties>
+      <!-- latest versions that should be referenced in independencies -->
+		<!-- ##############################
+			PRIVATE COMPILE DEPENDENCIES 
+		############################## -->
+	  <version.jlauncher>1.4.0</version.jlauncher>
+	  <version.vpc-swingext>2.3.6</version.vpc-swingext>
+	  <version.dbclient-core>0.5.8</version.dbclient-core>
+
+
+		<!-- ##############################
+			THIRD PARTY COMPILE DEPENDENCIES 
+		############################## -->
+      
+      
+		<!-- ##############################
+			TEST DEPENDENCIES
+		############################## -->
+	  <version.junit>3.8.1</version.junit>
+	</properties>
+</project>

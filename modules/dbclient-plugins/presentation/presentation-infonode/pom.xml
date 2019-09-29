@@ -1,0 +1,61 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.vpc.app.dbclient.plugins.presentation</groupId>
+    <artifactId>net.vpc.app.dbclient.plugins.presentation-infonode</artifactId>
+    <version>1.6.1.9</version>
+    <packaging>jar</packaging>
+    
+    <parent>
+      <groupId>net.vpc.app.dbclient</groupId>
+      <artifactId>net.vpc.app.dbclient.dbclient-plugin-root</artifactId>
+      <version>1.0</version>
+      <relativePath>../../../dbclient-plugin-root</relativePath>
+    </parent>
+
+    <properties>
+
+    </properties>
+
+    <dependencies>
+		<!-- ##############################
+			PRIVATE COMPILE DEPENDENCIES 
+		############################## -->
+
+		<!-- ##############################
+			THIRD PARTY COMPILE DEPENDENCIES 
+		############################## -->
+      
+        <dependency>
+            <groupId>net.infonode</groupId>
+            <artifactId>idw-gpl</artifactId>
+            <version>1.6.1</version>
+            <scope>system</scope>
+            <systemPath>${dbclient-root-folder}/modules/dbclient-plugins/presentation/presentation-infonode/src/main/resources/META-INF/lib/idw-gpl.jar</systemPath>
+        </dependency>
+      
+        <dependency>
+            <groupId>net.infonode</groupId>
+            <artifactId>ilf-gpl</artifactId>
+            <version>1.6.1</version>
+            <scope>system</scope>
+            <systemPath>${dbclient-root-folder}/modules/dbclient-plugins/presentation/presentation-infonode/src/main/resources/META-INF/lib/ilf-gpl.jar</systemPath>
+        </dependency>
+      
+        <dependency>
+            <groupId>net.infonode</groupId>
+            <artifactId>itp-gpl</artifactId>
+            <version>1.6.1</version>
+            <scope>system</scope>
+            <systemPath>${dbclient-root-folder}/modules/dbclient-plugins/presentation/presentation-infonode/src/main/resources/META-INF/lib/itp-gpl.jar</systemPath>
+        </dependency>
+      
+		<!-- ##############################
+			TEST DEPENDENCIES
+		############################## -->
+        
+    </dependencies>
+
+</project>

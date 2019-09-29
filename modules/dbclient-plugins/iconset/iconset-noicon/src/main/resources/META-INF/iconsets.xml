@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iconsets>
+    <iconset>
+        <id>iconset-noicon</id>
+        <name>No Icon</name>
+        <class>org.vpc.prs.iconset.DefaultIconSet</class>
+        <parameters>
+            <parameter>org.vpc.dbclient.iconset.dbclient-iconset-noicon</parameter>
+        </parameters>
+    </iconset>
+</iconsets>

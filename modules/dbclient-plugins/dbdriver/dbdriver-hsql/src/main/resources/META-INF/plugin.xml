@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="dbdriver-hsql">
+
+    <category>dbdriver</category>
+
+    <title>Hsql Jdbc Drivers</title>
+    <version>1.9.0.rc4.1</version>
+    <url>http://hsqldb.org</url>
+    <author>Hsql Team</author>
+    <contributors>Taha BEN SALAH (Packager)</contributors>
+    <description>
+            HSql Driver Library
+
+    </description>
+</plugin>

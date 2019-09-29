@@ -1,0 +1,20 @@
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin>
+  <name>DBClient</name>
+  <description>DBClient Support</description>
+  <version>1.0</version>
+  <vendor>vpc</vendor>
+  <idea-version since-build="3000"/>
+    <project-components>
+        <component>
+            <implementation-class>org.vpc.dbclient.ideplugins.ideaplugin.DBClientProjectComponent</implementation-class>
+        </component>
+    </project-components>
+    <actions>
+        <action id="DBClientIdeaPlugin" class="org.vpc.dbclient.ideplugins.ideaplugin.DBClientIdeaPlugin"
+                text="DBClient">
+            <keyboard-shortcut keymap="$default" first-keystroke="alt C"/>
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>

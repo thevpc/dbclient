@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="dbdriver-postgresql">
+
+    <category>dbdriver</category>
+
+    <title>PostgreSQL Jdbc Drivers</title>
+    <version>8.4.701.0</version>
+    <url>http://jdbc.postgresql.org</url>
+    <author>PostgreSQL Team</author>
+    <contributors>Taha BEN SALAH (Packager)</contributors>
+    <description>
+       PostgreSql Driver Library
+    </description>
+</plugin>

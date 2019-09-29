@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jbgen-output>
+  <table-elements>
+    <table do="TCnxProperty" name="T_CNX_PROPERTY"/>
+    <table do="TConfigProp" name="T_CONFIG_PROP"/>
+    <table do="TDriver" name="T_DRIVER"/>
+    <table do="TDriverLib" name="T_DRIVER_LIB"/>
+    <table do="TMessage" name="T_MESSAGE"/>
+    <table do="TSession" name="T_SESSION"/>
+    <table do="TSessionProp" name="T_SESSION_PROP"/>
+    <table do="TSqlTemplate" name="T_SQL_TEMPLATE"/>
+    <table do="TUiNodeProperty" name="T_UI_NODE_PROPERTY"/>
+  </table-elements>
+  <do-elements>
+    <do name="TSessionProp" bo="TSessionPropBO">
+      <field name="tspName" columnPkKeySeq="2" columnSize="512" columnName="TSP_NAME" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Tsp Name" columnBufferLength="0" tableName="T_SESSION_PROP" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="tspSesId" columnPkKeySeq="1" columnSize="10" columnName="TSP_SES_ID" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Tsp Ses Id" columnBufferLength="0" tableName="T_SESSION_PROP" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="tspValue" columnPkKeySeq="0" columnSize="4092" columnName="TSP_VALUE" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Tsp Value" columnBufferLength="0" tableName="T_SESSION_PROP" sqlType="VARCHAR" columnNumRecRadix="0"/>
+    </do>
+    <do name="TUiNodeProperty" bo="TUiNodePropertyBO">
+      <field name="unpCode" columnPkKeySeq="2" columnSize="512" columnName="UNP_CODE" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Unp Code" columnBufferLength="0" tableName="T_UI_NODE_PROPERTY" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="unpPath" columnPkKeySeq="3" columnSize="4092" columnName="UNP_PATH" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Unp Path" columnBufferLength="0" tableName="T_UI_NODE_PROPERTY" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="unpSesId" columnPkKeySeq="1" columnSize="10" columnName="UNP_SES_ID" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Unp Ses Id" columnBufferLength="0" tableName="T_UI_NODE_PROPERTY" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="unpValue" columnPkKeySeq="0" columnSize="4092" columnName="UNP_VALUE" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Unp Value" columnBufferLength="0" tableName="T_UI_NODE_PROPERTY" sqlType="VARCHAR" columnNumRecRadix="0"/>
+    </do>
+    <do name="TSession" bo="TSessionBO">
+      <field name="sesId" columnPkKeySeq="1" columnSize="10" columnName="SES_ID" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Ses Id" columnBufferLength="0" tableName="T_SESSION" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="sesName" columnPkKeySeq="0" columnSize="80" columnName="SES_NAME" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Ses Name" columnBufferLength="0" tableName="T_SESSION" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="sesPath" columnPkKeySeq="0" columnSize="512" columnName="SES_PATH" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Ses Path" columnBufferLength="0" tableName="T_SESSION" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="sesIndex" columnPkKeySeq="0" columnSize="10" columnName="SES_INDEX" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Ses Index" columnBufferLength="0" tableName="T_SESSION" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="sesCnxUrl" columnPkKeySeq="0" columnSize="80" columnName="SES_CNX_URL" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Ses Cnx Url" columnBufferLength="0" tableName="T_SESSION" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="sesCnxDriver" columnPkKeySeq="0" columnSize="80" columnName="SES_CNX_DRIVER" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Ses Cnx Driver" columnBufferLength="0" tableName="T_SESSION" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="sesCnxLogin" columnPkKeySeq="0" columnSize="80" columnName="SES_CNX_LOGIN" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Ses Cnx Login" columnBufferLength="0" tableName="T_SESSION" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="sesCnxPassword" columnPkKeySeq="0" columnSize="80" columnName="SES_CNX_PASSWORD" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Ses Cnx Password" columnBufferLength="0" tableName="T_SESSION" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="sesCnxAutocommit" columnPkKeySeq="0" columnSize="10" columnName="SES_CNX_AUTOCOMMIT" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Ses Cnx Autocommit" columnBufferLength="0" tableName="T_SESSION" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="sesCnxHoldability" columnPkKeySeq="0" columnSize="10" columnName="SES_CNX_HOLDABILITY" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Ses Cnx Holdability" columnBufferLength="0" tableName="T_SESSION" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="sesCnxTransIsolation" columnPkKeySeq="0" columnSize="10" columnName="SES_CNX_TRANS_ISOLATION" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Ses Cnx Trans Isolation" columnBufferLength="0" tableName="T_SESSION" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="sesCnxReadOnly" columnPkKeySeq="0" columnSize="10" columnName="SES_CNX_READ_ONLY" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Ses Cnx Read Only" columnBufferLength="0" tableName="T_SESSION" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="sesCnxOpenScript" columnPkKeySeq="0" columnSize="4096" columnName="SES_CNX_OPEN_SCRIPT" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Ses Cnx Open Script" columnBufferLength="0" tableName="T_SESSION" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="sesCnxCloseScript" columnPkKeySeq="0" columnSize="4096" columnName="SES_CNX_CLOSE_SCRIPT" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Ses Cnx Close Script" columnBufferLength="0" tableName="T_SESSION" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="sesCnxCreated" columnPkKeySeq="0" columnSize="10" columnName="SES_CNX_CREATED" sqlTypeName="DATE" columnDecimalDigits="0" title="Ses Cnx Created" columnBufferLength="0" tableName="T_SESSION" sqlType="DATE" columnNumRecRadix="10"/>
+      <field name="sesCnxLastUpdated" columnPkKeySeq="0" columnSize="10" columnName="SES_CNX_LAST_UPDATED" sqlTypeName="DATE" columnDecimalDigits="0" title="Ses Cnx Last Updated" columnBufferLength="0" tableName="T_SESSION" sqlType="DATE" columnNumRecRadix="10"/>
+      <field name="sesCnxFactoryName" columnPkKeySeq="0" columnSize="80" columnName="SES_CNX_FACTORY_NAME" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Ses Cnx Factory Name" columnBufferLength="0" tableName="T_SESSION" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="sesAutoConnect" columnPkKeySeq="0" columnSize="10" columnName="SES_AUTO_CONNECT" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Ses Auto Connect" columnBufferLength="0" tableName="T_SESSION" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="sesDesc" columnPkKeySeq="0" columnSize="4096" columnName="SES_DESC" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Ses Desc" columnBufferLength="0" tableName="T_SESSION" sqlType="VARCHAR" columnNumRecRadix="0"/>
+    </do>
+    <do name="TSqlTemplate" bo="TSqlTemplateBO">
+      <field name="sstId" columnPkKeySeq="1" columnSize="10" columnName="SST_ID" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Sst Id" columnBufferLength="0" tableName="T_SQL_TEMPLATE" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="sstVersion" columnPkKeySeq="0" columnSize="10" columnName="SST_VERSION" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Sst Version" columnBufferLength="0" tableName="T_SQL_TEMPLATE" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="sstSfcName" columnPkKeySeq="0" columnSize="80" columnName="SST_SFC_NAME" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Sst Sfc Name" columnBufferLength="0" tableName="T_SQL_TEMPLATE" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="sstIndex" columnPkKeySeq="0" columnSize="10" columnName="SST_INDEX" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Sst Index" columnBufferLength="0" tableName="T_SQL_TEMPLATE" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="sstGroupIndex" columnPkKeySeq="0" columnSize="10" columnName="SST_GROUP_INDEX" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Sst Group Index" columnBufferLength="0" tableName="T_SQL_TEMPLATE" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="sstName" columnPkKeySeq="0" columnSize="1024" columnName="SST_NAME" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Sst Name" columnBufferLength="0" tableName="T_SQL_TEMPLATE" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="sstIsSeparator" columnPkKeySeq="0" columnSize="10" columnName="SST_IS_SEPARATOR" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Sst Is Separator" columnBufferLength="0" tableName="T_SQL_TEMPLATE" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="sstSql" columnPkKeySeq="0" columnSize="10000" columnName="SST_SQL" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Sst Sql" columnBufferLength="0" tableName="T_SQL_TEMPLATE" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="sstNodeFilter" columnPkKeySeq="0" columnSize="1024" columnName="SST_NODE_FILTER" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Sst Node Filter" columnBufferLength="0" tableName="T_SQL_TEMPLATE" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="sstPreferTemplate" columnPkKeySeq="0" columnSize="10" columnName="SST_PREFER_TEMPLATE" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Sst Prefer Template" columnBufferLength="0" tableName="T_SQL_TEMPLATE" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="sstConfirmEnabled" columnPkKeySeq="0" columnSize="10" columnName="SST_CONFIRM_ENABLED" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Sst Confirm Enabled" columnBufferLength="0" tableName="T_SQL_TEMPLATE" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="sstConfirmMsg" columnPkKeySeq="0" columnSize="1024" columnName="SST_CONFIRM_MSG" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Sst Confirm Msg" columnBufferLength="0" tableName="T_SQL_TEMPLATE" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="sstEnabled" columnPkKeySeq="0" columnSize="10" columnName="SST_ENABLED" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Sst Enabled" columnBufferLength="0" tableName="T_SQL_TEMPLATE" sqlType="INTEGER" columnNumRecRadix="10"/>
+    </do>
+    <do name="TMessage" bo="TMessageBO">
+      <field name="msgId" columnPkKeySeq="2" columnSize="1024" columnName="MSG_ID" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Msg Id" columnBufferLength="0" tableName="T_MESSAGE" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="msgLocName" columnPkKeySeq="1" columnSize="80" columnName="MSG_LOC_NAME" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Msg Loc Name" columnBufferLength="0" tableName="T_MESSAGE" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="msgData" columnPkKeySeq="0" columnSize="8096" columnName="MSG_DATA" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Msg Data" columnBufferLength="0" tableName="T_MESSAGE" sqlType="VARCHAR" columnNumRecRadix="0"/>
+    </do>
+    <do name="TCnxProperty" bo="TCnxPropertyBO">
+      <field name="cprName" columnPkKeySeq="2" columnSize="1024" columnName="CPR_NAME" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Cpr Name" columnBufferLength="0" tableName="T_CNX_PROPERTY" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="cprSesId" columnPkKeySeq="1" columnSize="10" columnName="CPR_SES_ID" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Cpr Ses Id" columnBufferLength="0" tableName="T_CNX_PROPERTY" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="cprValue" columnPkKeySeq="0" columnSize="4092" columnName="CPR_VALUE" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Cpr Value" columnBufferLength="0" tableName="T_CNX_PROPERTY" sqlType="VARCHAR" columnNumRecRadix="0"/>
+    </do>
+    <do name="TDriver" bo="TDriverBO">
+      <field name="drvId" columnPkKeySeq="1" columnSize="10" columnName="DRV_ID" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Drv Id" columnBufferLength="0" tableName="T_DRIVER" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="drvName" columnPkKeySeq="0" columnSize="80" columnName="DRV_NAME" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Drv Name" columnBufferLength="0" tableName="T_DRIVER" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="drvIndex" columnPkKeySeq="0" columnSize="10" columnName="DRV_INDEX" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Drv Index" columnBufferLength="0" tableName="T_DRIVER" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="drvClassName" columnPkKeySeq="0" columnSize="1024" columnName="DRV_CLASS_NAME" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Drv Class Name" columnBufferLength="0" tableName="T_DRIVER" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="drvDefaultUrl" columnPkKeySeq="0" columnSize="4092" columnName="DRV_DEFAULT_URL" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Drv Default Url" columnBufferLength="0" tableName="T_DRIVER" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="drvDefaultLogin" columnPkKeySeq="0" columnSize="1024" columnName="DRV_DEFAULT_LOGIN" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Drv Default Login" columnBufferLength="0" tableName="T_DRIVER" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="drvDefaultPassword" columnPkKeySeq="0" columnSize="4092" columnName="DRV_DEFAULT_PASSWORD" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Drv Default Password" columnBufferLength="0" tableName="T_DRIVER" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="drvDefaultDesc" columnPkKeySeq="0" columnSize="1024" columnName="DRV_DEFAULT_DESC" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Drv Default Desc" columnBufferLength="0" tableName="T_DRIVER" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="drvEnabled" columnPkKeySeq="0" columnSize="10" columnName="DRV_ENABLED" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Drv Enabled" columnBufferLength="0" tableName="T_DRIVER" sqlType="INTEGER" columnNumRecRadix="10"/>
+    </do>
+    <do name="TDriverLib" bo="TDriverLibBO">
+      <field name="tdlDrvId" columnPkKeySeq="1" columnSize="10" columnName="TDL_DRV_ID" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Tdl Drv Id" columnBufferLength="0" tableName="T_DRIVER_LIB" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="tdlIndex" columnPkKeySeq="2" columnSize="10" columnName="TDL_INDEX" sqlTypeName="INTEGER" columnDecimalDigits="0" title="Tdl Index" columnBufferLength="0" tableName="T_DRIVER_LIB" sqlType="INTEGER" columnNumRecRadix="10"/>
+      <field name="tdlUrl" columnPkKeySeq="0" columnSize="512" columnName="TDL_URL" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Tdl Url" columnBufferLength="0" tableName="T_DRIVER_LIB" sqlType="VARCHAR" columnNumRecRadix="0"/>
+    </do>
+    <do name="TConfigProp" bo="TConfigPropBO">
+      <field name="tcpName" columnPkKeySeq="1" columnSize="512" columnName="TCP_NAME" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Tcp Name" columnBufferLength="0" tableName="T_CONFIG_PROP" sqlType="VARCHAR" columnNumRecRadix="0"/>
+      <field name="tcpValue" columnPkKeySeq="0" columnSize="4092" columnName="TCP_VALUE" sqlTypeName="VARCHAR" columnDecimalDigits="0" title="Tcp Value" columnBufferLength="0" tableName="T_CONFIG_PROP" sqlType="VARCHAR" columnNumRecRadix="0"/>
+    </do>
+  </do-elements>
+  <file-elements>
+    <file name="TCnxPropertyDAO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tcnxproperty/TCnxPropertyDAO.java"/>
+    <file name="TCnxPropertyDTO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tcnxproperty/TCnxPropertyDTO.java"/>
+    <file name="TCnxPropertyFilter.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tcnxproperty/TCnxPropertyFilter.java"/>
+    <file name="TCnxPropertyKey.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tcnxproperty/TCnxPropertyKey.java"/>
+    <file name="TCnxPropertyPropertyList.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tcnxproperty/TCnxPropertyPropertyList.java"/>
+    <file name="TConfigPropDAO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tconfigprop/TConfigPropDAO.java"/>
+    <file name="TConfigPropDTO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tconfigprop/TConfigPropDTO.java"/>
+    <file name="TConfigPropFilter.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tconfigprop/TConfigPropFilter.java"/>
+    <file name="TConfigPropKey.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tconfigprop/TConfigPropKey.java"/>
+    <file name="TConfigPropPropertyList.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tconfigprop/TConfigPropPropertyList.java"/>
+    <file name="TDriverDAO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tdriver/TDriverDAO.java"/>
+    <file name="TDriverDTO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tdriver/TDriverDTO.java"/>
+    <file name="TDriverFilter.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tdriver/TDriverFilter.java"/>
+    <file name="TDriverKey.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tdriver/TDriverKey.java"/>
+    <file name="TDriverPropertyList.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tdriver/TDriverPropertyList.java"/>
+    <file name="TDriverLibDAO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tdriverlib/TDriverLibDAO.java"/>
+    <file name="TDriverLibDTO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tdriverlib/TDriverLibDTO.java"/>
+    <file name="TDriverLibFilter.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tdriverlib/TDriverLibFilter.java"/>
+    <file name="TDriverLibKey.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tdriverlib/TDriverLibKey.java"/>
+    <file name="TDriverLibPropertyList.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tdriverlib/TDriverLibPropertyList.java"/>
+    <file name="TMessageDAO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tmessage/TMessageDAO.java"/>
+    <file name="TMessageDTO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tmessage/TMessageDTO.java"/>
+    <file name="TMessageFilter.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tmessage/TMessageFilter.java"/>
+    <file name="TMessageKey.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tmessage/TMessageKey.java"/>
+    <file name="TMessagePropertyList.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tmessage/TMessagePropertyList.java"/>
+    <file name="TSessionDAO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tsession/TSessionDAO.java"/>
+    <file name="TSessionDTO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tsession/TSessionDTO.java"/>
+    <file name="TSessionFilter.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tsession/TSessionFilter.java"/>
+    <file name="TSessionKey.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tsession/TSessionKey.java"/>
+    <file name="TSessionPropertyList.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tsession/TSessionPropertyList.java"/>
+    <file name="TSessionPropDAO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tsessionprop/TSessionPropDAO.java"/>
+    <file name="TSessionPropDTO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tsessionprop/TSessionPropDTO.java"/>
+    <file name="TSessionPropFilter.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tsessionprop/TSessionPropFilter.java"/>
+    <file name="TSessionPropKey.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tsessionprop/TSessionPropKey.java"/>
+    <file name="TSessionPropPropertyList.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tsessionprop/TSessionPropPropertyList.java"/>
+    <file name="TSqlTemplateDAO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tsqltemplate/TSqlTemplateDAO.java"/>
+    <file name="TSqlTemplateDTO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tsqltemplate/TSqlTemplateDTO.java"/>
+    <file name="TSqlTemplateFilter.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tsqltemplate/TSqlTemplateFilter.java"/>
+    <file name="TSqlTemplateKey.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tsqltemplate/TSqlTemplateKey.java"/>
+    <file name="TSqlTemplatePropertyList.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tsqltemplate/TSqlTemplatePropertyList.java"/>
+    <file name="TUiNodePropertyDAO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tuinodeproperty/TUiNodePropertyDAO.java"/>
+    <file name="TUiNodePropertyDTO.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tuinodeproperty/TUiNodePropertyDTO.java"/>
+    <file name="TUiNodePropertyFilter.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tuinodeproperty/TUiNodePropertyFilter.java"/>
+    <file name="TUiNodePropertyKey.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tuinodeproperty/TUiNodePropertyKey.java"/>
+    <file name="TUiNodePropertyPropertyList.java" path="org/vpc/dbclient/plugin/cfgsupport/cfgderby/dbimpl/tuinodeproperty/TUiNodePropertyPropertyList.java"/>
+  </file-elements>
+</jbgen-output>

@@ -1,0 +1,1 @@
+SELECT ${sequence}.NEXTVAL FROM dual

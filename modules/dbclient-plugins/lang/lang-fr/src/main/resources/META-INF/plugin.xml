@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="lang-fr">
+
+    <category>messageset</category>
+
+    <title>French Localization</title>
+    <version>0.16</version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <description>
+
+        Localization Plugin
+
+    </description>
+</plugin>

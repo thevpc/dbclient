@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="presentation-swinglabs" class="org.vpc.dbclient.plugin.presentation.swinglabs.SwingLabsPlugin">
+
+    <category>presentation</category>
+    <title>SwingLabs Library Addons</title>
+    <version> 0.9.3.14 </version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <description>
+
+        Table sorting support, Session folding in Session Chooser, Better Error Handler (swingx-0.9.3)
+
+    </description>
+    <dependencies>
+        <dependency>dbclient-system</dependency>
+    </dependencies>
+    <applicationVersion>[0.5.0,*[</applicationVersion>
+</plugin>

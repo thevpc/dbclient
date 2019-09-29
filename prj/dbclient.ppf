@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project type="java bundle">
+<settings name="dbclient">
+<replacespace enable="false" string="_"/>
+<emptykeys enable="true"/>
+<saveWYSIWYGmode enable="true"/>
+</settings>
+<files workdirectory="/home/vpc/xprojects/dbclient/prj">
+<file filename="DBClient_ar.properties">
+<properties encoding="java utf" visible="true" withescape="true"/>
+</file>
+<file filename="DBClient_de.properties">
+<properties encoding="java utf" visible="true" withescape="true"/>
+</file>
+<file filename="DBClient_fr.properties">
+<properties encoding="java utf" visible="true" withescape="true"/>
+</file>
+<file filename="DBClient_nl.properties">
+<properties encoding="java utf" visible="true" withescape="true"/>
+</file>
+<file filename="DBClient_en.properties">
+<properties encoding="java utf" visible="true" withescape="true"/>
+</file>
+</files>
+<scanner>
+<files enable="false" rootdir="./"/>
+</scanner>
+</project>

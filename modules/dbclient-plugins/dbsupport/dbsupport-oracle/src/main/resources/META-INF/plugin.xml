@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="dbsupport-oracle" class="org.vpc.dbclient.plugin.dbsupport.oracle.OraclePlugin">
+
+    <category>dbsupport</category>
+    <title>Oracle Support</title>
+    <version>0.5.1</version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <dependencies>
+        <dependency>dbclient-system[0.5.0,*[</dependency>
+    </dependencies>
+    <description>
+        Plugin that adds custom handling of the database particularities.
+        Support for DDL Viewing, RENAME/ALTER,URLBuilder
+
+    </description>
+    <applicationVersion>[0.5.0,*[</applicationVersion>
+</plugin>

@@ -1,0 +1,72 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>net.vpc.app.dbclient</groupId>
+    <artifactId>net.vpc.app.dbclient.dbclient-plugin-root</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>net.vpc.app.dbclient</groupId>
+        <artifactId>net.vpc.app.dbclient.dbclient-root</artifactId>
+        <version>1.0</version>
+        <relativePath>../dbclient-root</relativePath>
+    </parent>
+
+    <properties>
+        <dbclient-root-folder>/home/vpc/Data/xprojects/net/vpc/dbclient</dbclient-root-folder>
+    </properties>
+
+    <dependencies>
+		<!-- ##############################
+			PRIVATE COMPILE DEPENDENCIES 
+		############################## -->
+        <dependency>
+            <groupId>net.vpc.app.dbclient</groupId>
+            <artifactId>net.vpc.app.dbclient.dbclient-core</artifactId>
+            <version>${version.dbclient-core}</version>
+        </dependency>
+
+		<!-- ##############################
+			THIRD PARTY COMPILE DEPENDENCIES 
+		############################## -->
+      
+      
+		<!-- ##############################
+			TEST DEPENDENCIES
+		############################## -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${version.junit}</version>
+            <scope>test</scope>
+        </dependency>
+        
+    </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

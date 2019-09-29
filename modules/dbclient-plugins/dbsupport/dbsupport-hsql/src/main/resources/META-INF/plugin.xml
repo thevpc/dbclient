@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="dbsupport-hsql" class="org.vpc.dbclient.plugin.dbsupport.hsql.HSqlPlugin">
+
+    <category>dbsupport</category>
+
+    <title>HSql Support</title>
+    <version>0.5.2</version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <dependencies>
+        <dependency>dbclient-system[0.5.0,*[</dependency>
+        <dependency>tool-server-manager[0.5.0,*[</dependency>
+    </dependencies>
+    <description>
+
+        Plugin that adds custom handling of the database particularities
+
+    </description>
+    <applicationVersion>[0.5.0,*[</applicationVersion>
+</plugin>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="tool-box">
+
+    <category>tool</category>
+
+    <title>DBClient main Toolbox</title>
+    <version>0.5.8</version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <description>
+
+        DBClient Main Toolbox, System Plugin extensions that are useful
+
+    </description>
+    <dependencies>
+        <dependency>dbclient-system[0.5.0,*[</dependency>
+    </dependencies>
+    <applicationVersion>[O.5,*[</applicationVersion>
+</plugin>

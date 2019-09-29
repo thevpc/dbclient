@@ -1,0 +1,1 @@
+SELECT U.name FROM master.dbo.syslogins L, sysusers U WHERE L.sid = U.sid and L.name=${user?}

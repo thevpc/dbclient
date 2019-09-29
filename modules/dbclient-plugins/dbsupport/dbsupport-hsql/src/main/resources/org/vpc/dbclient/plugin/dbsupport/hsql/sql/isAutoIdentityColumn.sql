@@ -1,0 +1,8 @@
+Select 1  From SYS.SYSCOLUMNS C
+  inner join  SYS.SYSTABLES T on T.TABLEID=C.REFERENCEID
+  inner join  SYS.SYSSCHEMAS S on S.SCHEMAID=T.SCHEMAID
+  Where
+      S.SCHEMANAME=${schema?}
+      AND T.TABLENAME=${table?}
+      AND C.COLUMNNAME=${column?}
+      AND AUTOINCREMENTSTART IS NOT NULL

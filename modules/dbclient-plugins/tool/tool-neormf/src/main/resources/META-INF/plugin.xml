@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="tool-neormf" class="org.vpc.dbclient.plugin.tool.neormf.NeormfPlugin">
+
+    <category>tool</category>
+    <title>Neormf Support</title>
+    <version> 0.5.2 </version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <description>
+
+        neormf (New Entreprise Object Relational Mapping Framework) is a Bottom-Up Code Generation Framework for a number of languages/plateforms (Java/J2EE,C#/DotNet,...) and architectures, following main design patterns and frameworks.
+        This plugin enables code generation from within DBClient.
+
+    </description>
+    <dependencies>
+        <dependency>library-javac</dependency>
+    </dependencies>
+    <applicationVersion>[0.5.0,*[</applicationVersion>
+</plugin>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="plugin_id" class="plugin.full.class.name" category="..." title="..." version="..." url="..." author="..." contributors="..." applicationVersion="...">
+    <category>plugin_category(one of {tool, presentation, dbsupport, dbdriver,arset})</category>
+    <title>some title</title>
+    <version> 0.4.0 </version>
+    <url>http://my.plugin.web.site</url>
+    <author>author name</author>
+    <contributors>contributor 1, contributor 2, contributor 3,...</contributors>
+    <description>
+        some description here....
+    </description>
+    <dependencies>
+        <dependency>other_required_plugin_id</dependency>
+        <dependency>or_other_required_plugin_id[1.0,1.1[</dependency>
+    </dependencies>
+   <applicationVersion>[0.4,*[</applicationVersion>
+</plugin>

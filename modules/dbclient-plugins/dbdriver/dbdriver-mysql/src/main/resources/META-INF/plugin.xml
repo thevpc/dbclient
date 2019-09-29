@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="dbdriver-mysql">
+
+    <category>dbdriver</category>
+
+    <title>MySQL Jdbc Drivers</title>
+    <version> 5.1.7 </version>
+    <url>http://dbclient.java.net</url>
+    <author>MySQL Team</author>
+    <contributors>Taha BEN SALAH (Packager)</contributors>
+    <description>
+        MySQL Driver Library
+
+    </description>
+    <applicationVersion>[0.4,*[</applicationVersion>
+</plugin>

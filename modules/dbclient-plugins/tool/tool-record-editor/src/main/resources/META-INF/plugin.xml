@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="tool-record-editor" class="org.vpc.dbclient.plugin.tool.recordeditor.RecordEditorPlugin">
+
+    <category>tool</category>
+
+    <title>Record Editor</title>
+    <version>0.5.6</version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <description>
+
+        Plugin for simplifying Record Edition with generating dynamically a formular for inserting and updating table
+        records.
+        Provides also mechanisms to configure Fields Editors (checkboxes, comboboxes, etc...)
+
+    </description>
+    <applicationVersion>[0.5.0,*[</applicationVersion>
+</plugin>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="search-engine" class="org.vpc.dbclient.plugin.tool.searchengine.SearchEnginePlugin">
+    <category>tool</category>
+
+    <title>Search Engine</title>
+    <version> 0.5.8 </version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <description>
+
+        This plugin enables searching into all of database data and schema information.
+
+    </description>
+    <applicationVersion>[0.5.3,*[</applicationVersion>
+</plugin>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="dbclient-artset-grass">
+    <category>artset</category>
+    <title>Original 0.4 ArtSet</title>
+    <version>0.5.3</version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors>
+    </contributors>
+    <description>
+        Green based ArtSet (splash screen, icons, banners, ...)
+    </description>
+</plugin>

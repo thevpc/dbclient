@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="import-export-excel"
+        class="org.vpc.dbclient.plugin.tool.importexportexcel.exporter.ImportExportExcelPlugin">
+    <category>tool</category>
+
+    <title>Import Export Tool for MS Excel</title>
+    <version>0.5.6</version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <dependency>tool-import-export</dependency>
+    <description>
+
+        Import Export Tool for Excel
+
+    </description>
+    <applicationVersion>[0.1.7,*[</applicationVersion>
+</plugin>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="iconset-linux">
+
+    <category>iconset</category>
+
+    <title>Linux Icons Repository</title>
+    <version>0.6.4</version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <description>
+
+        IconSet Plugin
+
+    </description>
+</plugin>

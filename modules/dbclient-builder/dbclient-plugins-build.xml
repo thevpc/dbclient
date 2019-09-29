@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<project name="dbclient-plugins-build" default="dbclient-all" basedir=".">
+    <description>.</description>
+    <property name="app-major-version" value="0.5"/>
+    <property name="app-minor-version" value="8"/>
+    <property name="app-version" value="${app-major-version}.${app-minor-version}"/>
+    <property name="www" location="../../www"/>
+    <property name="runtime" location="../../runtime"/>
+    <property name="install" location="../../install"/>
+    <property name="repository" location="${www}/plugins-repository/${app-major-version}"/>
+    <property name="app-name" value="dbclient"/>
+    <property name="app-label" value="DBClient"/>
+    <property name="release" location="${www}/release/${app-major-version}"/>
+    <property name="files-bin-core" location="target/bin/core"/>
+    <property name="files-bin-plugins" location="target/bin/plugins"/>
+    <property name="files-src-core" location="target/src/core"/>
+    <property name="files-src-plugins" location="target/src/plugins"/>
+
+    <path id="dbclient-path">
+        <fileset dir="../dbclient-core/target/lib/">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+    
+    <target name="dbclient-files">
+        <mkdir dir="${files-bin-core}" />
+        <mkdir dir="${files-src-core}" />
+        <mkdir dir="${files-src-plugins}/system" />
+        <mkdir dir="${files-src-plugins}/update" />
+        <mkdir dir="${files-src-plugins}/recommanded" />
+        <mkdir dir="${files-src-plugins}/media" />
+        <mkdir dir="${files-src-plugins}/drivers" />
+        <mkdir dir="${files-src-plugins}/lang" />
+        <mkdir dir="${files-src-plugins}/useful" />
+        <mkdir dir="${files-bin-plugins}/system" />
+        <mkdir dir="${files-bin-plugins}/update" />
+        <mkdir dir="${files-bin-plugins}/recommanded" />
+        <mkdir dir="${files-bin-plugins}/media" />
+        <mkdir dir="${files-bin-plugins}/drivers" />
+        <mkdir dir="${files-bin-plugins}/useful" />
+        <mkdir dir="${files-bin-plugins}/lang" />
+        <echo level="error"> 1 </echo>
+        <delete>
+            <fileset dir="${files-bin-core}">
+                <include name="**/*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-core}">
+                <include name="**/*.jar"/>
+            </fileset>
+            <fileset dir="${files-bin-plugins}">
+                <include name="**/*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-plugins}">
+                <include name="**/*.jar"/>
+            </fileset>
+        </delete>
+        <echo level="error"> 2 </echo>
+        <copy todir="${files-bin-core}">
+            <fileset dir="../dbclient-core/target/">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-core/target/lib/">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+        <echo level="error"> 3 </echo>
+        
+        <copy todir="${files-src-core}">
+            <fileset dir="../dbclient-core/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../vpc-libs/release/src">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../vpc-libs/vpc-commons/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../vpc-libs/vpc-prs/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../vpc-libs/vpc-swingext/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+        </copy>
+        
+        <echo level="error"> 4 </echo>
+        <copy todir="${files-bin-plugins}/system">
+            <fileset dir="../dbclient-plugins/system/dbclient-system/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${files-bin-plugins}/update">
+            <fileset dir="../dbclient-plugins/system/dbclient-update/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+        </copy>
+        <echo level="error"> 5 </echo>
+        <copy todir="${files-bin-plugins}/recommanded">
+            <fileset dir="../dbclient-plugins/artset/artset-blues/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/artset/artset-grass/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/presentation/presentation-infonode/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/presentation/presentation-swinglabs/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbsupport/dbsupport-derby/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbsupport/dbsupport-hsql/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbsupport/dbsupport-mckoi/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbsupport/dbsupport-mysql/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbsupport/dbsupport-postgresql/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbsupport/dbsupport-mssqlserver/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbsupport/dbsupport-oracle/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbsupport/dbsupport-access/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/tool/tool-box/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${files-bin-plugins}/media">
+            <fileset dir="../dbclient-plugins/iconset/iconset-java/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+<!--            <fileset dir="../dbclient-plugins/iconset/iconset-linux/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>-->
+            <fileset dir="../dbclient-plugins/iconset/iconset-noicon/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/iconset/iconset-tango/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/presentation/presentation-plaf-metal/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${files-bin-plugins}/lang">
+            <fileset dir="../dbclient-plugins/lang/lang-ar/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/lang/lang-fr/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/lang/lang-de/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/lang/lang-nl/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${files-bin-plugins}/drivers">
+            <fileset dir="../dbclient-plugins/dbdriver/dbdriver-derby/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbdriver/dbdriver-hsql/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbdriver/dbdriver-mckoi/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbdriver/dbdriver-mysql/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbdriver/dbdriver-postgresql/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+        </copy>
+        <echo level="error"> 7 </echo>
+        <copy todir="${files-bin-plugins}/useful">
+            <fileset dir="../dbclient-plugins/cfgsupport/cfgsupport-derby/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/library/library-derby-server/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/library/library-hsql-server/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/library/library-mckoi-server/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/library/library-javac/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/library/library-jexcelapi/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/tool/tool-import-export/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/tool/tool-import-export-excel/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/tool/tool-jstsql/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/tool/tool-neormf/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/tool/tool-record-editor/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/tool/tool-search-engine/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/tool/tool-server-manager/target">
+                <include name="*.jar"/>
+                <exclude name="*-sources.jar"/>
+            </fileset>
+        </copy>
+    
+
+        <copy todir="${files-src-plugins}/system">
+            <fileset dir="../dbclient-plugins/system/dbclient-system/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${files-src-plugins}/update">
+            <fileset dir="../dbclient-plugins/system/dbclient-update/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${files-src-plugins}/recommanded">
+            <fileset dir="../dbclient-plugins/artset/artset-blues/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/artset/artset-grass/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/presentation/presentation-infonode/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/presentation/presentation-swinglabs/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbsupport/dbsupport-derby/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbsupport/dbsupport-hsql/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbsupport/dbsupport-mckoi/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbsupport/dbsupport-mysql/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbsupport/dbsupport-postgresql/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbsupport/dbsupport-mssqlserver/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbsupport/dbsupport-oracle/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbsupport/dbsupport-access/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/tool/tool-box/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${files-src-plugins}/media">
+            <fileset dir="../dbclient-plugins/iconset/iconset-java/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+<!--            <fileset dir="../dbclient-plugins/iconset/iconset-linux/target">
+                <include name="*-sources.jar"/>
+            </fileset>-->
+            <fileset dir="../dbclient-plugins/iconset/iconset-noicon/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/iconset/iconset-tango/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/presentation/presentation-plaf-metal/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${files-src-plugins}/lang">
+            <fileset dir="../dbclient-plugins/lang/lang-ar/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/lang/lang-fr/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/lang/lang-de/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/lang/lang-nl/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${files-src-plugins}/drivers">
+            <fileset dir="../dbclient-plugins/dbdriver/dbdriver-derby/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbdriver/dbdriver-hsql/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbdriver/dbdriver-mckoi/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbdriver/dbdriver-mysql/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/dbdriver/dbdriver-postgresql/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${files-src-plugins}/useful">
+            <fileset dir="../dbclient-plugins/cfgsupport/cfgsupport-derby/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/library/library-derby-server/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/library/library-hsql-server/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/library/library-mckoi-server/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/library/library-javac/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/library/library-jexcelapi/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/tool/tool-import-export/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/tool/tool-import-export-excel/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/tool/tool-jstsql/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/tool/tool-neormf/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/tool/tool-record-editor/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/tool/tool-search-engine/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins/tool/tool-server-manager/target">
+                <include name="*-sources.jar"/>
+            </fileset>
+        </copy>
+
+    
+    </target>
+    
+    <target name="dbclient-runtime" depends="dbclient-files">
+        <delete>
+            <fileset dir="${runtime}/lib">
+                <include name="*.jar"/>
+            </fileset>
+        </delete>
+        <copy todir="${runtime}/lib">
+            <fileset dir="${files-bin-core}">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+        <delete>
+            <fileset dir="${runtime}/plugins">
+                <include name="*.jar"/>
+            </fileset>
+        </delete>
+        <copy todir="${runtime}/plugins">
+            <fileset dir="${files-bin-plugins}/system">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-bin-plugins}/recommanded">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-bin-plugins}/media">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-bin-plugins}/drivers">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-bin-plugins}/lang">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-bin-plugins}/useful">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+
+        <delete>
+            <fileset dir="${runtime}/src/core">
+                <include name="*.jar"/>
+            </fileset>
+        </delete>
+        <copy todir="${runtime}/src/core">
+            <fileset dir="${files-src-core}">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+        <delete>
+            <fileset dir="${runtime}/src/plugins">
+                <include name="*.jar"/>
+            </fileset>
+        </delete>
+        <copy todir="${runtime}/src/plugins">
+            <fileset dir="${files-src-plugins}/system">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-plugins}/recommanded">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-plugins}/media">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-plugins}/drivers">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-plugins}/lang">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-plugins}/useful">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="dbclient-repository" depends="dbclient-files">
+        <mkdir dir="${repository}/bin"/>
+        <mkdir dir="${repository}/src"/>
+        
+        <copy todir="${repository}/bin">
+            <fileset dir="${files-bin-plugins}/system">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-bin-plugins}/recommanded">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-bin-plugins}/media">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-bin-plugins}/drivers">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-bin-plugins}/lang">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-bin-plugins}/useful">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+
+        <copy todir="${repository}/src">
+            <fileset dir="${files-src-plugins}/system">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-plugins}/recommanded">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-plugins}/media">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-plugins}/drivers">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-plugins}/lang">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-plugins}/useful">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+
+        <java classname="org.vpc.prs.PRSTools" fork="true">
+            <classpath refid="dbclient-path"/>
+            <arg value="-build-repository"/>
+            <arg value="${app-version}"/>
+            <arg value="${www}/plugins-repository/${app-major-version}"/>
+        </java>
+    </target>
+
+<!--    <target name="dbclient-runtime" depends="compile-plugins,build-repository">
+        <copy todir="${runtime}/plugins">
+            <fileset dir="${repository}/bin">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${runtime}" file="${repository}/version.txt"/>
+    </target>-->
+
+    <target name="dbclient-install" >
+        <delete>
+            <fileset dir="${install}/izpack/default/files/base/lib/" includes="*.jar"/>
+            <fileset dir="${install}/izpack/default/files/base/plugins/" includes="*.jar"/>
+            <fileset dir="${install}/izpack/default/files/recommanded" includes="*.jar"/>
+            <fileset dir="${install}/izpack/default/files/lang" includes="*.jar"/>
+            <fileset dir="${install}/izpack/default/files/media" includes="*.jar"/>
+            <fileset dir="${install}/izpack/default/files/drivers" includes="*.jar"/>
+            <fileset dir="${install}/izpack/default/files/useful" includes="*.jar"/>
+        </delete>
+        <copy todir="${install}/izpack/default/files/base/lib/">
+            <fileset dir="${files-bin-core}">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+        <copy tofile="${install}/izpack/default/files/base/run.jar" >
+            <fileset dir="${files-bin-core}">
+                <include name="jlauncher-*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${install}/izpack/default/files/base/plugins/">
+            <fileset dir="${files-bin-plugins}/system">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${install}/izpack/default/files/recommanded">
+            <fileset dir="${files-bin-plugins}/recommanded">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${install}/izpack/default/files/media">
+            <fileset dir="${files-bin-plugins}/media">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${install}/izpack/default/files/lang">
+            <fileset dir="${files-bin-plugins}/lang">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${install}/izpack/default/files/drivers">
+            <fileset dir="${files-bin-plugins}/drivers">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${install}/izpack/default/files/useful">
+            <fileset dir="${files-bin-plugins}/useful">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${install}/izpack/default/files/src/core">
+            <fileset dir="${files-src-core}">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${install}/izpack/default/files/src/plugins">
+            <fileset dir="${files-src-plugins}/system">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-plugins}/recommanded">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-plugins}/media">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-plugins}/lang">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-plugins}/drivers">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${files-src-plugins}/useful">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+
+        
+        <zip keepcompression="true" zipfile="${release}/dbclient-min-${app-version}.zip">
+            <fileset dir="${install}/izpack/default/files/base"/>
+        </zip>
+        
+        <zip keepcompression="true" zipfile="${release}/dbclient-${app-version}.zip">
+            <fileset dir="${install}/izpack/default/files/base"/>
+<!--            <zipfileset dir="${install}/izpack/default/files/base"/>-->
+            <zipfileset dir="${install}/izpack/default/files/recommanded" includes="*.jar" prefix="plugins"/>
+            <zipfileset dir="${install}/izpack/default/files/drivers" includes="*.jar" prefix="plugins"/>
+            <zipfileset dir="${install}/izpack/default/files/media" includes="*.jar" prefix="plugins"/>
+            <zipfileset dir="${install}/izpack/default/files/lang" includes="*.jar" prefix="plugins"/>
+            <zipfileset dir="${install}/izpack/default/files/useful" includes="*.jar" prefix="plugins"/>
+        </zip>
+
+
+<!--        <delete dir="${runtime}/../temp"/>-->
+<!--        <copy todir="${runtime}/../temp/dbclient/plugins">
+            <fileset dir="../dbclient-core/target/lib/">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="../dbclient-plugins">
+                <include name="*/*/target/*.jar"/>
+            </fileset>
+            <fileset dir="${runtime}">default bundled plugins
+                <exclude name="**/CVS"/>
+            </fileset>
+        </copy>-->
+<!--        <copy todir="${runtime}/../temp/dbclient">
+            <fileset dir="${runtime}">default bundled plugins
+                <include name="plugins/readme.txt"/>
+                <include name="version.txt"/>
+                <exclude name="**/CVS"/>
+                <include name="run.jar"/>
+                <include name="run.jex"/>
+                <include name="run.sh"/>
+                <include name="run.bat"/>
+                <include name="dbclient128.png"/>
+                <include name="dbclient128.ico"/>
+                <include name="jdbcdrivers/readme.txt"/>
+                <include name="lib/dbclient.jar"/>
+                <include name="lib/jars"/>
+                <include name="lib/plaf/plaf-config.xml"/>
+                <include name="lib/licenses/dbclient-license.txt"/>
+                <include name="plugins/repositories"/>
+            </fileset>
+        </copy>
+        <zip keepcompression="true" basedir="${runtime}/../temp" zipfile="${release}/dbclient-${app-version}.zip"/>
+        <delete dir="${runtime}/../temp"/>-->
+
+
+        <java classname="org.vpc.prs.PRSTools" fork="true">
+            <classpath refid="dbclient-path"/>
+            <arg value="-build-file"/>
+            <arg value="../../install/izpack/default/templates/install.xml"/>
+            <arg value="../../install/izpack/default/templates/template.prp"/>
+            <arg value="../../install/izpack/default/install.xml"/>
+            <arg value="-build-file"/>
+            <arg value="../../install/izpack/default/templates/shortcutSpec.xml"/>
+            <arg value="../../install/izpack/default/templates/template.prp"/>
+            <arg value="../../install/izpack/default/shortcutSpec.xml"/>
+            <arg value="-build-file"/>
+            <arg value="../../install/izpack/default/templates/Unix_shortcutSpec.xml"/>
+            <arg value="../../install/izpack/default/templates/template.prp"/>
+            <arg value="../../install/izpack/default/Unix_shortcutSpec.xml"/>
+            <arg value="-build-file"/>
+            <arg value="../../install/izpack/default/templates/userInputSpec.xml"/>
+            <arg value="../../install/izpack/default/templates/template.prp"/>
+            <arg value="../../install/izpack/default/userInputSpec.xml"/>
+            <sysproperty key="app-version" value="${app-version}"/>
+            <sysproperty key="app-label" value="${app-label}"/>
+            <sysproperty key="app-name" value="${app-name}"/>
+        </java>
+
+        <zip basedir="${runtime}/src" zipfile="${release}/dbclient-src-${app-version}.zip"/>
+        <exec executable="${user.home}/Programs/IzPack/bin/compile" dir="../../install/izpack/default">
+            <arg value="install.xml"/>
+            <arg value="-o"/>
+            <arg value="${release}/dbclient-setup-${app-version}"/>
+        </exec>
+    </target>
+
+
+    <target name="dbclient-all" depends="dbclient-runtime,dbclient-repository,dbclient-install"/>
+<!--    <target name="inc-build-count" description="inc-build-count">
+        <java classname="vpccodetool" fork="true">
+            <classpath path="../lib/dev/vpc-devtools.jar"/>
+            <arg value="-debug=true"/>
+            <arg value="../@vpccodetool.list"/>
+        </java>
+    </target>-->
+
+</project>

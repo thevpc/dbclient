@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="library-derby-server">
+
+    <category>library</category>
+
+    <title>Derby Server Library</title>
+    <version>10.7.1.1.0</version>
+    <url>http://db.apache.org/derby</url>
+    <author>Apache Derby Team</author>
+    <contributors>Taha BEN SALAH (Packager)</contributors>
+    <description>
+
+        Derby Server Library
+
+    </description>
+</plugin>

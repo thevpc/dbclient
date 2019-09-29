@@ -1,0 +1,11 @@
+ctrl espace apres '.' ne marche pas
+
+oracle
+  ajouter le support des commentaire (comment on table machin is 'some thing')
+
+++ I18N
+ check Titles of session Chooser
+
+++ Better MySQL Support
+++ Proxy Support (see URL.openConnection(Proxy))
+++ bundle jtds free driver with default installation

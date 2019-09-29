@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="library-jexcelapi">
+
+    <category>library</category>
+
+    <title>jexcelapi</title>
+    <version>0.4</version>
+    <url>http://sourceforge.net/projects/jexcelapi</url>
+    <author>jexcelapi Team</author>
+    <contributors>Taha BEN SALAH (Packager)</contributors>
+    <description>
+
+        Microsoft Excel Library
+
+    </description>
+</plugin>

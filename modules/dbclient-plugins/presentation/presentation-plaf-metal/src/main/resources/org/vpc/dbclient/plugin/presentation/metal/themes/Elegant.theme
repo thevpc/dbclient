@@ -1,0 +1,20 @@
+name=Elegant
+menuSelectedBackground=@primary3
+controlTextFont=Verdana, PLAIN, 10
+menuTextFont=Verdana, PLAIN, 10
+focusColor=@secondary2
+highlightedTextColor=@white
+menuItemSelectedBackground=@textHighlightColor
+menuItemSelectedForeground=@white
+menuSelectedBackground=@secondary2
+textHighlightColor=@primary1
+# blue
+primary1  =0, 0, 128    
+primary2  =85, 115, 170 
+primary3  =174, 174, 248
+#primary3  =49, 172, 247
+# marron clair
+secondary1=162, 141, 104
+secondary2=213, 204, 187
+secondary3=234, 230, 221
+white=255, 255, 250

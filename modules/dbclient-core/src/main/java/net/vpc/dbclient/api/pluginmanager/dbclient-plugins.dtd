@@ -1,0 +1,12 @@
+<!DOCTYPE plugins [
+        <!ELEMENT plugins (plugin)+>
+        <!ELEMENT plugin (category|title|version|url|author|contributors|description)*>
+        <!ATTLIST plugin class CDATA>
+        <!ELEMENT contributors (#PCDATA)>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+        <!ELEMENT category (#PCDATA)>
+        <!ELEMENT url (#PCDATA)>
+        <!ELEMENT author (#PCDATA)>
+        <!ELEMENT version (#PCDATA)>
+]>

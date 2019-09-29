@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iconsets>
+    <iconset group="kde" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-kde16"/>
+    <iconset group="kde" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-kde22"/>
+    <iconset group="kde" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-kde32"/>
+    <iconset group="tango" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-tango16"/>
+    <iconset group="tango" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-tango22"/>
+    <iconset group="tango" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-tango24"/>
+    <iconset group="tango" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-tango32"/>
+    <iconset group="gnome" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-gnome16"/>
+    <iconset group="gnome" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-gnome22"/>
+    <iconset group="gnome" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-gnome24"/>
+    <iconset group="gnome" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-gnome32"/>
+    <iconset group="hicolor" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-hicolor16"/>
+    <iconset group="hicolor" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-hicolor22"/>
+    <iconset group="hicolor" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-hicolor24"/>
+    <iconset group="hicolor" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-hicolor32"/>
+    <iconset group="locolor" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-locolor16"/>
+    <iconset group="locolor" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-locolor32"/>
+
+    <iconset group="ikons" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-ikons16"/>
+    <iconset group="ikons" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-ikons22"/>
+    <iconset group="ikons" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-ikons24"/>
+    <iconset group="ikons" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-ikons32"/>
+
+    <iconset group="kids" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-kids16"/>
+    <iconset group="kids" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-kids22"/>
+    <iconset group="kids" path="org.vpc.dbclient.iconset.dbclient-iconset-linux-kids32"/>
+</iconsets>

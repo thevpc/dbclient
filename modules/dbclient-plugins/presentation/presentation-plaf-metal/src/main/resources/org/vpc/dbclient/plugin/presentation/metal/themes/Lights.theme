@@ -1,0 +1,19 @@
+name=Lights
+menuSelectedBackground=@primary3
+controlTextFont=Verdana, PLAIN, 10
+menuTextFont=Verdana, PLAIN, 10
+focusColor=@secondary2
+highlightedTextColor=@white
+menuItemSelectedBackground=@textHighlightColor
+menuItemSelectedForeground=@white
+menuSelectedBackground=@secondary2
+textHighlightColor=@primary1
+
+black=57,41,64
+white=253,255,255
+primary3=163,163,222
+secondary3=251,251,235
+primary2=73,54,129
+secondary2=240,237,187
+primary1=0,0,102
+secondary1=198,198,137

@@ -1,0 +1,3 @@
+please put your jdbc driver jar files here...
+you can organize them into separate folders if you prefer.
+

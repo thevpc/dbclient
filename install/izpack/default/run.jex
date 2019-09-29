@@ -1,0 +1,12 @@
+jlauncher.classpath lib;*.jar!
+jvm.arg -Xms128m
+jvm.arg -Xmx512m
+jlauncher.main.class org.vpc.dbclient.DBClientMain
+app.arg -%{DBCConfigType}
+
+#uncomment the following to enable full debug logging
+#app.arg -loglevel=ALL
+
+#uncomment the following to disable spash screen
+#app.arg -nosplash
+

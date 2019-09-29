@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="tutorial-hello">
+
+    <category>tutorial</category>
+    <title>I Really Hello From DBClient</title>
+    <version>1.0</version>
+    <url>http://dbclient.java.net</url>
+    <author>Toto</author>
+    <contributors>Yasmine</contributors>
+    <description>
+        I'm a dummy plugin,.....
+    </description>
+</plugin>

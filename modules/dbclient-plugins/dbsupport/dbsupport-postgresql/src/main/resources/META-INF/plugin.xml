@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="dbsupport-postgresql" class="org.vpc.dbclient.plugin.dbsupport.postgresql.PostgreSqlPlugin">
+
+    <category>dbsupport</category>
+    <title>PostgreSQL Support</title>
+    <version>0.5.6</version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <dependencies>
+        <dependency>dbclient-system[0.5.0,*[</dependency>
+    </dependencies>
+    <description>
+        Plugin that adds custom handling of the database particularities.
+    </description>
+    <applicationVersion>[0.5.0,*[</applicationVersion>
+</plugin>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="dbdriver-mckoi">
+
+    <category>dbdriver</category>
+
+    <title>McKoi Jdbc Drivers</title>
+    <version>1.0.3</version>
+    <url>http://mckoi.com</url>
+    <author>McKoi Team</author>
+    <contributors>Taha BEN SALAH (Packager)</contributors>
+    <description>
+         McKoi Driver Library
+
+    </description>
+</plugin>

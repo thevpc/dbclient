@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+
+<!-- 
+    A sample installation file.
+    Use it as a base for your own installers :-)
+    
+    To compile it :
+    - go in the bin directory where you installed IzPack
+    - call "compile ../sample/install.xml -b ../sample"
+-->
+
+<installation version="1.0">
+
+    <!-- 
+        The info section.
+        The meaning of the tags should be natural ...
+    -->
+    <info>
+        <appname>dbclient</appname>
+        <appversion>0.5.0</appversion>
+        <authors>
+            <author name="Taha BEN SALAH" email="taha.bensalah@gmail.com"/>
+        </authors>
+        <url>http://dbclient.java.net</url>
+    </info>
+
+    <!--
+        The gui preferences indication.
+        Sets the installer window to 640x480. It will not be able to change the size.
+    -->
+    <guiprefs height="400" resizable="yes" width="600">
+        <!-- GUI addaption for more informations see "Modifying the GUI" in the documentation -->
+        <modifier key="layoutAnchor" value="CENTER"/>
+        <modifier key="headingPanelCounter" value="progressbar"/>
+        <modifier key="headingPanelCounterPos" value="inNavigationPanel"/>
+        <modifier key="allYGap" value="4"/>
+        <modifier key="paragraphYGap" value="10"/>
+        <modifier key="filler1YGap" value="5"/>
+        <modifier key="filler3XGap" value="10"/>
+    </guiprefs>
+
+    <variables>
+        <variable name="DesktopShortcutCheckboxEnabled" value="true"/>
+    </variables>
+
+    <!-- 
+        The locale section.
+        Asks here to include the English and French langpacks.
+    -->
+    <locale>
+        <langpack iso3="eng"/>
+        <langpack iso3="fra"/>
+        <langpack iso3="deu"/>
+        <langpack iso3="ita"/>
+        <langpack iso3="nor"/>
+    </locale>
+
+    <!-- 
+        The resources section.
+        The ids must be these ones if you want to use the LicencePanel and/or the InfoPanel.
+    -->
+    <resources>
+        <!--<res id="InfoPanel.info" src="../../../runtime/readme.txt"/>-->
+        <!--<res id="HTMLLicencePanel.info" src="install-readme.html"/>-->
+        <res id="LicencePanel.licence" src="../../../runtime/licenses/dbclient-license.txt"/>
+        <res id="HTMLInfoPanel.info" src="install-readme.html" />
+        <res src="shortcutSpec.xml" id="shortcutSpec.xml"/>
+        <res src="Unix_shortcutSpec.xml" id="Unix_shortcutSpec.xml"/>
+    </resources>
+
+    <!-- 
+        The panels section.
+        We indicate here which panels we want to use. The order will be respected.
+    -->
+    <!--<panels>-->
+        <!--<panel classname="HelloPanel"/>-->
+        <!--<panel classname="InfoPanel"/>-->
+        <!--<panel classname="LicencePanel"/>-->
+        <!--<panel classname="TargetPanel"/>-->
+        <!--<panel classname="PacksPanel"/>-->
+        <!--<panel classname="InstallPanel"/>-->
+        <!--<panel classname="FinishPanel"/>-->
+    <!--</panels>-->
+    <panels>
+        <panel classname="CheckedHelloPanel" id="hellopanel"/>
+        <panel classname="HTMLInfoPanel" id="infopanel"/>
+        <!--<panel classname="HTMLLicencePanel" id="licensepanel"/>-->
+        <!--<panel classname="InfoPanel"/>-->
+        <panel classname="LicencePanel"/>
+        <panel classname="TargetPanel" id="targetpanel"/>
+        <panel classname="PacksPanel" id="packspanel"/>
+        <panel classname="SummaryPanel" id="summarypanel"/>
+        <panel classname="InstallPanel" id="installpanel"/>
+        <panel classname="ShortcutPanel" id="shortcutpanel"/>
+        <panel classname="FinishPanel" id="finishpanel"/>
+    </panels>
+
+    <!-- 
+        The packs section.
+        We specify here our packs.
+    -->
+    <packs>
+        <pack name="Core" required="yes">
+            <description>Base files</description>
+            <file src="../../../runtime/config/dbclient-splash.jpg" targetdir="$INSTALL_PATH/config"/>
+            <file src="../../../runtime/config/repositories" targetdir="$INSTALL_PATH/config"/>
+            <file src="../../../runtime/readme.txt" targetdir="$INSTALL_PATH"/>
+            <file src="../../../runtime/version.txt" targetdir="$INSTALL_PATH"/>
+            <file src="../../../runtime/run.jar" targetdir="$INSTALL_PATH"/>
+            <file src="../../../runtime/run.jex" targetdir="$INSTALL_PATH"/>
+            <file src="../../../runtime/run.sh" targetdir="$INSTALL_PATH"/>
+            <file src="../../../runtime/run.bat" targetdir="$INSTALL_PATH"/>
+            <file src="../../../runtime/dbclient128.png" targetdir="$INSTALL_PATH"/>
+            <file src="../../../runtime/dbclient128.ico" targetdir="$INSTALL_PATH"/>
+            <file src="../../../runtime/jdbcdrivers/readme.txt" targetdir="$INSTALL_PATH/jdbcdrivers"/>
+            <file src="../../../runtime/lib/dbclient.jar" targetdir="$INSTALL_PATH/lib"/>
+            <file src="../../../runtime/lib/jars" targetdir="$INSTALL_PATH/lib"/>
+            <file src="../../../runtime/lib/vpc-prs.jar" targetdir="$INSTALL_PATH/lib"/>
+            <file src="../../../runtime/lib/vpc-swingext.jar" targetdir="$INSTALL_PATH/lib"/>
+            <file src="../../../runtime/lib/vpc-commons.jar" targetdir="$INSTALL_PATH/lib"/>
+            <file src="../../../runtime/lib/swing-worker.jar" targetdir="$INSTALL_PATH/lib"/>
+            <file src="../../../runtime/lib/plaf/plaf-config.xml" targetdir="$INSTALL_PATH/lib/plaf"/>
+            <file src="../../../runtime/licenses/dbclient-license.txt" targetdir="$INSTALL_PATH/licenses"/>
+            <file src="../../../runtime/plugins/dbclient-system.jar" targetdir="$INSTALL_PATH/plugins"/>
+        </pack>
+
+        <pack name="Recommended Plugins" required="no">
+            <description>Main look and dbsupport for commons RDBMS (artset-blues,swinglabs,infonode,cfgsupport-derby,dbsupport)</description>
+            <file src="../../../runtime/plugins/artset-blues.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/presentation-swinglabs.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/presentation-infonode.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/cfgsupport-derby.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/dbsupport-access.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/dbsupport-derby.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/dbsupport-hsql.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/dbsupport-mckoi.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/dbsupport-mssqlserver.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/dbsupport-mysql.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/dbsupport-oracle.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/dbsupport-postgresql.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/tool-box.jar" targetdir="$INSTALL_PATH/plugins"/>
+        </pack>
+        <pack name="Extra Media Materials" required="no">
+            <description>Iconsets (java, linux, tango), Plafs (metal themes), Artsets, ...</description>
+            <file src="../../../runtime/plugins/presentation-plaf-metal.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/iconset-java.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/iconset-linux.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/iconset-noicon.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/iconset-tango.jar" targetdir="$INSTALL_PATH/plugins"/>
+        </pack>
+        <pack name="Extra Language Packs" required="no">
+            <description>Language packs including fr,nl,de and ar</description>
+            <file src="../../../runtime/plugins/lang-ar.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/lang-fr.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/lang-de.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/lang-nl.jar" targetdir="$INSTALL_PATH/plugins"/>
+        </pack>
+        <pack name="Open Source/Free Drivers" required="no">
+            <description>Free Drivers for derby, mckoi, hsql,mysql and postgresql</description>
+            <file src="../../../runtime/plugins/dbdriver-mckoi.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/dbdriver-derby.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/dbdriver-hsql.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/dbdriver-mysql.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/dbdriver-postgresql.jar" targetdir="$INSTALL_PATH/plugins"/>
+        </pack>
+        <pack name="Useful Plugins" required="no">
+            <description>A Set of very useful plugins (record-editor,search-engine,jstsql, export various libraries)</description>
+            <file src="../../../runtime/plugins/tool-server-manager.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/library-derby-server.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <!--<file src="../../../runtime/plugins/library-hsql-server.jar" targetdir="$INSTALL_PATH/plugins"/>-->
+            <file src="../../../runtime/plugins/library-mckoi-server.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/library-javac.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/library-jexcelapi.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/tool-import-export.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/tool-import-export-excel.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/tool-jstsql.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/tool-neormf.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/tool-record-editor.jar" targetdir="$INSTALL_PATH/plugins"/>
+            <file src="../../../runtime/plugins/tool-search-engine.jar" targetdir="$INSTALL_PATH/plugins"/>
+        </pack>
+    </packs>
+    <native type="izpack" name="ShellLink.dll"/>
+</installation>

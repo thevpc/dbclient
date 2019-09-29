@@ -1,0 +1,2 @@
+currentVersion=/**@vpc-tool:write(version)**/0.4.2/**@vpc-tool:end**/
+ 

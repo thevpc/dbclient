@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="dbsupport-derby" class="org.vpc.dbclient.plugin.dbsupport.derby.DerbyPlugin">
+
+    <category>dbsupport</category>
+
+    <title>Derby Support</title>
+    <version>0.4.17</version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <dependencies>
+        <dependency>dbclient-system[0.5.0,*[</dependency>
+        <dependency>tool-server-manager[0.5.0,*[</dependency>
+    </dependencies>
+    <description>
+        Plugin that adds custom handling of the database particularities :
+        Auto Identity support, View DDL
+
+    </description>
+    <applicationVersion>[0.5.0,*[</applicationVersion>
+</plugin>

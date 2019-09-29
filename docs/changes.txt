@@ -1,0 +1,36 @@
+version 0.5.3
+  Tutorial
+    Hello plugin updated
+  Plugin dbsupport-hsql
+        HSqlNetworkDriverUrlParser : added missing ':' in url formatter
+        HSqlServerManager : fixed filename argument of the server
+  API Changes:
+        DBClientInfo.getProductLeadingVersion renamed to getProductMajorVersion
+        DBCApplication.ApplicationState.INITIALZING renamed to INITIALIZING
+
+version 0.4.0 final
+api :
+  added parameter Properties in DBCConnection methods (to enable native sql generation)
+  added SQLFileChooser
+  added SQLCommandFilter
+swinglabs :
+  upgrade to swingx version 0.9.5
+  swinglabs.jar replaced with swingx.jar (smaller, only needed)
+infonode :
+  upgrade to infonode version 1.5.0
+system :
+  corrected bug (id=8,  Unable to connect to Sybase)
+  corrected bug in saving date formats
+  corrected bug in ui (some icons are not displayed in the second session)
+  corrected Cancel/Discard support in ErrorDialog
+  corrected icon size for SQLCommand
+  better handling for dropping dependant tables
+  better Error Handling in Scripts
+  added drag and drop support (Explorer to SQL command)
+jstsql
+  removed dependency of 'system'
+install :
+  added install support (izpack)
+i18n :
+  updated fr
+

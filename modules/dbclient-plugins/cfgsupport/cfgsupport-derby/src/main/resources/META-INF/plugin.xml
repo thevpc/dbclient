@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="cfgsupport-derby" class="org.vpc.dbclient.plugin.cfgsupport.cfgderby.CfgDerbyPlugin">
+    <category>cfgsupport</category>
+
+    <title>Derby Config Support</title>
+    <version>0.1.13</version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <dependencies>
+        <dependency>dbclient-system[0.5.0,*]</dependency>
+    </dependencies>
+    <description>
+
+        Store DBClient config into Derby Database
+
+    </description>
+    <applicationVersion>[0.5.0,*[</applicationVersion>
+</plugin>

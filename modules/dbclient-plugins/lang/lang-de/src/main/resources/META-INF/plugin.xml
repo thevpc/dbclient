@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="lang-de">
+
+    <category>messageset</category>
+
+    <title>German Localization</title>
+    <version>0.12</version>
+    <url>http://dbclient.java.net</url>
+    <author>Piet Blok</author>
+    <contributors/>
+    <description>
+
+        Localization Plugin
+
+    </description>
+</plugin>

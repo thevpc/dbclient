@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<project name="dbclient-plugins-build" default="dbclient-install" basedir="../plugins">
+    <description>.</description>
+    <property name="app-major-version" value="0.5"/>
+    <property name="app-minor-version" value="6"/>
+    <property name="app-version" value="${app-major-version}.${app-minor-version}"/>
+    <property name="www" location="../www"/>
+    <property name="repository" location="${www}/plugins-repository/${app-major-version}"/>
+    <property name="app-name" value="dbclient"/>
+    <property name="app-label" value="DBClient"/>
+    <property name="runtime" location="../runtime"/>
+    <property name="release" location="${www}/release/${app-major-version}"/>
+    <target name="dbclient-compile" depends="compile-core,compile-plugins,build-repository">
+    </target>
+
+    <target name="compile-core">
+        <!--   Process Main Application Jar-->
+        <jar destfile="${runtime}/lib/dbclient.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.vpc.dbclient.DBClientMain"/>
+            </manifest>
+            <fileset dir="../build/classes" excludes=".*"/>
+        </jar>
+        <jar destfile="${runtime}/src/${app-name}-src.zip" basedir="../src"/>
+
+        <!--   Process Update Plugin-->
+        <copy todir="dbclient-update/src/META-INF/jex-resources/add/lib">
+            <fileset dir="${runtime}/lib">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+        <javac destdir="system/dbclient-update/build/classes" srcdir="system/dbclient-update/src" includeantruntime="false">
+            <classpath path="${runtime}/lib/dbclient.jar"/>
+            <classpath path="${runtime}/lib/vpc-swingext.jar"/>
+            <classpath path="${runtime}/lib/vpc-commons.jar"/>
+            <classpath path="${runtime}/lib/vpc-prs.jar"/>
+        </javac>
+        <jar destfile="${repository}/bin/dbclient-update.jar" basedir="system/dbclient-update/build/classes"/>
+
+    </target>
+
+    <target name="compile-plugins">
+        <mkdir dir="${repository}/bin"/>
+        <mkdir dir="${repository}/src"/>
+        <!--system-->
+        <jar keepcompression="true" destfile="${repository}/bin/dbclient-system.jar"
+             basedir="system/dbclient-system/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/dbclient-system-src.zip" basedir="system/dbclient-system/src"
+             excludes="**/.directory"/>
+        <jar keepcompression="true" destfile="${repository}/bin/cfgsupport-derby.jar"
+             basedir="cfgsupport/cfgsupport-derby/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/cfgsupport-derby-src.zip" basedir="cfgsupport/cfgsupport-derby/src"
+             excludes="**/.directory"/>
+        <zip keepcompression="true" destfile="${repository}/src/dbsupport-access-src.zip" basedir="dbsupport/dbsupport-access/src"
+             excludes="**/.directory"/>
+        <jar keepcompression="true" destfile="${repository}/bin/dbsupport-access.jar"
+             basedir="dbsupport/dbsupport-access/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/dbsupport-derby-src.zip" basedir="dbsupport/dbsupport-derby/src"
+             excludes="**/.directory"/>
+        <jar keepcompression="true" destfile="${repository}/bin/dbsupport-derby.jar"
+             basedir="dbsupport/dbsupport-derby/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/dbdriver-derby.jar"
+             basedir="dbdriver/dbdriver-derby/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/src/dbdriver-derby-src.zip" basedir="dbdriver/dbdriver-derby/src"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/library-derby-server.jar"
+             basedir="library/library-derby-server/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/src/library-derby-server-src.zip"
+             basedir="library/library-derby-server/src" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/dbsupport-hsql.jar"
+             basedir="dbsupport/dbsupport-hsql/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/dbsupport-hsql-src.zip" basedir="dbsupport/dbsupport-hsql/src"
+             excludes="**/.directory"/>
+        <jar keepcompression="true" destfile="${repository}/bin/dbdriver-hsql.jar" basedir="dbdriver/dbdriver-hsql/build/classes"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/src/dbdriver-hsql-src.zip" basedir="dbdriver/dbdriver-hsql/src"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <!--<jar keepcompression="true" destfile="${repository}/bin/library-hsql-server.jar" basedir="library/library-hsql-server/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>-->
+        <!--<jar keepcompression="true" destfile="${repository}/src/library-hsql-server.zip" basedir="library/library-hsql-server/src" excludes="**/*.directory,**/vpp.plugins.xml"/>-->
+        <jar keepcompression="true" destfile="${repository}/bin/dbsupport-mckoi.jar"
+             basedir="dbsupport/dbsupport-mckoi/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/dbsupport-mckoi-src.zip" basedir="dbsupport/dbsupport-mckoi/src"
+             excludes="**/.directory"/>
+        <jar keepcompression="true" destfile="${repository}/bin/dbdriver-mckoi.jar"
+             basedir="dbdriver/dbdriver-mckoi/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/src/dbdriver-mckoi-src.zip" basedir="dbdriver/dbdriver-mckoi/src"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/library-mckoi-server.jar"
+             basedir="library/library-mckoi-server/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/src/library-mckoi-server-src.zip"
+             basedir="library/library-mckoi-server/src" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/dbsupport-mssqlserver.jar"
+             basedir="dbsupport/dbsupport-mssqlserver/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/dbsupport-mssqlserver-src.zip"
+             basedir="dbsupport/dbsupport-mssqlserver/src" excludes="**/.directory"/>
+        <jar keepcompression="true" destfile="${repository}/bin/dbsupport-oracle.jar"
+             basedir="dbsupport/dbsupport-oracle/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/dbsupport-oracle-src.zip" basedir="dbsupport/dbsupport-oracle/src"
+             excludes="**/.directory"/>
+        <jar keepcompression="true" destfile="${repository}/bin/dbsupport-mysql.jar"
+             basedir="dbsupport/dbsupport-mysql/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/dbsupport-mysql-src.zip" basedir="dbsupport/dbsupport-mysql/src"
+             excludes="**/.directory"/>
+        <jar keepcompression="true" destfile="${repository}/bin/dbdriver-mysql.jar"
+             basedir="dbdriver/dbdriver-mysql/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/src/dbdriver-mysql.zip" basedir="dbdriver/dbdriver-mysql/src"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/dbsupport-postgresql.jar"
+             basedir="dbsupport/dbsupport-postgresql/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/dbsupport-postgresql-src.zip"
+             basedir="dbsupport/dbsupport-postgresql/src" excludes="**/.directory"/>
+        <jar keepcompression="true" destfile="${repository}/bin/dbdriver-postgresql.jar"
+             basedir="dbdriver/dbdriver-postgresql/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/src/dbdriver-postgresql-src.zip"
+             basedir="dbdriver/dbdriver-postgresql/src" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/presentation-infonode.jar"
+             basedir="presentation/presentation-infonode/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/presentation-infonode-src.zip" basedir="presentation/presentation-infonode/src"
+             excludes="**/.directory"/>
+        <jar keepcompression="true" destfile="${repository}/bin/presentation-plaf-metal.jar"
+             basedir="presentation/presentation-plaf-metal/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/presentation-plaf-metal-src.zip"
+             basedir="presentation/presentation-plaf-metal/src" excludes="**/.directory"/>
+        <jar keepcompression="true" destfile="${repository}/bin/presentation-swinglabs.jar"
+             basedir="presentation/presentation-swinglabs/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/presentation-swinglabs-src.zip" basedir="presentation/presentation-swinglabs/src"
+             excludes="**/.directory"/>
+        <jar keepcompression="true" destfile="${repository}/bin/tool-jstsql.jar" basedir="tool/tool-jstsql/build/classes"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/tool-jstsql-src.zip" basedir="tool/tool-jstsql/src"
+             excludes="**/.directory"/>
+        <jar keepcompression="true" destfile="${repository}/bin/tool-neormf.jar" basedir="tool/tool-neormf/build/classes"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/tool-neormf-src.zip" basedir="tool/tool-neormf/src"
+             excludes="**/.directory"/>
+        <jar keepcompression="true" destfile="${repository}/bin/tool-record-editor.jar"
+             basedir="tool/tool-record-editor/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/tool-record-editor-src.zip" basedir="tool/tool-record-editor/src"
+             excludes="**/.directory"/>
+
+        <jar keepcompression="true" destfile="${repository}/bin/tool-search-engine.jar"
+             basedir="tool/tool-search-engine/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/tool-search-engine-src.zip" basedir="tool/tool-search-engine/src"
+             excludes="**/.directory"/>
+
+        <jar keepcompression="true" destfile="${repository}/bin/tool-box.jar" basedir="tool/tool-box/build/classes"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/tool-box-src.zip" basedir="tool/tool-box/src"
+             excludes="**/.directory"/>
+
+        <jar keepcompression="true" destfile="${repository}/bin/tool-server-manager.jar"
+             basedir="tool/tool-server-manager/build/classes" excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <zip keepcompression="true" destfile="${repository}/src/tool-server-manager-src.zip"
+             basedir="tool/tool-server-manager/src" excludes="**/.directory"/>
+
+        <zip keepcompression="true" destfile="${repository}/bin/tool-import-export.jar"
+             basedir="tool/tool-import-export/build/classes" excludes="**/.directory"/>
+        <zip keepcompression="true" destfile="${repository}/src/tool-import-export-src.zip"
+             basedir="tool/tool-import-export/src" excludes="**/.directory"/>
+
+        <zip keepcompression="true" destfile="${repository}/bin/tool-import-export-excel.jar"
+             basedir="tool/tool-import-export-excel/build/classes" excludes="**/.directory"/>
+        <zip keepcompression="true" destfile="${repository}/src/tool-import-export-excel-src.zip"
+             basedir="tool/tool-import-export-excel/src" excludes="**/.directory"/>
+
+        <jar keepcompression="true" destfile="${repository}/bin/library-javac.jar" basedir="library/library-javac/src"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/library-jexcelapi.jar" basedir="library/library-jexcelapi/src"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+
+
+        <jar keepcompression="true" destfile="${repository}/bin/artset-blues.jar" basedir="artset/artset-blues/src"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/artset-grass.jar" basedir="artset/artset-grass/src"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/lang-ar.jar" basedir="lang/lang-ar/src"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/lang-fr.jar" basedir="lang/lang-fr/src"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/lang-de.jar" basedir="lang/lang-de/src"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/lang-nl.jar" basedir="lang/lang-nl/src"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/iconset-java.jar" basedir="iconset/iconset-java/src"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/iconset-linux.jar" basedir="iconset/iconset-linux/src"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/iconset-tango.jar" basedir="iconset/iconset-tango/src"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <jar keepcompression="true" destfile="${repository}/bin/iconset-noicon.jar" basedir="iconset/iconset-noicon/src"
+             excludes="**/*.directory,**/vpp.plugins.xml"/>
+        <copy todir="${runtime}/src/plugins">
+            <fileset dir="${repository}/src">
+                <include name="**/*.zip"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="build-repository">
+        <java classname="org.vpc.prs.PRSTools" fork="true">
+            <classpath path="${runtime}/lib/dbclient.jar"/>
+            <classpath path="${runtime}/lib/vpc-swingext.jar"/>
+            <classpath path="${runtime}/lib/vpc-commons.jar"/>
+            <classpath path="${runtime}/lib/vpc-prs.jar"/>
+            <arg value="-build-repository"/>
+            <arg value="${app-version}"/>
+            <arg value="${www}/plugins-repository/${app-major-version}"/>
+        </java>
+    </target>
+
+    <target name="dbclient-install" depends="dbclient-runtime">
+
+        <delete dir="${runtime}/../temp"/>
+        <copy todir="${runtime}/../temp/dbclient">
+            <fileset dir="${runtime}"><!--default bundled plugins-->
+                <include name="plugins/dbclient-system.jar"/>
+                <include name="version.txt"/>
+                <include name="plugins/readme.txt"/>
+                <include name="run.jar"/>
+                <include name="run.jex"/>
+                <include name="run.sh"/>
+                <include name="run.bat"/>
+                <include name="dbclient128.png"/>
+                <include name="dbclient128.ico"/>
+                <include name="jdbcdrivers/readme.txt"/>
+                <include name="lib/dbclient.jar"/>
+                <include name="lib/derby.jar"/>
+                <include name="lib/jars"/>
+                <include name="lib/vpc-prs.jar"/>
+                <include name="lib/vpc-swingext.jar"/>
+                <include name="lib/swing-worker.jar"/>
+                <include name="lib/vpc-commons.jar"/>
+                <include name="lib/plaf/plaf-config.xml"/>
+                <include name="lib/licenses/dbclient-license.txt"/>
+                <include name="plugins/repositories"/>
+            </fileset>
+        </copy>
+        <zip keepcompression="true" basedir="${runtime}/../temp"
+             zipfile="${release}/dbclient-min-${app-version}.zip"/>
+        <delete dir="${runtime}/../temp"/>
+
+
+        <delete dir="${runtime}/../temp"/>
+        <copy todir="${runtime}/../temp/dbclient/plugins">
+            <fileset dir="${repository}/bin">
+                <exclude name="**/CVS"/>
+                <include name="dbclient-system.jar"/>
+                <include name="iconset-java.jar"/>
+                <include name="iconset-linux.jar"/>
+                <include name="iconset-noicon.jar"/>
+                <include name="iconset-tango.jar"/>
+                <include name="artset-blues.jar"/>
+                <include name="lang-ar.jar"/>
+                <include name="lang-fr.jar"/>
+                <include name="lang-de.jar"/>
+                <include name="lang-nl.jar"/>
+                <include name="dbdriver-mckoi.jar"/>
+                <include name="dbdriver-derby.jar"/>
+                <include name="dbdriver-mysql.jar"/>
+                <include name="dbdriver-postgresql.jar"/>
+                <include name="dbdriver-hsql.jar"/>
+                <include name="dbsupport-access.jar"/>
+                <include name="dbsupport-derby.jar"/>
+                <include name="dbsupport-mysql.jar"/>
+                <include name="dbsupport-posgresql.jar"/>
+                <include name="dbsupport-hsql.jar"/>
+                <include name="dbsupport-oracle.jar"/>
+                <include name="dbsupport-mssqlserver.jar"/>
+                <include name="dbsupport-postgresql.jar"/>
+                <include name="dbsupport-mckoi.jar"/>
+                <include name="cfgsupport-derby.jar"/>
+                <include name="presentation-plaf-metal.jar"/>
+                <include name="presentation-swinglabs.jar"/>
+                <include name="presentation-infonode.jar"/>
+                <include name="tool-record-editor.jar"/>
+                <include name="tool-search-engine.jar"/>
+                <include name="tool-neormf.jar"/>
+                <include name="tool-jstsql.jar"/>
+                <include name="tool-import-export.jar"/>
+                <include name="tool-import-export-excel.jar"/>
+                <include name="library-jexcelapi.jar"/>
+                <include name="library-javac.jar"/>
+                <include name="library-derby-server.jar"/>
+                <include name="library-mckoi-server.jar"/>
+                <include name="tool-server-manager.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${runtime}/../temp/dbclient">
+            <fileset dir="${runtime}"><!--default bundled plugins-->
+                <include name="plugins/readme.txt"/>
+                <include name="version.txt"/>
+                <exclude name="**/CVS"/>
+                <include name="run.jar"/>
+                <include name="run.jex"/>
+                <include name="run.sh"/>
+                <include name="run.bat"/>
+                <include name="dbclient128.png"/>
+                <include name="dbclient128.ico"/>
+                <include name="jdbcdrivers/readme.txt"/>
+                <include name="lib/dbclient.jar"/>
+                <include name="lib/jars"/>
+                <include name="lib/vpc-prs.jar"/>
+                <include name="lib/vpc-swingext.jar"/>
+                <include name="lib/vpc-commons.jar"/>
+                <include name="lib/swing-worker.jar"/>
+                <include name="lib/plaf/plaf-config.xml"/>
+                <include name="lib/licenses/dbclient-license.txt"/>
+                <include name="plugins/repositories"/>
+            </fileset>
+        </copy>
+        <zip keepcompression="true" basedir="${runtime}/../temp" zipfile="${release}/dbclient-${app-version}.zip"/>
+        <delete dir="${runtime}/../temp"/>
+
+
+        <java classname="org.vpc.prs.PRSTools" fork="true">
+            <classpath path="${runtime}/lib/dbclient.jar"/>
+            <classpath path="${runtime}/lib/vpc-swingext.jar"/>
+            <classpath path="${runtime}/lib/vpc-commons.jar"/>
+            <classpath path="${runtime}/lib/vpc-prs.jar"/>
+            <arg value="-build-file"/>
+            <arg value="../install/izpack/default/templates/install.xml"/>
+            <arg value="../install/izpack/default/templates/template.prp"/>
+            <arg value="../install/izpack/default/install.xml"/>
+            <arg value="-build-file"/>
+            <arg value="../install/izpack/default/templates/shortcutSpec.xml"/>
+            <arg value="../install/izpack/default/templates/template.prp"/>
+            <arg value="../install/izpack/default/shortcutSpec.xml"/>
+            <arg value="-build-file"/>
+            <arg value="../install/izpack/default/templates/Unix_shortcutSpec.xml"/>
+            <arg value="../install/izpack/default/templates/template.prp"/>
+            <arg value="../install/izpack/default/Unix_shortcutSpec.xml"/>
+            <arg value="-build-file"/>
+            <arg value="../install/izpack/default/templates/userInputSpec.xml"/>
+            <arg value="../install/izpack/default/templates/template.prp"/>
+            <arg value="../install/izpack/default/userInputSpec.xml"/>
+            <sysproperty key="app-version" value="${app-version}"/>
+            <sysproperty key="app-label" value="${app-label}"/>
+            <sysproperty key="app-name" value="${app-name}"/>
+        </java>
+
+        <zip basedir="${runtime}/src" zipfile="${release}/dbclient-src-${app-version}.zip"/>
+        <exec executable="${user.home}/bin/Programs/IzPack/bin/compile" dir="../install/izpack/default">
+            <arg value="install.xml"/>
+            <arg value="-o"/>
+            <arg value="${release}/dbclient-setup-${app-version}"/>
+        </exec>
+    </target>
+
+    <target name="dbclient-runtime" depends="dbclient-compile">
+        <copy todir="${runtime}/plugins">
+            <fileset dir="${repository}/bin">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${runtime}" file="${repository}/version.txt"/>
+    </target>
+
+    <target name="inc-build-count" description="inc-build-count">
+        <java classname="vpccodetool" fork="true">
+            <classpath path="../lib/dev/vpc-devtools.jar"/>
+            <arg value="-debug=true"/>
+            <arg value="../@vpccodetool.list"/>
+        </java>
+    </target>
+
+</project>

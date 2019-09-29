@@ -1,0 +1,50 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.vpc.app.dbclient.plugins.dbsupport</groupId>
+    <artifactId>net.vpc.app.dbclient.plugins.dbsupport-derby</artifactId>
+    <version>0.4.17</version>
+    <packaging>jar</packaging>
+    
+    <parent>
+      <groupId>net.vpc.app.dbclient</groupId>
+      <artifactId>net.vpc.app.dbclient.dbclient-plugin-root</artifactId>
+      <version>1.0</version>
+      <relativePath>../../../dbclient-plugin-root</relativePath>
+    </parent>
+
+    <properties>
+
+    </properties>
+
+    <dependencies>
+		<!-- ##############################
+			PRIVATE COMPILE DEPENDENCIES 
+		############################## -->
+        <dependency>
+            <groupId>net.vpc.app.dbclient.plugins.system</groupId>
+            <artifactId>net.vpc.app.dbclient.plugins.dbclient-system</artifactId>
+            <version>[0.5.6,]</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.vpc.app.dbclient.plugins.tool</groupId>
+            <artifactId>net.vpc.app.dbclient.plugins.tool-server-manager</artifactId>
+            <version>[0.5.6,]</version>
+            <scope>compile</scope>
+        </dependency>
+
+		<!-- ##############################
+			THIRD PARTY COMPILE DEPENDENCIES 
+		############################## -->
+      
+      
+		<!-- ##############################
+			TEST DEPENDENCIES
+		############################## -->
+        
+    </dependencies>
+
+</project>

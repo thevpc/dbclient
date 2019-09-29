@@ -1,0 +1,21 @@
+name=Brise
+
+white=253,255,255
+secondary3=241,239,235
+secondary2=212,208,201
+secondary1=162,156,146
+primary3=174,174,248
+primary1=102,102,153
+primary2=153,153,204
+black=0,0,0
+
+textHighlightColor=@primary1
+menuSelectedBackground=@primary3
+controlTextFont=Verdana, PLAIN, 10
+menuTextFont=Verdana, PLAIN, 10
+
+focusColor=@secondary2
+highlightedTextColor=@white
+menuItemSelectedBackground=@textHighlightColor
+menuItemSelectedForeground=@white
+menuSelectedBackground=@secondary2

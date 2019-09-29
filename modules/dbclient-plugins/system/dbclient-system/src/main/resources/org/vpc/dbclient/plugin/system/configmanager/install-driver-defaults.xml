@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object type="Vector">
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="JDBC/ODBC"/>
+        <attribute attribute-name="index" type="int" value="1"/>
+        <attribute attribute-name="driverClassName" type="String" value="sun.jdbc.odbc.JdbcOdbcDriver"/>
+        <attribute attribute-name="defaultPassword" type="String" value=""/>
+        <attribute attribute-name="defaultLogin" type="String" value=""/>
+        <attribute attribute-name="defaultURL" type="String" value="jdbc:odbc:{database}"/>
+        <attribute attribute-name="description" cdata="true" type="String">
+            <![CDATA[jdbc:odbc:<i>databaseName</i><br><u>exemple :</u><br>jdbc:odbc:test<br>]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="Oracle Thin"/>
+        <attribute attribute-name="index" type="int" value="2"/>
+        <attribute attribute-name="driverClassName" type="String" value="oracle.jdbc.driver.OracleDriver"/>
+        <attribute attribute-name="defaultURL" type="String" value="jdbc:oracle:thin:@{server}:1521:{database}"/>
+        <attribute attribute-name="defaultLogin" type="String" value="system"/>
+        <attribute attribute-name="defaultPassword" type="String" value="manager"/>
+        <attribute attribute-name="description" cdata="true" type="String">
+            <![CDATA[jdbc:oracle:thin:@<i>serverAddress</i>:<i>serverPort</i>:<i>databaseName</i><br><u>exemple :</u><br>jdbc:oracle:thin:@localhost:1521:orclParams :<br>user = system<br>password = manager ; serverPort = 1521<br>]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="Sybase"/>
+        <attribute attribute-name="index" type="int" value="3"/>
+        <attribute attribute-name="driverClassName" type="String" value="connect.sybase.SybaseDriver"/>
+        <attribute attribute-name="defaultURL" type="String" value="jdbc:sybase://{server}:{port}/{database}"/>
+        <attribute attribute-name="defaultLogin" type="String" value="guest"/>
+        <attribute attribute-name="defaultPassword" type="String" value="trustworthy"/>
+        <attribute attribute-name="description" cdata="true" type="String">
+            <![CDATA[jdbc:sybase://<i>serverAddress</i>[:<i>serverPort</i>]/pubs2<br><u>exemple :</u><br>jdbc:sybase://dbtest/pubs2<br><u>Params :</u><br>user = guest<br>password = trustworthy<br>serverPort = 1455<br>]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="DB2"/>
+        <attribute attribute-name="index" type="int" value="4"/>
+        <attribute attribute-name="driverClassName" type="String" value="COM.ibm.db2.jdbc.app.DB2Driver"/>
+        <attribute attribute-name="defaultURL" type="String" value="jdbc:db2:{database}"/>
+        <attribute attribute-name="defaultLogin" type="String" value="db2admin"/>
+        <attribute attribute-name="defaultPassword" type="String" value="db2admin"/>
+        <attribute attribute-name="description" cdata="true" type="String"><![CDATA[jdbc:db2:<i>databaseName</i>
+        <br><u>exemple :</u>
+        <br>jdbc:db2:test
+        <br><u>Params :</u>
+        <br>user = db2admin
+        <br>password = db2admin<br>]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="InstantDB"/>
+        <attribute attribute-name="index" type="int" value="5"/>
+        <attribute attribute-name="driverClassName" type="String" value="com.lutris.instantdb.jdbc.idbDriver"/>
+        <attribute attribute-name="defaultURL" type="String" value="jdbc:idb={database}"/>
+        <attribute attribute-name="defaultLogin" type="String" value=""/>
+        <attribute attribute-name="defaultPassword" type="String" value=""/>
+        <attribute attribute-name="description" cdata="true" type="String"><![CDATA[jdbc:idb=<i>databaseName</i>
+        <br><u>exemple :</u>
+        <br>jdbc:db2=D:/einstein/work/runtime/resources/db/sgDb.prp]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="Interbase"/>
+        <attribute attribute-name="index" type="int" value="6"/>
+        <attribute attribute-name="driverClassName" type="String" value="interbase.interclient.Driver"/>
+        <attribute attribute-name="defaultURL" type="String" value="jdbc:interbase://{server]/{database}"/>
+        <attribute attribute-name="defaultLogin" type="String" value="SYSDBA"/>
+        <attribute attribute-name="defaultPassword" type="String" value="masterkey"/>
+        <attribute attribute-name="description" cdata="true" type="String"><![CDATA[jdbc:interbase://<i>serverAddress</i>/<i>databaseName</i>
+                    <br><u>exemple :</u>
+                    <br>jdbc:interbase://localhost/D:/examples/employee.gdb
+                    <br><u>Params :</u>
+                    <br>user = SYSDBA
+                    <br>password = masterkey]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="MSSQLServer/Avenir"/>
+        <attribute attribute-name="index" type="int" value="7"/>
+        <attribute attribute-name="driverClassName" type="String" value="net.avenir.jdbc2.Driver"/>
+        <attribute attribute-name="defaultURL" type="String" value="jdbc:AvenirDriver://{server}:{port}/{database}"/>
+        <attribute attribute-name="defaultLogin" type="String" value="sa"/>
+        <attribute attribute-name="defaultPassword" type="String" value=""/>
+        <attribute attribute-name="description" cdata="true" type="String"><![CDATA[jdbc:AvenirDriver://<i>serverAddress</i>[:<i>serverPort</i>]/<i>databaseName</i>
+                    <br><u>exemple :</u>
+                    <br>jdbc:AvenirDriver://localhost:1433/master
+                    <br><u>Params :</u>
+                    <br>user = sa<br>password =
+                    <br>serverPort = 1433]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="MSSQLServer/SequeLink"/>
+        <attribute attribute-name="index" type="int" value="8"/>
+        <attribute attribute-name="driverClassName" type="String" value="com.merant.sequelink.jdbc.SequeLinkDriver"/>
+        <attribute attribute-name="defaultURL" type="String"
+                   value="jdbc:sequelink://{server}:{port}:/databaseName={database}"/>
+        <attribute attribute-name="defaultLogin" type="String" value="sa"/>
+        <attribute attribute-name="defaultPassword" type="String" value=""/>
+        <attribute attribute-name="description" cdata="true" type="String"><![CDATA[jdbc:sequelink://<i>serverAddress</i>[:<i>serverPort</i>]:/databaseName=<i>databaseName</i>
+                    <br><u>exemple :</u>
+                    <br>jdbc:sequelink://localhost:99996:/databaseName=master
+                    <br><u>Params :</u><br>user = sa
+                    <br>password = <br>serverPort = 99996]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="MSSQLServer"/>
+        <attribute attribute-name="index" type="int" value="9"/>
+        <attribute attribute-name="driverClassName" type="String" value="com.microsoft.jdbc.sqlserver.SQLServerDriver"/>
+        <attribute attribute-name="defaultURL" type="String"
+                   value="jdbc:microsoft:sqlserver://{server}:{port};databaseName={database}"/>
+        <attribute attribute-name="defaultLogin" type="String" value="sa"/>
+        <attribute attribute-name="defaultPassword" type="String" value=""/>
+        <attribute attribute-name="description" cdata="true" type="String"><![CDATA[jdbc:microsoft:sqlserver://<i>serverAddress</i>:<i>serverPort</i>;databaseName=<i>databaseName</i>
+                    <br><u>exemple :</u>
+                    <br>jdbc:sequelink://localhost:99996:/databaseName=master
+                    <br><u>Params :</u>
+                    <br>user = sa
+                    <br>password =
+                    <br>serverPort = 99996<br>]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="MySQL"/>
+        <attribute attribute-name="index" type="int" value="10"/>
+        <attribute attribute-name="driverClassName" type="String" value="org.gjt.mm.mysql.Driver"/>
+        <attribute attribute-name="defaultURL" type="String" value="jdbc:mysql://{server}/{database}"/>
+        <attribute attribute-name="defaultLogin" type="String" value="root"/>
+        <attribute attribute-name="defaultPassword" type="String" value=""/>
+        <attribute attribute-name="description" cdata="true" type="String"><![CDATA[jdbc:mysql://<i>serverAddress</i>/<i>databaseName</i>
+                    <br><u>exemple :</u>
+                    <br>jdbc:mysql://localhost/test
+                    <br><u>Params :</u>
+                    <br>user = root<br>password =]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="McKoi"/>
+        <attribute attribute-name="index" type="int" value="11"/>
+        <attribute attribute-name="driverClassName" type="String" value="com.mckoi.JDBCDriver"/>
+        <attribute attribute-name="defaultURL" type="String" value="jdbc:mckoi://{server}:{port}/{database}/"/>
+        <attribute attribute-name="defaultLogin" type="String" value=""/>
+        <attribute attribute-name="defaultPassword" type="String" value=""/>
+        <attribute attribute-name="description" cdata="true" type="String"><![CDATA[jdbc:mckoi://host[:<i>port</i>][/<i>schema</i>]/
+                    <br><u>exemple :</u>
+                    <br>jdbc:mckoi://mydatabase.mydomain.org/TOBY/
+                    <br><u>Params :</u><br>user = root
+                    <br>password = <br>port=9157
+                    <br>schema=APP
+                    <br><br>or
+                    <br><br>
+                    jdbc:mckoi:local://<i>path_to_database_config</i>[/<i>schema</i>][?<i>var1</i>=<i>value1</i>&<i>var2</i>=<i>value2</i>&...]
+                    <br><u>exemple :</u>
+                    <br>jdbc:mckoi:local://c:/mydb/myconfig.conf?read_only=enabled&log_path=c:/mynewlogdir/
+                    <br><u>to create a database :</u>
+                    <br>jdbc:mckoi:local://c:/mydb/myconfig.conf?create=true]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="Derby/Embedded"/>
+        <attribute attribute-name="index" type="int" value="12"/>
+        <attribute attribute-name="driverClassName" type="String" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+        <attribute attribute-name="defaultURL" type="String" value="jdbc:derby:{database};create=true"/>
+        <attribute attribute-name="defaultLogin" type="String" value=""/>
+        <attribute attribute-name="defaultPassword" type="String" value=""/>
+        <attribute attribute-name="description" cdata="true" type="String"><![CDATA[jdbc:derby:<i>dbname</i>;create=true
+                    <br><u>exemple :</u>
+                    <br>jdbc:derby:test;create=true
+                    <br><u>Params :</u>
+                    <br>user = root
+                    <br>password = root]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="MSAccess/hxtt"/>
+        <attribute attribute-name="index" type="int" value="13"/>
+        <attribute attribute-name="driverClassName" type="String" value="com.hxtt.sql.access.AccessDriver"/>
+        <attribute attribute-name="defaultURL" type="String" value="jdbc:access:{database}"/>
+        <attribute attribute-name="defaultLogin" type="String" value=""/>
+        <attribute attribute-name="defaultPassword" type="String" value=""/>
+        <attribute attribute-name="description" cdata="true" type="String">
+            <![CDATA[jdbc:access:////home/vpc/example]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="PostgreSQL"/>
+        <attribute attribute-name="index" type="int" value="14"/>
+        <attribute attribute-name="driverClassName" type="String" value="org.postgresql.Driver"/>
+        <attribute attribute-name="defaultURL" type="String" value="jdbc:postgresql://{server}/{database}"/>
+        <attribute attribute-name="defaultLogin" type="String" value="postgres"/>
+        <attribute attribute-name="defaultPassword" type="String" value="postgres"/>
+        <attribute attribute-name="description" cdata="true" type="String">
+            <![CDATA[jdbc:postgresql://localhost/postgres]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="Derby Network Server"/>
+        <attribute attribute-name="index" type="int" value="15"/>
+        <attribute attribute-name="driverClassName" type="String" value="org.apache.derby.jdbc.ClientDriver"/>
+        <attribute attribute-name="defaultURL" type="String"
+                   value="jdbc:derby://{server}:{port}/{database};create=true"/>
+        <attribute attribute-name="defaultLogin" type="String" value=""/>
+        <attribute attribute-name="defaultPassword" type="String" value=""/>
+        <attribute attribute-name="description" cdata="true" type="String"><![CDATA[jdbc:derby://localhost:1527/MyDbTest;create=true
+                    <br><u>exemple :</u>
+                    <br>jdbc:derby:test;create=true
+                    <br><u>Params :</u>
+                    <br>user = root
+                    <br>password = root]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="HSql"/>
+        <attribute attribute-name="index" type="int" value="16"/>
+        <attribute attribute-name="driverClassName" type="String" value="org.hsqldb.jdbcDriver"/>
+        <attribute attribute-name="defaultURL" type="String" value="jdbc:hsqldb:{protocol}:{subUrl}"/>
+        <attribute attribute-name="defaultLogin" type="String" value=""/>
+        <attribute attribute-name="defaultPassword" type="String" value=""/>
+        <attribute attribute-name="description" cdata="true" type="String"><![CDATA[examples of urls
+                    <ul>
+                    <li>jdbc:hsqldb:file:/path/to/testdb</li>
+                    <li>jdbc:hsqldb:mem:testdb</li>
+                    <li>jdbc:hsqldb:hsql://localhost/testdb</li>
+                    </ul>]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+        <attribute attribute-name="name" type="String" value="Sybase-Tds"/>
+        <attribute attribute-name="index" type="int" value="17"/>
+        <attribute attribute-name="driverClassName" type="String" value="com.sybase.jdbc3.jdbc.SybDriver"/>
+        <attribute attribute-name="defaultURL" type="String" value="jdbc:sybase:Tds:{server}:{port}/{database}"/>
+        <attribute attribute-name="defaultLogin" type="String" value="sa"/>
+        <attribute attribute-name="defaultPassword" type="String" value=""/>
+        <attribute attribute-name="description" cdata="true" type="String">
+            <![CDATA[jdbc:sybase:Tds:<i>serverAddress</i>[:<i>serverPort</i>]/XP<br><u>exemple :</u><br>jdbc:sybase:Tds:localhost:5000<br><u>Params :</u><br>user = sa<br>password = <br>serverPort = 5000<br>]]></attribute>
+        <attribute attribute-name="enabled" type="boolean" value="true"/>
+    </item>
+
+</object>

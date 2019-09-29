@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<shortcuts>
+
+    <skipIfNotSupported/>
+
+    <programGroup defaultName="<%=app-label%>" location="applications"/>
+
+    <shortcut
+            name="<%=app-label%> <%=app-version%>"
+            programGroup="yes"
+            desktop="no"
+            applications="no"
+            startMenu="no"
+            startup="no"
+            target="$INSTALL_PATH\run.jar"
+	    workingDirectory="$INSTALL_PATH"
+	    iconFile="$INSTALL_PATH\dbclient128.ico"
+            commandLine=""
+            description="This starts DBClient 0.5.2 application">
+
+        <createForPack name="Core"/>
+    </shortcut>
+
+    <shortcut
+            name="<%=app-label%> <%=app-version%> Uninstaller"
+            programGroup="yes"
+            desktop="no"
+            applications="no"
+            startMenu="no"
+            startup="no"
+            target="$INSTALL_PATH\Uninstaller\uninstaller.jar"
+            commandLine=""
+            iconFile="%SystemRoot%\system32\SHELL32.dll"
+            iconIndex="31"
+            description="This uninstalls <%=app-label%> <%=app-version%>">
+
+        <createForPack name="Core"/>
+    </shortcut>
+
+</shortcuts>

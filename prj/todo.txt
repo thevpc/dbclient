@@ -1,0 +1,8 @@
+ctrl espace apres '.' ne marche pas
+les icones disparaissent lors de la seconde session
+
+++ Must have Better Error Handling in Script !!!!!!
+++ I18N of PluginManager & DriverManager
+++ PostgreSQL Support
+++ Better MySQL Support
+++ Proxy Support (see URL.openConnection(Proxy))

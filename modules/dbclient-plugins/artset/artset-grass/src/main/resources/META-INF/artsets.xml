@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<artsets>
+    <artset id="dbclient-artset-grass" group="" name="Grass ArtSet" urlmask="org/vpc/dbclient/artset/grass/*.jpg">
+        <property name="splash-foreground" value="0xFFFFFF"/>
+        <property name="splash-foreground-error" value="0xFFB427"/>
+        <property name="splash-foreground-warn" value="0x7C5EFF"/>
+        <property name="splash-foreground-info" value="0xA0FFF1"/>
+        <property name="splash-foreground-success" value="0xFFF233"/>
+    </artset>
+</artsets>

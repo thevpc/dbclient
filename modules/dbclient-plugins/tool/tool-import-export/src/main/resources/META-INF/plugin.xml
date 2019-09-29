@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="tool-import-export" class="org.vpc.dbclient.plugin.tool.importexport.ImportExportPlugin">
+    <category>tool</category>
+
+    <title>Import Export Tool</title>
+    <version>0.5.6</version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <description>
+
+        Import Export Tool
+
+    </description>
+    <applicationVersion>[0.5.0,*[</applicationVersion>
+</plugin>

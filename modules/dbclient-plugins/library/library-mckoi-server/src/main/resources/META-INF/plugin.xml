@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="library-mckoi-server">
+
+    <category>library</category>
+
+    <title>McKoi Server Library</title>
+    <version>1.0.4</version>
+    <url>http://mckoi.com</url>
+    <author>McKoi Team</author>
+    <contributors>Taha BEN SALAH (Packager)</contributors>
+    <description>
+
+        McKoi Server Library
+
+    </description>
+</plugin>

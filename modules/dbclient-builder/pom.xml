@@ -1,0 +1,107 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>net.vpc.app.dbclient</groupId>
+    <artifactId>net.vpc.app.dbclient.dbclient-builder</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    
+    <parent>
+        <groupId>net.vpc.app.dbclient</groupId>
+        <artifactId>net.vpc.app.dbclient.dbclient-root</artifactId>
+        <version>1.0</version>
+        <relativePath>../dbclient-root</relativePath>
+    </parent>
+
+    <modules>
+
+        <module>../vpc-libs/vpc-commons</module>
+        <module>../vpc-libs/vpc-prs</module>
+        <module>../vpc-libs/vpc-swingext</module>
+        <module>../dbclient-core</module>
+        <module>../dbclient-plugins/system/dbclient-system</module>
+        <module>../dbclient-plugins/system/dbclient-update</module>
+
+        <module>../dbclient-plugins/artset/artset-blues</module>
+        <module>../dbclient-plugins/artset/artset-grass</module>
+
+        <module>../dbclient-plugins/cfgsupport/cfgsupport-derby</module>
+
+        <module>../dbclient-plugins/dbdriver/dbdriver-derby</module>
+        <module>../dbclient-plugins/dbdriver/dbdriver-hsql</module>
+        <module>../dbclient-plugins/dbdriver/dbdriver-mckoi</module>
+        <module>../dbclient-plugins/dbdriver/dbdriver-mysql</module>
+        <module>../dbclient-plugins/dbdriver/dbdriver-postgresql</module>
+
+        <module>../dbclient-plugins/dbsupport/dbsupport-derby</module>
+        <module>../dbclient-plugins/dbsupport/dbsupport-hsql</module>
+        <module>../dbclient-plugins/dbsupport/dbsupport-mckoi</module>
+        <module>../dbclient-plugins/dbsupport/dbsupport-mysql</module>
+        <module>../dbclient-plugins/dbsupport/dbsupport-postgresql</module>
+        <module>../dbclient-plugins/dbsupport/dbsupport-mssqlserver</module>
+        <module>../dbclient-plugins/dbsupport/dbsupport-oracle</module>
+        <module>../dbclient-plugins/dbsupport/dbsupport-access</module>
+
+        <module>../dbclient-plugins/iconset/iconset-java</module>
+<!--        <module>../dbclient-plugins/iconset/iconset-linux</module>-->
+        <module>../dbclient-plugins/iconset/iconset-noicon</module>
+        <module>../dbclient-plugins/iconset/iconset-tango</module>
+
+        <module>../dbclient-plugins/lang/lang-ar</module>
+        <module>../dbclient-plugins/lang/lang-fr</module>
+        <module>../dbclient-plugins/lang/lang-de</module>
+        <module>../dbclient-plugins/lang/lang-nl</module>
+
+
+        <module>../dbclient-plugins/library/library-derby-server</module>
+        <module>../dbclient-plugins/library/library-hsql-server</module>
+        <module>../dbclient-plugins/library/library-mckoi-server</module>
+        <module>../dbclient-plugins/library/library-javac</module>
+        <module>../dbclient-plugins/library/library-jexcelapi</module>
+
+        <module>../dbclient-plugins/presentation/presentation-infonode</module>
+        <module>../dbclient-plugins/presentation/presentation-plaf-metal</module>
+        <module>../dbclient-plugins/presentation/presentation-swinglabs</module>
+
+        <module>../dbclient-plugins/tool/tool-box</module>
+        <module>../dbclient-plugins/tool/tool-import-export</module>
+        <module>../dbclient-plugins/tool/tool-import-export-excel</module>
+        <module>../dbclient-plugins/tool/tool-jstsql</module>
+        <module>../dbclient-plugins/tool/tool-record-editor</module>
+        <module>../dbclient-plugins/tool/tool-search-engine</module>
+        <module>../dbclient-plugins/tool/tool-server-manager</module>
+        <module>../dbclient-plugins/tool/tool-neormf</module>
+    </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>install</phase>
+                        <configuration>
+                            <target>
+
+                                <property name="compile_classpath" refid="maven.compile.classpath"/><!--
+                                <property name="runtime_classpath" refid="maven.runtime.classpath"/>
+                                <property name="test_classpath" refid="maven.test.classpath"/>
+                                <property name="plugin_classpath" refid="maven.plugin.classpath"/>
+                                -->
+                                <property name="DBCLIENT_ROOT" value="${dbclient-root-folder}"/>
+                                <echo message="DBCLIENT_ROOT : ${DBCLIENT_ROOT}"/>
+                                <ant antfile="dbclient-plugins-build.xml" inheritRefs="true" inheritAll="true"/>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

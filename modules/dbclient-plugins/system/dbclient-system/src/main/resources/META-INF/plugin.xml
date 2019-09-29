@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="dbclient-system" class="org.vpc.dbclient.plugin.system.DBCDefaultSystemPlugin" system="true">
+
+    <category>system</category>
+
+    <title>DBClient Core</title>
+    <version>0.5.8</version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <description>
+        DBClient Core System Plugin
+    </description>
+    <applicationVersion>[O.5,*[</applicationVersion>
+</plugin>

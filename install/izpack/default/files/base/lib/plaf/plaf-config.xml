@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<!-- 
+   This file specifies all plaf classes to use within DBClient.
+   Note that you should copy plaf jar files in the lib/plaf folder too
+-->
+<!--
+	<entry key="Synthetica">de.javasoft.plaf.synthetica.SyntheticaStandardLookAndFeel</entry>
+	<entry key="JGoodies Plastic 3D">com.jgoodies.plaf.plastic.Plastic3DLookAndFeel</entry>
+	<entry key="JGoodies Plastic">com.jgoodies.plaf.plastic.PlasticLookAndFeel</entry>
+	<entry key="JGoodies Plastic XP">com.jgoodies.plaf.plastic.PlasticXPLookAndFeel</entry>
+-->
+</properties>
+ 

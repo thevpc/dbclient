@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="lang-nl">
+
+    <category>messageset</category>
+
+    <title>Dutch Localization</title>
+    <version>0.12</version>
+    <url>http://dbclient.java.net</url>
+    <author>Piet Blok</author>
+    <contributors/>
+    <description>
+
+        Localization Plugin
+
+    </description>
+</plugin>

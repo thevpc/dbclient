@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<userInput>
+  <!-- Install -->
+    <panel order="0">
+<!--        <createForPack name="Main Application" />-->
+        <field type="title" txt="Preferences" bold="true" size="1" />
+        <field type="divider" align="top"/>
+        <!-- Keystore -->
+<!--        <field type="staticText" align="left" txt="DBClient Configuration Files will be stored to :"/>-->
+        <field type="radio" variable="DBCConfigType">
+            <description align="left" txt="DBClient Configuration Files will be stored to"
+            />
+            <spec>
+                <choice txt="Home Folder" value="hwd" />
+                <choice txt="Installation Folder" value="cwd" set="true" />
+            </spec>
+        </field>    
+    </panel>
+</userInput>

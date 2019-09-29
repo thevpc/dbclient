@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="tool-jstsql" class="org.vpc.dbclient.plugin.sql.jstsql.JSTSqlPlugin">
+
+    <category>tool</category>
+
+    <title>Java Scripting Technology for SQL</title>
+    <version>0.5.8</version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+<!--    <dependencies>
+        <dependency>library-javac</dependency>
+    </dependencies>-->
+    <description>
+
+        Supported embedded Java into SQL
+
+    </description>
+    <applicationVersion>[0.5.3,*[</applicationVersion>
+</plugin>

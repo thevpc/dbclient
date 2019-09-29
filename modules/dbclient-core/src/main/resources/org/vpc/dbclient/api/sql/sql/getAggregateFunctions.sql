@@ -1,0 +1,5 @@
+*
+AVG
+MAX
+MIN
+SUM

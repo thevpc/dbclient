@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="dbclient-update" class="org.vpc.dbclient.plugin.update.DBClientUpdatePlugin">
+
+    <category>system</category>
+
+    <title>DBClient Update Patch</title>
+    <version>0.5.3</version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <description>
+
+        Patch to upgrade DBClient
+
+    </description>
+    <applicationVersion>[*,0.5.3[</applicationVersion>
+</plugin>

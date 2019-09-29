@@ -1,0 +1,77 @@
+/**
+ * ====================================================================
+ *             DBClient yet another Jdbc client tool
+ *
+ * DBClient is a new Open Source Tool for connecting to jdbc
+ * compliant relational databases. Specific extensions will take care of
+ * each RDBMS implementation.
+ *
+ * Copyright (C) 2006-2008 Taha BEN SALAH
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ * ====================================================================
+ */
+
+package net.vpc.dbclient.plugin.system.sql.objects;
+
+import net.vpc.dbclient.api.sql.DBCConnection;
+import net.vpc.dbclient.api.sql.objects.DBKeyword;
+import net.vpc.dbclient.api.sql.objects.DBKeywordsFolder;
+import net.vpc.dbclient.api.sql.objects.SQLObjectTypes;
+
+import java.sql.SQLException;
+
+
+/**
+ * @author Taha BEN SALAH (taha.bensalah@gmail.com)
+ * @creationtime 13 juil. 2005 14:32:11
+ */
+public class DBKeywordsFolderImpl extends DBObjectFolderImpl implements DBKeywordsFolder {
+//    protected TreeSet<String> keywords92 = new TreeSet<String>(Arrays.asList(new String[]{
+//        "SELECT", "FROM", "WHERE", "AND", "OR", "NOT", "IN", "IS", "BY", "DESC", "ASC",
+//        "INNER", "OUTER", "FULL", "JOIN", "ON", "ORDER", "UPDATE", "DELETE", "INSERT",
+//        "INTO", "VALUES", "CREATE", "TABLE", "DATABASE", "DROP", "COMMIT", "ALTER", "VIEW",
+//        "LEFT", "RIGHT", "PROCEDURE", "FUNCTION", "BEGIN", "END", "IF", "THEN", "ELSE", "CONSTRAINT",
+//        "PRIMARY", "FOREIGN", "INDEX", "DATABASE", "KEY", "UNIQUE",
+//        "REFERENCES", "SET", "EXEC", "AS"
+//        , "GO","COLUMN", "MODIFY","GROUP"
+//    }));
+
+    public void init(DBCConnection session) {
+        super.init(session, "Tree.AllKeywords", null, null, null, "AllKeywords", false);
+    }
+
+    void addKeyword(DBKeyword s) {
+        super.addChild(s);
+    }
+
+    @Override
+    public String getSQL() {
+        return null;
+    }
+
+    @Override
+    protected void loadChildren() throws SQLException {
+        for (String aNewKw : getConnection().getSQLKeywords()) {
+            DBKeyword item = getConnection().getFactory().newInstance(DBKeyword.class);
+            item.init(getConnection(), aNewKw);
+            addChild(item);
+        }
+    }
+
+    public SQLObjectTypes getType() {
+        return SQLObjectTypes.FOLDER;
+    }
+}

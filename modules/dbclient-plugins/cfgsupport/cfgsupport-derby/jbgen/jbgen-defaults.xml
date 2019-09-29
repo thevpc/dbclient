@@ -1,0 +1,40 @@
+<jbgen>
+    <codestyle>
+        <object-name type="dto-data" value="{TableName:class}DTO"/>
+        <object-name type="dto-filter" value="{TableName:class}Filter"/>
+        <object-name type="dto-properties" value="{TableName:class}Properties"/>
+        <object-name type="dto-key" value="{TableName:class}Key"/>
+        <object-name type="dto-package" value="{ModulePackage}.dto.{TableName:package}"/>
+
+        <object-name type="entity" value="{TableName:class}"/>
+        <object-name type="entity-package" value="{ModulePackage}.server.entity.{TableName:package}"/>
+        <object-name type="entity-bean" value="{TableName:class}Bean"/>
+        <object-name type="entity-remote" value="{TableName:class}Remote"/>
+        <object-name type="entity-home" value="{TableName:class}Home"/>
+        <object-name type="entity-local-home" value="{TableName:class}LocalHome"/>
+        <object-name type="entity-local" value="{TableName:class}Local"/>
+
+        <object-name type="session" value="{SessionName:class}"/>
+        <object-name type="session.package" value="{ModulePackage}.server.session.{SessionName:package}"/>
+        <object-name type="session-bean" value="{SessionName:class}Bean"/>
+        <object-name type="session-remote" value="{SessionName:class}Remote"/>
+        <object-name type="session-home" value="{SessionName:class}Home"/>
+        <object-name type="session-local-home" value="{SessionName:class}LocalHome"/>
+        <object-name type="session-local" value="{SessionName:class}Local"/>
+
+        <object-name type="ejb-business-delegate" value="{SessionName:class}BD"/>
+        <object-name type="ejb-business-delegate-package" value="{ModulePackage}.bd"/>
+
+        <object-name type="dao" value="{TableName:class}DAO"/>
+        <object-name type="dao-package" value="{ModulePackage}.server.dao.{TableName:package}"/>
+    </codestyle>
+
+
+    <options>
+        <option-check-queries/>
+        <log-option name="info-if-found-entity-file"/>
+        <log-option name="warn-if-missing-entity-file"/>
+        <log-option name="info-if-found-session-file"/>
+        <log-option name="warn-if-missing-session-file"/>
+    </options>
+</jbgen>

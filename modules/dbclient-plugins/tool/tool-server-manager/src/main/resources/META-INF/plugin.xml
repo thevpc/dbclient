@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="tool-server-manager">
+    <category>tool</category>
+    <title>Server Manager</title>
+    <version>0.5.6 </version>
+    <url>http://dbclient.java.net</url>
+    <author>Taha BEN SALAH</author>
+    <contributors/>
+    <description>
+        Server Manager Plugin. Enables launching a server instance within DBClient.
+    </description>
+    <applicationVersion>[O.5,*[</applicationVersion>
+</plugin>

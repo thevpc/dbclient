@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+
+<!-- 
+    A sample installation file.
+    Use it as a base for your own installers :-)
+    
+    To compile it :
+    - go in the bin directory where you installed IzPack
+    - call "compile ../sample/install.xml -b ../sample"
+-->
+
+<installation version="1.0">
+
+    <!-- 
+        The info section.
+        The meaning of the tags should be natural ...
+    -->
+    <info>
+        <appname>dbclient</appname>
+        <appversion>0.5.8</appversion>
+        <appsubpath>DBClient/DBClient-0.5.8</appsubpath>
+        <authors>
+            <author name="Taha BEN SALAH" email="taha.bensalah@gmail.com"/>
+        </authors>
+        <url>http://dbclient.java.net</url>
+        <!--<pack200/>-->
+        <javaversion>1.6</javaversion>
+    </info>
+
+    <!--
+        The gui preferences indication.
+        Sets the installer window to 640x480. It will not be able to change the size.
+    -->
+    <guiprefs height="450" resizable="yes" width="600">
+        <!-- GUI addaption for more informations see "Modifying the GUI" in the documentation -->
+        <modifier key="layoutAnchor" value="CENTER"/>
+        <modifier key="headingPanelCounter" value="progressbar"/>
+        <modifier key="headingPanelCounterPos" value="inNavigationPanel"/>
+        <modifier key="allYGap" value="4"/>
+        <modifier key="paragraphYGap" value="10"/>
+        <modifier key="filler1YGap" value="5"/>
+        <modifier key="filler3XGap" value="10"/>
+        <modifier key="useHeadingPanel" value="true"/><!--
+        <modifier key="headingImageOnLeft" value="true"/>-->
+    </guiprefs>
+
+    <variables>
+        <variable name="DesktopShortcutCheckboxEnabled" value="true"/>
+    </variables>
+
+    <!-- 
+        The locale section.
+        Asks here to include the English and French langpacks.
+    -->
+    <locale>
+        <langpack iso3="eng"/>
+        <langpack iso3="fra"/>
+        <langpack iso3="deu"/>
+        <langpack iso3="ita"/>
+        <langpack iso3="nor"/>
+    </locale>
+
+    <!-- 
+        The resources section.
+        The ids must be these ones if you want to use the LicencePanel and/or the InfoPanel.
+    -->
+    <resources>
+        <!--<res id="InfoPanel.info" src="../../../runtime/readme.txt"/>-->
+        <!--<res id="HTMLLicencePanel.info" src="install-readme.html"/>-->
+        <res id="LicencePanel.licence" src="../../../runtime/licenses/dbclient-license.txt"/>
+        <res id="HTMLInfoPanel.info" src="install-readme.html" />
+        <res src="shortcutSpec.xml" id="shortcutSpec.xml"/>
+        <res src="userInputSpec.xml" id="userInputSpec.xml"/>
+        <res src="Unix_shortcutSpec.xml" id="Unix_shortcutSpec.xml"/>
+        <res src="dbclient-banner-header1.jpg" id="installer.langsel.img" />
+        <res src="dbclient-banner-margin1.jpg" id="Installer.image" />
+    </resources>
+
+    <!-- 
+        The panels section.
+        We indicate here which panels we want to use. The order will be respected.
+    -->
+    <!--<panels>-->
+        <!--<panel classname="HelloPanel"/>-->
+        <!--<panel classname="InfoPanel"/>-->
+        <!--<panel classname="LicencePanel"/>-->
+        <!--<panel classname="TargetPanel"/>-->
+        <!--<panel classname="PacksPanel"/>-->
+        <!--<panel classname="InstallPanel"/>-->
+        <!--<panel classname="FinishPanel"/>-->
+    <!--</panels>-->
+    <panels>
+        <panel classname="CheckedHelloPanel" id="hellopanel"/>
+        <panel classname="HTMLInfoPanel" id="infopanel"/>
+        <!--<panel classname="HTMLLicencePanel" id="licensepanel"/>-->
+        <!--<panel classname="InfoPanel"/>-->
+        <panel classname="LicencePanel"/>
+        <panel classname="TargetPanel" id="targetpanel"/>
+        <panel classname="PacksPanel" id="packspanel"/>
+        <panel classname="SummaryPanel" id="summarypanel"/>
+        
+        <panel classname="UserInputPanel" id="UserInputPanel.0"/>
+        <panel classname="InstallPanel" id="installpanel"/>
+<!--        <panel classname="UserInputPanel" id="UserInputPanel.1"/>
+        <panel classname="UserInputPanel" id="UserInputPanel.2"/>-->
+            
+        <panel classname="ShortcutPanel" id="shortcutpanel"/>
+<!--        <panel classname="ProcessPanel" id="processpanel"/>-->
+        <panel classname="FinishPanel" id="finishpanel"/>
+    </panels>
+
+    <!-- 
+        The packs section.
+        We specify here our packs.
+    -->
+    <packs>
+        <pack name="Core" required="yes">
+            <description>Base files</description>
+            <fileset dir="files/base" targetdir="$INSTALL_PATH" />
+            <parsable targetfile="$INSTALL_PATH/run.jex" type="shell"/> 
+        </pack>
+
+        <pack name="Recommended Plugins" required="no">
+            <description>Main look and dbsupport for commons RDBMS (artset-blues,swinglabs,infonode,cfgsupport-derby,dbsupport)</description>
+            <fileset dir="files/recommanded" targetdir="$INSTALL_PATH/plugins"/>
+        </pack>
+        <pack name="Extra Media Materials" required="no">
+            <description>Iconsets (java, linux, tango), Plafs (metal themes), Artsets, ...</description>
+            <fileset dir="files/media" targetdir="$INSTALL_PATH/plugins"/>
+        </pack>
+        <pack name="Extra Language Packs" required="no">
+            <description>Language packs including fr,nl,de and ar</description>
+            <fileset dir="files/lang" targetdir="$INSTALL_PATH/plugins"/>
+        </pack>
+        <pack name="Open Source/Free Drivers" required="no">
+            <description>Free Drivers for derby, mckoi, hsql,mysql and postgresql</description>
+            <fileset dir="files/drivers" targetdir="$INSTALL_PATH/plugins"/>
+        </pack>
+        <pack name="Useful Plugins" required="no">
+            <description>A Set of very useful plugins (record-editor,search-engine,jstsql, export various libraries)</description>
+            <fileset dir="files/useful" targetdir="$INSTALL_PATH/plugins"/>
+        </pack>
+    </packs>
+    <native type="izpack" name="ShellLink.dll"/>
+</installation>
