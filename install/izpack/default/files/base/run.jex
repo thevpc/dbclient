@@ -1,5 +1,5 @@
 jlauncher.classpath lib;*.jar!
 jvm.arg -Xms128m
 jvm.arg -Xmx512m
-jlauncher.main.class org.vpc.dbclient.DBClientMain
+jlauncher.main.class net.thevpc.dbclient.DBClientMain
 app.arg -cwd

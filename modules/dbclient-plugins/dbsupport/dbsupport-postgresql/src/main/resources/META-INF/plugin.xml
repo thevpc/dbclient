@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="dbsupport-postgresql" class="org.vpc.dbclient.plugin.dbsupport.postgresql.PostgreSqlPlugin">
+<plugin id="dbsupport-postgresql" class="net.thevpc.dbclient.plugin.dbsupport.postgresql.PostgreSqlPlugin">
 
     <category>dbsupport</category>
     <title>PostgreSQL Support</title>

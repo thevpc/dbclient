@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="dbsupport-mssqlserver" class="org.vpc.dbclient.plugin.dbsupport.mssqlserver.MSSqlServerPlugin">
+<plugin id="dbsupport-mssqlserver" class="net.thevpc.dbclient.plugin.dbsupport.mssqlserver.MSSqlServerPlugin">
 
     <category>dbsupport</category>
     <title>MSSQLServer Support</title>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="plaf-metal" class="org.vpc.dbclient.plugin.presentation.metal.MetalPlugin">
+<plugin id="plaf-metal" class="net.thevpc.dbclient.plugin.presentation.metal.MetalPlugin">
 
     <category>presentation</category>
 

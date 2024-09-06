@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="dbsupport-mckoi" class="org.vpc.dbclient.plugin.dbsupport.mckoi.McKoiPlugin">
+<plugin id="dbsupport-mckoi" class="net.thevpc.dbclient.plugin.dbsupport.mckoi.McKoiPlugin">
 
     <category>dbsupport</category>
     <title>McKoi Support</title>

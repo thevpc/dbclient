@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="cfgsupport-derby" class="org.vpc.dbclient.plugin.cfgsupport.cfgderby.CfgDerbyPlugin">
+<plugin id="cfgsupport-derby" class="net.thevpc.dbclient.plugin.cfgsupport.cfgderby.CfgDerbyPlugin">
     <category>cfgsupport</category>
 
     <title>Derby Config Support</title>

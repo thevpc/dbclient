@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="search-engine" class="org.vpc.dbclient.plugin.tool.searchengine.SearchEnginePlugin">
+<plugin id="search-engine" class="net.thevpc.dbclient.plugin.tool.searchengine.SearchEnginePlugin">
     <category>tool</category>
 
     <title>Search Engine</title>

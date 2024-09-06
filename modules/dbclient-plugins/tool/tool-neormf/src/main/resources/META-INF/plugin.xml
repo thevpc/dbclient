@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="tool-neormf" class="org.vpc.dbclient.plugin.tool.neormf.NeormfPlugin">
+<plugin id="tool-neormf" class="net.thevpc.dbclient.plugin.tool.neormf.NeormfPlugin">
 
     <category>tool</category>
     <title>Neormf Support</title>

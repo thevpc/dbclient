@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>net.vpc.dbclient</groupId>
+    <groupId>net.thevpc.dbclient</groupId>
     <artifactId>dbclient</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
         <module>modules/dbclient-root</module>
-        <module>modules/dbclient-root</module>
         <module>modules/dbclient-core</module>
         <module>modules/dbclient-plugin-root</module>
+        <module>modules/dbclient-plugins/artset</module>
+        <module>modules/dbclient-plugins/cfgsupport</module>
+        <module>modules/dbclient-plugins/dbdriver</module>
+        <module>modules/dbclient-plugins/dbsupport</module>
+        <module>modules/dbclient-plugins/iconset</module>
+        <module>modules/dbclient-plugins/lang</module>
+        <module>modules/dbclient-plugins/library</module>
+        <module>modules/dbclient-plugins/presentation</module>
+        <module>modules/dbclient-plugins/system</module>
+        <module>modules/dbclient-plugins/tool</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

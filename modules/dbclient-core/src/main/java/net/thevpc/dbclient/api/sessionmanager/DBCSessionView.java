@@ -1,0 +1,99 @@
+/**
+ * ====================================================================
+ *             DBClient yet another Jdbc client tool
+ *
+ * DBClient is a new Open Source Tool for connecting to jdbc
+ * compliant relational databases. Specific extensions will take care of
+ * each RDBMS implementation.
+ *
+ * Copyright (C) 2006-2008 Taha BEN SALAH
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ * ====================================================================
+ */
+
+package net.thevpc.dbclient.api.sessionmanager;
+
+import net.thevpc.dbclient.api.DBCSession;
+import net.thevpc.dbclient.api.DBClientViewContext;
+import net.thevpc.common.prs.plugin.Extension;
+import net.thevpc.dbclient.api.sql.objects.DBObject;
+import net.thevpc.dbclient.api.viewmanager.DBCComponent;
+
+import javax.swing.*;
+import java.awt.*;
+
+/**
+ * @author Taha BEN SALAH (taha.bensalah@gmail.com)
+ * @creationtime 13 juil. 2005 14:32:52
+ */
+@Extension(group = "ui.session")
+public interface DBCSessionView extends DBClientViewContext {
+    DBCSessionLayoutManager getSessionLayoutManager();
+
+    public static enum Side {
+        Explorer,
+        Workspace,
+        Footer
+    }
+
+    public DBCSessionInternalWindowBrowser getExplorerContainer();
+
+    public DBCSessionInternalWindowBrowser getTracerContainer();
+
+    public Component getToolbar();
+
+    public DBCSessionInternalWindowBrowser getWorkspaceContainer();
+
+    public Component getStatusBar();
+
+    public Component[] getComponents();
+
+    public String getInsertSQL(DBObject n);
+
+    public DBCSessionExplorer getExplorer();
+
+    public JMenuBar getMenu();
+
+
+    public void updateResources();
+
+    public Component getMainComponent();
+
+    public void saveView();
+
+    public void reloadView();
+
+    public DBCSession getSession();
+
+    public void refreshView();
+
+
+
+    public Icon getObjectIcon(DBObject node);
+
+    public String getObjectTreeName(DBObject node);
+
+    public boolean isDefaultObject(DBObject value);
+
+    public DBCInternalWindow addWindow(Component tabFrame, Side side, boolean replaceUnlocked);
+
+    public DBCInternalWindow addWindow(DBCComponent tabFrame, Side side, boolean replaceUnlocked);
+
+    public DBCSessionMessageDialogManager getDialogManager();
+
+    public void openSession();
+
+}

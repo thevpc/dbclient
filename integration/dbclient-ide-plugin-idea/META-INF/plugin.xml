@@ -7,11 +7,11 @@
   <idea-version since-build="3000"/>
     <project-components>
         <component>
-            <implementation-class>org.vpc.dbclient.ideplugins.ideaplugin.DBClientProjectComponent</implementation-class>
+            <implementation-class>net.thevpc.dbclient.ideplugins.ideaplugin.DBClientProjectComponent</implementation-class>
         </component>
     </project-components>
     <actions>
-        <action id="DBClientIdeaPlugin" class="org.vpc.dbclient.ideplugins.ideaplugin.DBClientIdeaPlugin"
+        <action id="DBClientIdeaPlugin" class="net.thevpc.dbclient.ideplugins.ideaplugin.DBClientIdeaPlugin"
                 text="DBClient">
             <keyboard-shortcut keymap="$default" first-keystroke="alt C"/>
             <add-to-group group-id="ToolsMenu" anchor="last"/>

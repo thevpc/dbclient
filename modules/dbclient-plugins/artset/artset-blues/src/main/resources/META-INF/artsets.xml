@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <artsets>
-    <artset id="dbclient-artset-blues" group="" name="Blues ArtSet" urlmask="org/vpc/dbclient/artset/blues/*.jpg">
+    <artset id="dbclient-artset-blues" group="" name="Blues ArtSet" urlmask="net/thevpc/dbclient/artset/blues/*.jpg">
         <property name="splash-foreground" value="0xFFFFFF"/>
         <property name="splash-foreground-error" value="0xFF0000"/>
         <property name="splash-foreground-warn" value="0xFF7745"/>

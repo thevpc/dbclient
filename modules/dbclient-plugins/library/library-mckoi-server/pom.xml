@@ -3,14 +3,14 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>net.vpc.app.dbclient.plugins.library</groupId>
-    <artifactId>net.vpc.app.dbclient.plugins.library-mckoi-server</artifactId>
+    <groupId>net.thevpc.dbclient.plugins.library</groupId>
+    <artifactId>net.thevpc.dbclient.plugins.library-mckoi-server</artifactId>
     <version>1.0.4</version>
     <packaging>jar</packaging>
     
     <parent>
-      <groupId>net.vpc.app.dbclient</groupId>
-      <artifactId>net.vpc.app.dbclient.dbclient-plugin-root</artifactId>
+      <groupId>net.thevpc.dbclient</groupId>
+      <artifactId>dbclient-plugin-root</artifactId>
       <version>1.0</version>
       <relativePath>../../../dbclient-plugin-root</relativePath>
     </parent>

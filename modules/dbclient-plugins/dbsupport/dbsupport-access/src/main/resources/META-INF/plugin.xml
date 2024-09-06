@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="dbsupport-access" class="org.vpc.dbclient.plugin.dbsupport.access.AccessPlugin">
+<plugin id="dbsupport-access" class="net.thevpc.dbclient.plugin.dbsupport.access.AccessPlugin">
 
     <category>dbsupport</category>
 

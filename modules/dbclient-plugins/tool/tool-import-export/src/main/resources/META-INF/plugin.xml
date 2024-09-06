@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="tool-import-export" class="org.vpc.dbclient.plugin.tool.importexport.ImportExportPlugin">
+<plugin id="tool-import-export" class="net.thevpc.dbclient.plugin.tool.importexport.ImportExportPlugin">
     <category>tool</category>
 
     <title>Import Export Tool</title>

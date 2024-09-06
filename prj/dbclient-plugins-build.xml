@@ -20,7 +20,7 @@
         <!--   Process Main Application Jar-->
         <jar destfile="${runtime}/lib/dbclient.jar">
             <manifest>
-                <attribute name="Main-Class" value="org.vpc.dbclient.DBClientMain"/>
+                <attribute name="Main-Class" value="net.thevpc.dbclient.DBClientMain"/>
             </manifest>
             <fileset dir="../build/classes" excludes=".*"/>
         </jar>

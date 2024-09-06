@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <object type="Vector">
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="JDBC/ODBC"/>
         <attribute attribute-name="index" type="int" value="1"/>
         <attribute attribute-name="driverClassName" type="String" value="sun.jdbc.odbc.JdbcOdbcDriver"/>
@@ -12,7 +12,7 @@
         <attribute attribute-name="enabled" type="boolean" value="true"/>
     </item>
 
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="Oracle Thin"/>
         <attribute attribute-name="index" type="int" value="2"/>
         <attribute attribute-name="driverClassName" type="String" value="oracle.jdbc.driver.OracleDriver"/>
@@ -24,7 +24,7 @@
         <attribute attribute-name="enabled" type="boolean" value="true"/>
     </item>
 
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="Sybase"/>
         <attribute attribute-name="index" type="int" value="3"/>
         <attribute attribute-name="driverClassName" type="String" value="connect.sybase.SybaseDriver"/>
@@ -36,7 +36,7 @@
         <attribute attribute-name="enabled" type="boolean" value="true"/>
     </item>
 
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="DB2"/>
         <attribute attribute-name="index" type="int" value="4"/>
         <attribute attribute-name="driverClassName" type="String" value="COM.ibm.db2.jdbc.app.DB2Driver"/>
@@ -53,7 +53,7 @@
     </item>
 
 
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="InstantDB"/>
         <attribute attribute-name="index" type="int" value="5"/>
         <attribute attribute-name="driverClassName" type="String" value="com.lutris.instantdb.jdbc.idbDriver"/>
@@ -66,7 +66,7 @@
         <attribute attribute-name="enabled" type="boolean" value="true"/>
     </item>
 
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="Interbase"/>
         <attribute attribute-name="index" type="int" value="6"/>
         <attribute attribute-name="driverClassName" type="String" value="interbase.interclient.Driver"/>
@@ -83,7 +83,7 @@
     </item>
 
 
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="MSSQLServer/Avenir"/>
         <attribute attribute-name="index" type="int" value="7"/>
         <attribute attribute-name="driverClassName" type="String" value="net.avenir.jdbc2.Driver"/>
@@ -100,7 +100,7 @@
     </item>
 
 
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="MSSQLServer/SequeLink"/>
         <attribute attribute-name="index" type="int" value="8"/>
         <attribute attribute-name="driverClassName" type="String" value="com.merant.sequelink.jdbc.SequeLinkDriver"/>
@@ -116,7 +116,7 @@
         <attribute attribute-name="enabled" type="boolean" value="true"/>
     </item>
 
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="MSSQLServer"/>
         <attribute attribute-name="index" type="int" value="9"/>
         <attribute attribute-name="driverClassName" type="String" value="com.microsoft.jdbc.sqlserver.SQLServerDriver"/>
@@ -134,7 +134,7 @@
         <attribute attribute-name="enabled" type="boolean" value="true"/>
     </item>
 
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="MySQL"/>
         <attribute attribute-name="index" type="int" value="10"/>
         <attribute attribute-name="driverClassName" type="String" value="org.gjt.mm.mysql.Driver"/>
@@ -150,7 +150,7 @@
     </item>
 
 
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="McKoi"/>
         <attribute attribute-name="index" type="int" value="11"/>
         <attribute attribute-name="driverClassName" type="String" value="com.mckoi.JDBCDriver"/>
@@ -174,7 +174,7 @@
     </item>
 
 
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="Derby/Embedded"/>
         <attribute attribute-name="index" type="int" value="12"/>
         <attribute attribute-name="driverClassName" type="String" value="org.apache.derby.jdbc.EmbeddedDriver"/>
@@ -191,7 +191,7 @@
     </item>
 
 
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="MSAccess/hxtt"/>
         <attribute attribute-name="index" type="int" value="13"/>
         <attribute attribute-name="driverClassName" type="String" value="com.hxtt.sql.access.AccessDriver"/>
@@ -203,7 +203,7 @@
         <attribute attribute-name="enabled" type="boolean" value="true"/>
     </item>
 
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="PostgreSQL"/>
         <attribute attribute-name="index" type="int" value="14"/>
         <attribute attribute-name="driverClassName" type="String" value="org.postgresql.Driver"/>
@@ -215,7 +215,7 @@
         <attribute attribute-name="enabled" type="boolean" value="true"/>
     </item>
 
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="Derby Network Server"/>
         <attribute attribute-name="index" type="int" value="15"/>
         <attribute attribute-name="driverClassName" type="String" value="org.apache.derby.jdbc.ClientDriver"/>
@@ -232,7 +232,7 @@
         <attribute attribute-name="enabled" type="boolean" value="true"/>
     </item>
 
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="HSql"/>
         <attribute attribute-name="index" type="int" value="16"/>
         <attribute attribute-name="driverClassName" type="String" value="org.hsqldb.jdbcDriver"/>
@@ -248,7 +248,7 @@
         <attribute attribute-name="enabled" type="boolean" value="true"/>
     </item>
 
-    <item type="org.vpc.dbclient.api.configmanager.DBCDriverInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
         <attribute attribute-name="name" type="String" value="Sybase-Tds"/>
         <attribute attribute-name="index" type="int" value="17"/>
         <attribute attribute-name="driverClassName" type="String" value="com.sybase.jdbc3.jdbc.SybDriver"/>

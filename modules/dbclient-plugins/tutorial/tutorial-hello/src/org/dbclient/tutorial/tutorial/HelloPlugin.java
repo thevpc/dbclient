@@ -1,7 +1,7 @@
 package org.dbclient.tutorial.hello;
 
 import javax.swing.JOptionPane;
-import net.vpc.dbclient.api.pluginmanager.DBCAbstractPlugin;
+import net.thevpc.dbclient.api.pluginmanager.DBCAbstractPlugin;
 
 /**
  * @author Taha Ben Salah (taha.bensalah@gmail.com)

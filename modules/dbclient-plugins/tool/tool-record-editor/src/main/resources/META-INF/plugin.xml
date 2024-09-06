@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="tool-record-editor" class="org.vpc.dbclient.plugin.tool.recordeditor.RecordEditorPlugin">
+<plugin id="tool-record-editor" class="net.thevpc.dbclient.plugin.tool.recordeditor.RecordEditorPlugin">
 
     <category>tool</category>
 

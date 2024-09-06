@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="dbclient-system" class="org.vpc.dbclient.plugin.system.DBCDefaultSystemPlugin" system="true">
+<plugin id="dbclient-system" class="net.thevpc.dbclient.plugin.system.DBCDefaultSystemPlugin" system="true">
 
     <category>system</category>
 

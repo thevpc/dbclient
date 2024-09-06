@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="dbsupport-derby" class="org.vpc.dbclient.plugin.dbsupport.derby.DerbyPlugin">
+<plugin id="dbsupport-derby" class="net.thevpc.dbclient.plugin.dbsupport.derby.DerbyPlugin">
 
     <category>dbsupport</category>
 

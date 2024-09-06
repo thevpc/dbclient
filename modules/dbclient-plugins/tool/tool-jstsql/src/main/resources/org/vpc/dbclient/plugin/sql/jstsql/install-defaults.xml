@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <object type="Vector">
-    <item type="org.vpc.dbclient.api.configmanager.DBCMessageInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
         <attribute attribute-name="msgId" type="String" value="Action.GenericTreeSQLGenerator.SelectStar"/>
         <attribute attribute-name="msgLocName" type="String" value="*"/>
         <attribute attribute-name="msgData" type="String" value="Select *"/>
     </item>
-    <item type="org.vpc.dbclient.api.configmanager.DBCMessageInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
         <attribute attribute-name="msgId" type="String" value="Action.GenericTreeSQLGenerator.SelectAll"/>
         <attribute attribute-name="msgLocName" type="String" value="*"/>
         <attribute attribute-name="msgData" type="String" value="Select ..."/>
     </item>
-    <item type="org.vpc.dbclient.api.configmanager.DBCMessageInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
         <attribute attribute-name="msgId" type="String" value="Action.GenericTreeSQLGenerator.SelectWhere"/>
         <attribute attribute-name="msgLocName" type="String" value="*"/>
         <attribute attribute-name="msgData" type="String" value="Select ... Where ..."/>
     </item>
-    <item type="org.vpc.dbclient.api.configmanager.DBCMessageInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
         <attribute attribute-name="msgId" type="String" value="Action.GenericTreeSQLGenerator.SelectCount"/>
         <attribute attribute-name="msgLocName" type="String" value="*"/>
         <attribute attribute-name="msgData" type="String" value="Select Count"/>
     </item>
-    <item type="org.vpc.dbclient.api.configmanager.DBCMessageInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
         <attribute attribute-name="msgId" type="String" value="Action.GenericTreeSQLGenerator.Drop"/>
         <attribute attribute-name="msgLocName" type="String" value="*"/>
         <attribute attribute-name="msgData" type="String" value="Drop"/>
     </item>
-    <item type="org.vpc.dbclient.api.configmanager.DBCMessageInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
         <attribute attribute-name="msgId" type="String" value="Action.GenericTreeSQLGenerator.Delete"/>
         <attribute attribute-name="msgLocName" type="String" value="*"/>
         <attribute attribute-name="msgData" type="String" value="Delete All"/>
     </item>
-    <item type="org.vpc.dbclient.api.configmanager.DBCMessageInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
         <attribute attribute-name="msgId" type="String" value="Action.GenericTreeSQLGenerator.AlterColumn"/>
         <attribute attribute-name="msgLocName" type="String" value="*"/>
         <attribute attribute-name="msgData" type="String" value="Alter"/>
     </item>
-    <item type="org.vpc.dbclient.api.configmanager.DBCMessageInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
         <attribute attribute-name="msgId" type="String" value="Action.GenericTreeSQLGenerator.DropColumn"/>
         <attribute attribute-name="msgLocName" type="String" value="*"/>
         <attribute attribute-name="msgData" type="String" value="Drop Column"/>
     </item>
-    <item type="org.vpc.dbclient.api.configmanager.DBCMessageInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
         <attribute attribute-name="msgId" type="String" value="Action.GenericTreeSQLGenerator.Update"/>
         <attribute attribute-name="msgLocName" type="String" value="*"/>
         <attribute attribute-name="msgData" type="String" value="Update ... Where ..."/>
     </item>
-    <item type="org.vpc.dbclient.api.configmanager.DBCMessageInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
         <attribute attribute-name="msgId" type="String" value="Action.GenericTreeSQLGenerator.Insert"/>
         <attribute attribute-name="msgLocName" type="String" value="*"/>
         <attribute attribute-name="msgData" type="String" value="Insert"/>
     </item>
-    <item type="org.vpc.dbclient.api.configmanager.DBCMessageInfo">
+    <item type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
         <attribute attribute-name="msgId" type="String" value="Action.GenericTreeSQLGenerator.InsertSimple"/>
         <attribute attribute-name="msgLocName" type="String" value="*"/>
         <attribute attribute-name="msgData" type="String" value="Insert mandatory columns"/>

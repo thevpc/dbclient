@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <iconsets>
-    <iconset group="java" path="org.vpc.dbclient.iconset.dbclient-iconset-java16"/>
-    <iconset group="java" path="org.vpc.dbclient.iconset.dbclient-iconset-java24"/>
+    <iconset group="java" path="net.thevpc.dbclient.iconset.dbclient-iconset-java16"/>
+    <iconset group="java" path="net.thevpc.dbclient.iconset.dbclient-iconset-java24"/>
 </iconsets>

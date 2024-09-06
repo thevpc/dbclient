@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin id="import-export-excel"
-        class="org.vpc.dbclient.plugin.tool.importexportexcel.exporter.ImportExportExcelPlugin">
+        class="net.thevpc.dbclient.plugin.tool.importexportexcel.exporter.ImportExportExcelPlugin">
     <category>tool</category>
 
     <title>Import Export Tool for MS Excel</title>

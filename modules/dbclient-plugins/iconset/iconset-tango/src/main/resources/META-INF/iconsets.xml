@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <iconsets>
-    <iconset group="tango" path="org.vpc.dbclient.iconset.dbclient-iconset-tango16"/>
-    <iconset group="tango" path="org.vpc.dbclient.iconset.dbclient-iconset-tango22"/>
+    <iconset group="tango" path="net.thevpc.dbclient.iconset.dbclient-iconset-tango16"/>
+    <iconset group="tango" path="net.thevpc.dbclient.iconset.dbclient-iconset-tango22"/>
 </iconsets>

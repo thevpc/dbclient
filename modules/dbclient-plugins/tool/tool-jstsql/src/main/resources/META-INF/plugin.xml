@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="tool-jstsql" class="org.vpc.dbclient.plugin.sql.jstsql.JSTSqlPlugin">
+<plugin id="tool-jstsql" class="net.thevpc.dbclient.plugin.sql.jstsql.JSTSqlPlugin">
 
     <category>tool</category>
 

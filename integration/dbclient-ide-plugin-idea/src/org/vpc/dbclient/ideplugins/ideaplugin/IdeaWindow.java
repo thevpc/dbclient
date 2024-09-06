@@ -1,11 +1,11 @@
-package net.vpc.dbclient.ideplugins.ideaplugin;
+package net.thevpc.dbclient.ideplugins.ideaplugin;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowAnchor;
 import com.intellij.openapi.wm.ToolWindowManager;
-import net.vpc.dbclient.api.wm.AbstractDBCWindow;
-import net.vpc.dbclient.api.windowmanager.AbstractDBCWindow;
+import net.thevpc.dbclient.api.wm.AbstractDBCWindow;
+import net.thevpc.dbclient.api.windowmanager.AbstractDBCWindow;
 
 import javax.swing.*;
 

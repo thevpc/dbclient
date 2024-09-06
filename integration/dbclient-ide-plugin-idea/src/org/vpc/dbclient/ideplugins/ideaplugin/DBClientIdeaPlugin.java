@@ -1,12 +1,12 @@
-package net.vpc.dbclient.ideplugins.ideaplugin;
+package net.thevpc.dbclient.ideplugins.ideaplugin;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.DataConstants;
 import com.intellij.openapi.project.Project;
-import net.vpc.dbclient.api.DBCLookAndFeelSupport;
-import net.vpc.dbclient.api.wm.DBCWindow;
-import net.vpc.dbclient.util.DBCLookAndFeelSupportNone;
+import net.thevpc.dbclient.api.DBCLookAndFeelSupport;
+import net.thevpc.dbclient.api.wm.DBCWindow;
+import net.thevpc.dbclient.util.DBCLookAndFeelSupportNone;
 
 /**
  * @author Taha Ben Salah (taha.bensalah@gmail.com)

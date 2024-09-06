@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="dbsupport-mysql" class="org.vpc.dbclient.plugin.dbsupport.mysql.MySqlPlugin">
+<plugin id="dbsupport-mysql" class="net.thevpc.dbclient.plugin.dbsupport.mysql.MySqlPlugin">
 
     <category>dbsupport</category>
     <title>MySQL Support</title>

@@ -5,7 +5,7 @@
         <name>No Icon</name>
         <class>org.vpc.prs.iconset.DefaultIconSet</class>
         <parameters>
-            <parameter>org.vpc.dbclient.iconset.dbclient-iconset-noicon</parameter>
+            <parameter>net.thevpc.dbclient.iconset.dbclient-iconset-noicon</parameter>
         </parameters>
     </iconset>
 </iconsets>

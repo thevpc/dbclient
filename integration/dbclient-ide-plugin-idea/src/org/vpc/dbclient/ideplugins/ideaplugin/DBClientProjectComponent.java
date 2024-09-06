@@ -1,18 +1,18 @@
-package net.vpc.dbclient.ideplugins.ideaplugin;
+package net.thevpc.dbclient.ideplugins.ideaplugin;
 
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindowManager;
-import net.vpc.dbclient.api.DBCApplication;
-import net.vpc.dbclient.api.DBCLookAndFeelSupport;
-import net.vpc.dbclient.api.windowmanager.DBCWindow;
-import net.vpc.dbclient.api.session.DBCSessionLayoutManager;
-import net.vpc.dbclient.api.session.DBCSessionLayoutManagerExploded;
-import net.vpc.dbclient.api.wm.DBCWindow;
-import net.vpc.dbclient.util.DBCLookAndFeelSupportNone;
+import net.thevpc.dbclient.api.DBCApplication;
+import net.thevpc.dbclient.api.DBCLookAndFeelSupport;
+import net.thevpc.dbclient.api.windowmanager.DBCWindow;
+import net.thevpc.dbclient.api.session.DBCSessionLayoutManager;
+import net.thevpc.dbclient.api.session.DBCSessionLayoutManagerExploded;
+import net.thevpc.dbclient.api.wm.DBCWindow;
+import net.thevpc.dbclient.util.DBCLookAndFeelSupportNone;
 
 import java.util.HashMap;
-import net.vpc.prs.componentmanager.ComponentManager.ComponentImplementation;
+import net.thevpc.common.prs.componentmanager.ComponentManager.ComponentImplementation;
 
 /**
  * @author Taha Ben Salah (taha.bensalah@gmail.com)

@@ -1,4 +1,4 @@
-./src/org/vpc/dbclient/api/DBClientInfo.java
+./src/net/thevpc/dbclient/api/DBClientInfo.java
 ./dbclient-plugins/dbclient-system/src/META-INF/plugins.xml.vpp
 ./dbclient-plugins/dbclient-update/src/META-INF/plugins.xml.vpp
 ./dbclient-plugins/searchengine/src/META-INF/plugins.xml.vpp

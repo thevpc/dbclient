@@ -1,12 +1,12 @@
-package net.vpc.dbclient.ideplugins.ideaplugin;
+package net.thevpc.dbclient.ideplugins.ideaplugin;
 
-import net.vpc.dbclient.DBClientVersion;
-import net.vpc.dbclient.api.session.DBCSession;
-import net.vpc.dbclient.api.session.DBCSessionLayoutManager;
-import net.vpc.dbclient.api.session.DBCSessionView;
-import net.vpc.dbclient.api.windowmanager.DBCWindowListener;
-import net.vpc.dbclient.api.windowmanager.DBCWindow;
-import net.vpc.dbclient.api.windowmanager.DBCWindowKind;
+import net.thevpc.dbclient.DBClientVersion;
+import net.thevpc.dbclient.api.session.DBCSession;
+import net.thevpc.dbclient.api.session.DBCSessionLayoutManager;
+import net.thevpc.dbclient.api.session.DBCSessionView;
+import net.thevpc.dbclient.api.windowmanager.DBCWindowListener;
+import net.thevpc.dbclient.api.windowmanager.DBCWindow;
+import net.thevpc.dbclient.api.windowmanager.DBCWindowKind;
 
 import javax.swing.*;
 import java.awt.*;

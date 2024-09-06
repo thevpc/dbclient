@@ -63,7 +63,7 @@
   <target>
     <java-dao-zerolib-target name="DBClientDerbyConfig">
       <package>
-      org.vpc.dbclient.plugin.cfgsupport.cfgderby.dbimpl
+      net.thevpc.dbclient.plugin.cfgsupport.cfgderby.dbimpl
       </package>
       <log-generation enable="false" api="none"/>
       <dto-module/>
