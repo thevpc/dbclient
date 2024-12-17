@@ -8,9 +8,12 @@
             </goals>
             <properties>
                 <exec.classpathScope>runtime</exec.classpathScope>
-                <exec.workingdir>/data/me/xprojects/apps/dbclient/runtime</exec.workingdir>
-                <exec.args>-Xms200M -classpath %classpath net.thevpc.dbclient.DBClientMain --nosplash --loglevel=all</exec.args>
+                <exec.workingdir>/home/vpc/xprojects/productivity/dbclient/runtime/</exec.workingdir>
+                <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.executable>java</exec.executable>
+                <exec.vmArgs>-Xms200M -Dsun.java2d.uiScale=2</exec.vmArgs>
+                <exec.appArgs>--nosplash --loglevel=all</exec.appArgs>
+                <exec.mainClass>net.thevpc.dbclient.DBClientMain</exec.mainClass>
             </properties>
         </action>
         <action>
@@ -23,10 +26,13 @@
                 
                 <exec.classpathScope>runtime</exec.classpathScope>
                 
-                <exec.workingdir>/data/me/xprojects/apps/dbclient/runtime</exec.workingdir>
-                <exec.args>-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=${jpda.address} -Xms200M -classpath %classpath net.thevpc.dbclient.DBClientMain --nosplash --loglevel=all</exec.args>
+                <exec.workingdir>/home/vpc/xprojects/productivity/dbclient/runtime/</exec.workingdir>
+                <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <jpda.listen>true</jpda.listen>
                 <exec.executable>java</exec.executable>
+                <exec.vmArgs>-Xms200M -Dsun.java2d.uiScale=2 -agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
+                <exec.appArgs>--nosplash --loglevel=all</exec.appArgs>
+                <exec.mainClass>net.thevpc.dbclient.DBClientMain</exec.mainClass>
             </properties>
         </action>
         <action>
@@ -36,10 +42,13 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.1.1:exec</goal>
             </goals>
             <properties>
-                <exec.args>${profiler.args} -Xms200M -classpath %classpath net.thevpc.dbclient.DBClientMain --nosplash --loglevel=all</exec.args>
-                <exec.workingdir>/data/me/xprojects/apps/dbclient/runtime</exec.workingdir>
+                <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
+                <exec.workingdir>/home/vpc/xprojects/productivity/dbclient/runtime/</exec.workingdir>
                 <profiler.action>profile</profiler.action>
                 <exec.executable>${profiler.java}</exec.executable>
+                <exec.vmArgs>-Xms200M -Dsun.java2d.uiScale=2</exec.vmArgs>
+                <exec.appArgs>--nosplash --loglevel=all</exec.appArgs>
+                <exec.mainClass>net.thevpc.dbclient.DBClientMain</exec.mainClass>
             </properties>
         </action>
         <action>
@@ -63,10 +72,13 @@
             </goals>
             <properties>
                 <exec.classpathScope>runtime</exec.classpathScope>
-                <exec.workingdir>/data/me/xprojects/apps/dbclient/runtime</exec.workingdir>
-                <exec.args>-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=${jpda.address} -Xms200M -classpath %classpath net.thevpc.dbclient.DBClientMain --nosplash --loglevel=all</exec.args>
+                <exec.workingdir>/home/vpc/xprojects/productivity/dbclient/runtime/</exec.workingdir>
+                <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <jpda.listen>true</jpda.listen>
                 <exec.executable>java</exec.executable>
+                <exec.vmArgs>-Xms200M -Dsun.java2d.uiScale=2 -agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
+                <exec.appArgs>--nosplash --loglevel=all</exec.appArgs>
+                <exec.mainClass>net.thevpc.dbclient.DBClientMain</exec.mainClass>
             </properties>
         </action>
     </actions>
