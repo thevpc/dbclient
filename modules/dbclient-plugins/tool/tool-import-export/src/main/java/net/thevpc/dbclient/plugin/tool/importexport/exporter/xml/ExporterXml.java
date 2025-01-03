@@ -10,6 +10,11 @@ import org.w3c.dom.Element;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 
@@ -64,10 +69,10 @@ public class ExporterXml implements DBCExporter {
                         }
                     }
                 }
-                OutputFormat format = new OutputFormat(dom);
-                format.setIndenting(true);
-                XMLSerializer serializer = new XMLSerializer(out, format);
-                serializer.serialize(dom);
+                Transformer t = TransformerFactory.newInstance().newTransformer();
+                t.setOutputProperty(OutputKeys.INDENT, "yes");
+                t.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+                t.transform(new DOMSource(dom),new StreamResult(out));
             } finally {
                 if (out != null) {
                     out.close();

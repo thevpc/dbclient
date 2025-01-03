@@ -47,4 +47,6 @@ modules/dbclient-plugins/presentation/presentation-infonode/target
 modules/dbclient-plugins/presentation/presentation-plaf-metal/target
 modules/dbclient-plugins/presentation/presentation-swinglabs/target
 /runtime/var/plugins/plugins.cache
+/runtime/var/
+/runtime/plugins/
 /runtime/var/application/log
