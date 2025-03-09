@@ -1,0 +1,1420 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<object type="net.thevpc.dbclient.plugin.system.configmanager.xmlconfig.DBCXMLConfigApplicationModel">
+<sessions type="ArrayList"/>
+<drivers type="HashMap">
+<entry>
+<key type="int" value="0"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key id="3" type="String" value="defaultLogin"/>
+<value id="1" type="String" value=""/>
+</entry>
+<entry>
+<key id="5" type="String" value="name"/>
+<value type="String" value="JDBC/ODBC"/>
+</entry>
+<entry>
+<key id="7" type="String" value="libraries"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key id="9" type="String" value="driverClassName"/>
+<value type="String" value="sun.jdbc.odbc.JdbcOdbcDriver"/>
+</entry>
+<entry>
+<key id="11" type="String" value="index"/>
+<value type="int" value="0"/>
+</entry>
+<entry>
+<key id="13" type="String" value="description"/>
+<value type="String" value="jdbc:odbc:&lt;i&gt;databaseName&lt;/i&gt;&lt;br&gt;&lt;u&gt;exemple :&lt;/u&gt;&lt;br&gt;jdbc:odbc:test&lt;br&gt;"/>
+</entry>
+<entry>
+<key id="15" type="String" value="id"/>
+<value type="int" value="0"/>
+</entry>
+<entry>
+<key id="17" type="String" value="defaultURL"/>
+<value type="String" value="jdbc:odbc:{database}"/>
+</entry>
+<entry>
+<key id="19" type="String" value="enabled"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key id="21" type="String" value="defaultPassword"/>
+<value type="#ref" value="1"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="int" value="1"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="3"/>
+<value type="String" value="system"/>
+</entry>
+<entry>
+<key type="#ref" value="5"/>
+<value type="String" value="Oracle Thin"/>
+</entry>
+<entry>
+<key type="#ref" value="7"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key type="#ref" value="9"/>
+<value type="String" value="oracle.jdbc.driver.OracleDriver"/>
+</entry>
+<entry>
+<key type="#ref" value="11"/>
+<value type="int" value="1"/>
+</entry>
+<entry>
+<key type="#ref" value="13"/>
+<value cdata="true" type="String"><![CDATA[jdbc:oracle:thin:@<i>serverAddress</i>:<i>serverPort</i>:<i>databaseName</i><br><u>exemple :</u><br>jdbc:oracle:thin:@localhost:1521:orclParams :<br>user = system<br>password = manager ; serverPort = 1521<br>]]></value>
+</entry>
+<entry>
+<key type="#ref" value="15"/>
+<value type="int" value="1"/>
+</entry>
+<entry>
+<key type="#ref" value="17"/>
+<value type="String" value="jdbc:oracle:thin:@{server}:1521:{database}"/>
+</entry>
+<entry>
+<key type="#ref" value="19"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key type="#ref" value="21"/>
+<value type="String" value="manager"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="int" value="2"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="3"/>
+<value type="String" value="guest"/>
+</entry>
+<entry>
+<key type="#ref" value="5"/>
+<value type="String" value="Sybase"/>
+</entry>
+<entry>
+<key type="#ref" value="7"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key type="#ref" value="9"/>
+<value type="String" value="connect.sybase.SybaseDriver"/>
+</entry>
+<entry>
+<key type="#ref" value="11"/>
+<value type="int" value="2"/>
+</entry>
+<entry>
+<key type="#ref" value="13"/>
+<value cdata="true" type="String"><![CDATA[jdbc:sybase://<i>serverAddress</i>[:<i>serverPort</i>]/pubs2<br><u>exemple :</u><br>jdbc:sybase://dbtest/pubs2<br><u>Params :</u><br>user = guest<br>password = trustworthy<br>serverPort = 1455<br>]]></value>
+</entry>
+<entry>
+<key type="#ref" value="15"/>
+<value type="int" value="2"/>
+</entry>
+<entry>
+<key type="#ref" value="17"/>
+<value type="String" value="jdbc:sybase://{server}:{port}/{database}"/>
+</entry>
+<entry>
+<key type="#ref" value="19"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key type="#ref" value="21"/>
+<value type="String" value="trustworthy"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="int" value="3"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="3"/>
+<value id="43" type="String" value="db2admin"/>
+</entry>
+<entry>
+<key type="#ref" value="5"/>
+<value type="String" value="DB2"/>
+</entry>
+<entry>
+<key type="#ref" value="7"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key type="#ref" value="9"/>
+<value type="String" value="COM.ibm.db2.jdbc.app.DB2Driver"/>
+</entry>
+<entry>
+<key type="#ref" value="11"/>
+<value type="int" value="3"/>
+</entry>
+<entry>
+<key type="#ref" value="13"/>
+<value cdata="true" type="String"><![CDATA[jdbc:db2:<i>databaseName</i>
+        <br><u>exemple :</u>
+        <br>jdbc:db2:test
+        <br><u>Params :</u>
+        <br>user = db2admin
+        <br>password = db2admin<br>]]></value>
+</entry>
+<entry>
+<key type="#ref" value="15"/>
+<value type="int" value="3"/>
+</entry>
+<entry>
+<key type="#ref" value="17"/>
+<value type="String" value="jdbc:db2:{database}"/>
+</entry>
+<entry>
+<key type="#ref" value="19"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key type="#ref" value="21"/>
+<value type="#ref" value="43"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="int" value="4"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="3"/>
+<value type="#ref" value="1"/>
+</entry>
+<entry>
+<key type="#ref" value="5"/>
+<value type="String" value="InstantDB"/>
+</entry>
+<entry>
+<key type="#ref" value="7"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key type="#ref" value="9"/>
+<value type="String" value="com.lutris.instantdb.jdbc.idbDriver"/>
+</entry>
+<entry>
+<key type="#ref" value="11"/>
+<value type="int" value="4"/>
+</entry>
+<entry>
+<key type="#ref" value="13"/>
+<value cdata="true" type="String"><![CDATA[jdbc:idb=<i>databaseName</i>
+        <br><u>exemple :</u>
+        <br>jdbc:db2=D:/einstein/work/runtime/resources/db/sgDb.prp]]></value>
+</entry>
+<entry>
+<key type="#ref" value="15"/>
+<value type="int" value="4"/>
+</entry>
+<entry>
+<key type="#ref" value="17"/>
+<value type="String" value="jdbc:idb={database}"/>
+</entry>
+<entry>
+<key type="#ref" value="19"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key type="#ref" value="21"/>
+<value type="#ref" value="1"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="int" value="5"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="3"/>
+<value type="String" value="SYSDBA"/>
+</entry>
+<entry>
+<key type="#ref" value="5"/>
+<value type="String" value="Interbase"/>
+</entry>
+<entry>
+<key type="#ref" value="7"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key type="#ref" value="9"/>
+<value type="String" value="interbase.interclient.Driver"/>
+</entry>
+<entry>
+<key type="#ref" value="11"/>
+<value type="int" value="5"/>
+</entry>
+<entry>
+<key type="#ref" value="13"/>
+<value cdata="true" type="String"><![CDATA[jdbc:interbase://<i>serverAddress</i>/<i>databaseName</i>
+                    <br><u>exemple :</u>
+                    <br>jdbc:interbase://localhost/D:/examples/employee.gdb
+                    <br><u>Params :</u>
+                    <br>user = SYSDBA
+                    <br>password = masterkey]]></value>
+</entry>
+<entry>
+<key type="#ref" value="15"/>
+<value type="int" value="5"/>
+</entry>
+<entry>
+<key type="#ref" value="17"/>
+<value type="String" value="jdbc:interbase://{server]/{database}"/>
+</entry>
+<entry>
+<key type="#ref" value="19"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key type="#ref" value="21"/>
+<value type="String" value="masterkey"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="int" value="6"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="3"/>
+<value id="79" type="String" value="sa"/>
+</entry>
+<entry>
+<key type="#ref" value="5"/>
+<value type="String" value="MSSQLServer/Avenir"/>
+</entry>
+<entry>
+<key type="#ref" value="7"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key type="#ref" value="9"/>
+<value type="String" value="net.avenir.jdbc2.Driver"/>
+</entry>
+<entry>
+<key type="#ref" value="11"/>
+<value type="int" value="6"/>
+</entry>
+<entry>
+<key type="#ref" value="13"/>
+<value cdata="true" type="String"><![CDATA[jdbc:AvenirDriver://<i>serverAddress</i>[:<i>serverPort</i>]/<i>databaseName</i>
+                    <br><u>exemple :</u>
+                    <br>jdbc:AvenirDriver://localhost:1433/master
+                    <br><u>Params :</u>
+                    <br>user = sa<br>password =
+                    <br>serverPort = 1433]]></value>
+</entry>
+<entry>
+<key type="#ref" value="15"/>
+<value type="int" value="6"/>
+</entry>
+<entry>
+<key type="#ref" value="17"/>
+<value type="String" value="jdbc:AvenirDriver://{server}:{port}/{database}"/>
+</entry>
+<entry>
+<key type="#ref" value="19"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key type="#ref" value="21"/>
+<value type="#ref" value="1"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="int" value="7"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="3"/>
+<value type="#ref" value="79"/>
+</entry>
+<entry>
+<key type="#ref" value="5"/>
+<value type="String" value="MSSQLServer/SequeLink"/>
+</entry>
+<entry>
+<key type="#ref" value="7"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key type="#ref" value="9"/>
+<value type="String" value="com.merant.sequelink.jdbc.SequeLinkDriver"/>
+</entry>
+<entry>
+<key type="#ref" value="11"/>
+<value type="int" value="7"/>
+</entry>
+<entry>
+<key type="#ref" value="13"/>
+<value cdata="true" type="String"><![CDATA[jdbc:sequelink://<i>serverAddress</i>[:<i>serverPort</i>]:/databaseName=<i>databaseName</i>
+                    <br><u>exemple :</u>
+                    <br>jdbc:sequelink://localhost:99996:/databaseName=master
+                    <br><u>Params :</u><br>user = sa
+                    <br>password = <br>serverPort = 99996]]></value>
+</entry>
+<entry>
+<key type="#ref" value="15"/>
+<value type="int" value="7"/>
+</entry>
+<entry>
+<key type="#ref" value="17"/>
+<value type="String" value="jdbc:sequelink://{server}:{port}:/databaseName={database}"/>
+</entry>
+<entry>
+<key type="#ref" value="19"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key type="#ref" value="21"/>
+<value type="#ref" value="1"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="int" value="8"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="3"/>
+<value type="#ref" value="79"/>
+</entry>
+<entry>
+<key type="#ref" value="5"/>
+<value type="String" value="MSSQLServer"/>
+</entry>
+<entry>
+<key type="#ref" value="7"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key type="#ref" value="9"/>
+<value type="String" value="com.microsoft.jdbc.sqlserver.SQLServerDriver"/>
+</entry>
+<entry>
+<key type="#ref" value="11"/>
+<value type="int" value="8"/>
+</entry>
+<entry>
+<key type="#ref" value="13"/>
+<value cdata="true" type="String"><![CDATA[jdbc:microsoft:sqlserver://<i>serverAddress</i>:<i>serverPort</i>;databaseName=<i>databaseName</i>
+                    <br><u>exemple :</u>
+                    <br>jdbc:sequelink://localhost:99996:/databaseName=master
+                    <br><u>Params :</u>
+                    <br>user = sa
+                    <br>password =
+                    <br>serverPort = 99996<br>]]></value>
+</entry>
+<entry>
+<key type="#ref" value="15"/>
+<value type="int" value="8"/>
+</entry>
+<entry>
+<key type="#ref" value="17"/>
+<value type="String" value="jdbc:microsoft:sqlserver://{server}:{port};databaseName={database}"/>
+</entry>
+<entry>
+<key type="#ref" value="19"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key type="#ref" value="21"/>
+<value type="#ref" value="1"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="int" value="9"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="3"/>
+<value type="String" value="root"/>
+</entry>
+<entry>
+<key type="#ref" value="5"/>
+<value type="String" value="MySQL"/>
+</entry>
+<entry>
+<key type="#ref" value="7"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key type="#ref" value="9"/>
+<value type="String" value="org.gjt.mm.mysql.Driver"/>
+</entry>
+<entry>
+<key type="#ref" value="11"/>
+<value type="int" value="9"/>
+</entry>
+<entry>
+<key type="#ref" value="13"/>
+<value cdata="true" type="String"><![CDATA[jdbc:mysql://<i>serverAddress</i>/<i>databaseName</i>
+                    <br><u>exemple :</u>
+                    <br>jdbc:mysql://localhost/test
+                    <br><u>Params :</u>
+                    <br>user = root<br>password =]]></value>
+</entry>
+<entry>
+<key type="#ref" value="15"/>
+<value type="int" value="9"/>
+</entry>
+<entry>
+<key type="#ref" value="17"/>
+<value type="String" value="jdbc:mysql://{server}/{database}"/>
+</entry>
+<entry>
+<key type="#ref" value="19"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key type="#ref" value="21"/>
+<value type="#ref" value="1"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="int" value="10"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="3"/>
+<value type="#ref" value="1"/>
+</entry>
+<entry>
+<key type="#ref" value="5"/>
+<value type="String" value="McKoi"/>
+</entry>
+<entry>
+<key type="#ref" value="7"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key type="#ref" value="9"/>
+<value type="String" value="com.mckoi.JDBCDriver"/>
+</entry>
+<entry>
+<key type="#ref" value="11"/>
+<value type="int" value="10"/>
+</entry>
+<entry>
+<key type="#ref" value="13"/>
+<value cdata="true" type="String"><![CDATA[jdbc:mckoi://host[:<i>port</i>][/<i>schema</i>]/
+                    <br><u>exemple :</u>
+                    <br>jdbc:mckoi://mydatabase.mydomain.org/TOBY/
+                    <br><u>Params :</u><br>user = root
+                    <br>password = <br>port=9157
+                    <br>schema=APP
+                    <br><br>or
+                    <br><br>
+                    jdbc:mckoi:local://<i>path_to_database_config</i>[/<i>schema</i>][?<i>var1</i>=<i>value1</i>&<i>var2</i>=<i>value2</i>&...]
+                    <br><u>exemple :</u>
+                    <br>jdbc:mckoi:local://c:/mydb/myconfig.conf?read_only=enabled&log_path=c:/mynewlogdir/
+                    <br><u>to create a database :</u>
+                    <br>jdbc:mckoi:local://c:/mydb/myconfig.conf?create=true]]></value>
+</entry>
+<entry>
+<key type="#ref" value="15"/>
+<value type="int" value="10"/>
+</entry>
+<entry>
+<key type="#ref" value="17"/>
+<value type="String" value="jdbc:mckoi://{server}:{port}/{database}/"/>
+</entry>
+<entry>
+<key type="#ref" value="19"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key type="#ref" value="21"/>
+<value type="#ref" value="1"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="int" value="11"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="3"/>
+<value type="#ref" value="1"/>
+</entry>
+<entry>
+<key type="#ref" value="5"/>
+<value type="String" value="Derby/Embedded"/>
+</entry>
+<entry>
+<key type="#ref" value="7"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key type="#ref" value="9"/>
+<value type="String" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+</entry>
+<entry>
+<key type="#ref" value="11"/>
+<value type="int" value="11"/>
+</entry>
+<entry>
+<key type="#ref" value="13"/>
+<value cdata="true" type="String"><![CDATA[jdbc:derby:<i>dbname</i>;create=true
+                    <br><u>exemple :</u>
+                    <br>jdbc:derby:test;create=true
+                    <br><u>Params :</u>
+                    <br>user = root
+                    <br>password = root]]></value>
+</entry>
+<entry>
+<key type="#ref" value="15"/>
+<value type="int" value="11"/>
+</entry>
+<entry>
+<key type="#ref" value="17"/>
+<value type="String" value="jdbc:derby:{database};create=true"/>
+</entry>
+<entry>
+<key type="#ref" value="19"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key type="#ref" value="21"/>
+<value type="#ref" value="1"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="int" value="12"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="3"/>
+<value type="#ref" value="1"/>
+</entry>
+<entry>
+<key type="#ref" value="5"/>
+<value type="String" value="MSAccess/hxtt"/>
+</entry>
+<entry>
+<key type="#ref" value="7"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key type="#ref" value="9"/>
+<value type="String" value="com.hxtt.sql.access.AccessDriver"/>
+</entry>
+<entry>
+<key type="#ref" value="11"/>
+<value type="int" value="12"/>
+</entry>
+<entry>
+<key type="#ref" value="13"/>
+<value type="String" value="jdbc:access:////home/vpc/example"/>
+</entry>
+<entry>
+<key type="#ref" value="15"/>
+<value type="int" value="12"/>
+</entry>
+<entry>
+<key type="#ref" value="17"/>
+<value type="String" value="jdbc:access:{database}"/>
+</entry>
+<entry>
+<key type="#ref" value="19"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key type="#ref" value="21"/>
+<value type="#ref" value="1"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="int" value="13"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="3"/>
+<value id="160" type="String" value="postgres"/>
+</entry>
+<entry>
+<key type="#ref" value="5"/>
+<value type="String" value="PostgreSQL"/>
+</entry>
+<entry>
+<key type="#ref" value="7"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key type="#ref" value="9"/>
+<value type="String" value="org.postgresql.Driver"/>
+</entry>
+<entry>
+<key type="#ref" value="11"/>
+<value type="int" value="13"/>
+</entry>
+<entry>
+<key type="#ref" value="13"/>
+<value type="String" value="jdbc:postgresql://localhost/postgres"/>
+</entry>
+<entry>
+<key type="#ref" value="15"/>
+<value type="int" value="13"/>
+</entry>
+<entry>
+<key type="#ref" value="17"/>
+<value type="String" value="jdbc:postgresql://{server}/{database}"/>
+</entry>
+<entry>
+<key type="#ref" value="19"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key type="#ref" value="21"/>
+<value type="#ref" value="160"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="int" value="14"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="3"/>
+<value type="#ref" value="1"/>
+</entry>
+<entry>
+<key type="#ref" value="5"/>
+<value type="String" value="Derby Network Server"/>
+</entry>
+<entry>
+<key type="#ref" value="7"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key type="#ref" value="9"/>
+<value type="String" value="org.apache.derby.jdbc.ClientDriver"/>
+</entry>
+<entry>
+<key type="#ref" value="11"/>
+<value type="int" value="14"/>
+</entry>
+<entry>
+<key type="#ref" value="13"/>
+<value cdata="true" type="String"><![CDATA[jdbc:derby://localhost:1527/MyDbTest;create=true
+                    <br><u>exemple :</u>
+                    <br>jdbc:derby:test;create=true
+                    <br><u>Params :</u>
+                    <br>user = root
+                    <br>password = root]]></value>
+</entry>
+<entry>
+<key type="#ref" value="15"/>
+<value type="int" value="14"/>
+</entry>
+<entry>
+<key type="#ref" value="17"/>
+<value type="String" value="jdbc:derby://{server}:{port}/{database};create=true"/>
+</entry>
+<entry>
+<key type="#ref" value="19"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key type="#ref" value="21"/>
+<value type="#ref" value="1"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="int" value="15"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="3"/>
+<value type="#ref" value="1"/>
+</entry>
+<entry>
+<key type="#ref" value="5"/>
+<value type="String" value="HSql"/>
+</entry>
+<entry>
+<key type="#ref" value="7"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key type="#ref" value="9"/>
+<value type="String" value="org.hsqldb.jdbcDriver"/>
+</entry>
+<entry>
+<key type="#ref" value="11"/>
+<value type="int" value="15"/>
+</entry>
+<entry>
+<key type="#ref" value="13"/>
+<value cdata="true" type="String"><![CDATA[examples of urls
+                    <ul>
+                    <li>jdbc:hsqldb:file:/path/to/testdb</li>
+                    <li>jdbc:hsqldb:mem:testdb</li>
+                    <li>jdbc:hsqldb:hsql://localhost/testdb</li>
+                    </ul>]]></value>
+</entry>
+<entry>
+<key type="#ref" value="15"/>
+<value type="int" value="15"/>
+</entry>
+<entry>
+<key type="#ref" value="17"/>
+<value type="String" value="jdbc:hsqldb:{protocol}:{subUrl}"/>
+</entry>
+<entry>
+<key type="#ref" value="19"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key type="#ref" value="21"/>
+<value type="#ref" value="1"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="int" value="16"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCDriverInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="3"/>
+<value type="#ref" value="79"/>
+</entry>
+<entry>
+<key type="#ref" value="5"/>
+<value type="String" value="Sybase-Tds"/>
+</entry>
+<entry>
+<key type="#ref" value="7"/>
+<value type="ArrayList"/>
+</entry>
+<entry>
+<key type="#ref" value="9"/>
+<value type="String" value="com.sybase.jdbc3.jdbc.SybDriver"/>
+</entry>
+<entry>
+<key type="#ref" value="11"/>
+<value type="int" value="16"/>
+</entry>
+<entry>
+<key type="#ref" value="13"/>
+<value cdata="true" type="String"><![CDATA[jdbc:sybase:Tds:<i>serverAddress</i>[:<i>serverPort</i>]/XP<br><u>exemple :</u><br>jdbc:sybase:Tds:localhost:5000<br><u>Params :</u><br>user = sa<br>password = <br>serverPort = 5000<br>]]></value>
+</entry>
+<entry>
+<key type="#ref" value="15"/>
+<value type="int" value="16"/>
+</entry>
+<entry>
+<key type="#ref" value="17"/>
+<value type="String" value="jdbc:sybase:Tds:{server}:{port}/{database}"/>
+</entry>
+<entry>
+<key type="#ref" value="19"/>
+<value type="boolean" value="true"/>
+</entry>
+<entry>
+<key type="#ref" value="21"/>
+<value type="#ref" value="1"/>
+</entry>
+</map>
+</value>
+</entry>
+</drivers>
+<props type="HashMap">
+<entry>
+<key type="String" value="Plugin.dbsupport-postgresql.Version"/>
+<value type="String" value="0.5.6"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbsupport-access.InstallStatus"/>
+<value id="198" type="String" value="installed"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.tool-import-export.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbdriver-derby.Version"/>
+<value type="String" value="10.7.1.1"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.tool-record-editor.Version"/>
+<value type="String" value="0.5.6"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.tool-jstsql.Version"/>
+<value type="String" value="0.5.8"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbdriver-hsql.Version"/>
+<value type="String" value="1.9.0.rc4.1"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.tool-server-manager.Version"/>
+<value type="String" value="0.5.6"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.iconset-tango.Version"/>
+<value type="String" value="0.6.1"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.library-jexcelapi.Version"/>
+<value type="String" value="0.4"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.tool-box.Version"/>
+<value type="String" value="0.5.8"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.cfgsupport-derby.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbsupport-mysql.Version"/>
+<value type="String" value="0.5.1"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbsupport-hsql.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.tool-record-editor.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.infonode.Version"/>
+<value type="String" value="1.6.1.9"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbclient-artset-grass.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.library-hsql-server.Version"/>
+<value type="String" value="1.9.0.rc4.1"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.library-javac.Version"/>
+<value type="String" value="1.6.0.24"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.tool-neormf.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.tool-import-export.Version"/>
+<value type="String" value="0.5.6"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.iconset-noicon.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbsupport-mckoi.Version"/>
+<value type="String" value="0.5.1"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbsupport-mssqlserver.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.infonode.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="configVersion"/>
+<value type="String" value="0.5.0"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbsupport-access.Version"/>
+<value type="String" value="0.4.0"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.lang-nl.Version"/>
+<value type="String" value="0.12"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.presentation-swinglabs.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbdriver-derby.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.lang-de.Version"/>
+<value type="String" value="0.12"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.library-derby-server.Version"/>
+<value type="String" value="10.7.1.1.0"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.tool-neormf.Version"/>
+<value type="String" value="0.5.2"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbsupport-postgresql.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbclient-system.InstallStatus"/>
+<value id="235" type="String" value="installed"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.iconset-linux.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.lang-nl.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.library-mckoi-server.Version"/>
+<value type="String" value="1.0.4"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.library-mckoi-server.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.tool-server-manager.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbdriver-mysql.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbclient-system.Version"/>
+<value type="String" value="0.5.8"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbdriver-mysql.Version"/>
+<value type="String" value="5.1.7"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.library-hsql-server.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.import-export-excel.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbclient-update.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbclient-artset-grass.Version"/>
+<value type="String" value="0.5.3"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbsupport-hsql.Version"/>
+<value type="String" value="0.5.2"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.cfgsupport-derby.Version"/>
+<value type="String" value="0.1.13"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.iconset-java.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.plaf-metal.Version"/>
+<value type="String" value="0.1"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbsupport-mckoi.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.presentation-swinglabs.Version"/>
+<value type="String" value="0.9.3.14"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbclient-update.Version"/>
+<value type="String" value="0.5.3"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.iconset-linux.Version"/>
+<value type="String" value="0.6.4"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbdriver-hsql.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbsupport-derby.Version"/>
+<value type="String" value="0.4.17"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbsupport-oracle.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.lang-fr.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.import-export-excel.Version"/>
+<value type="String" value="0.5.6"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.plaf-metal.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.search-engine.Version"/>
+<value type="String" value="0.5.8"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbsupport-oracle.Version"/>
+<value type="String" value="0.5.1"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.lang-ar.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbclient-artset-blues.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbsupport-derby.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.library-jexcelapi.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="ui.locale"/>
+<value type="String" value="en_US"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.iconset-tango.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.tool-box.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbdriver-mckoi.Version"/>
+<value type="String" value="1.0.3"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbsupport-mssqlserver.Version"/>
+<value type="String" value="0.5.1"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbdriver-postgresql.Version"/>
+<value type="String" value="8.4.701.0"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.lang-fr.Version"/>
+<value type="String" value="0.16"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.iconset-noicon.Version"/>
+<value type="String" value="0.4.3"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.iconset-java.Version"/>
+<value type="String" value="0.4"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbsupport-mysql.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.library-derby-server.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.search-engine.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbdriver-postgresql.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.tool-jstsql.InstallStatus"/>
+<value type="#ref" value="235"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.library-javac.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.lang-de.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbdriver-mckoi.InstallStatus"/>
+<value type="#ref" value="198"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.lang-ar.Version"/>
+<value type="String" value="0.13"/>
+</entry>
+<entry>
+<key type="String" value="Plugin.dbclient-artset-blues.Version"/>
+<value type="String" value="0.5.3"/>
+</entry>
+</props>
+<messages type="HashMap">
+<entry>
+<key type="String" value="Action.GenericTreeSQLGenerator.SelectCount;*"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
+<map type="HashMap">
+<entry>
+<key id="240" type="String" value="msgId"/>
+<value type="String" value="Action.GenericTreeSQLGenerator.SelectCount"/>
+</entry>
+<entry>
+<key id="242" type="String" value="msgData"/>
+<value type="String" value="Select Count"/>
+</entry>
+<entry>
+<key id="244" type="String" value="msgLocName"/>
+<value type="String" value="*"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="String" value="Action.GenericTreeSQLGenerator.Drop;*"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="240"/>
+<value type="String" value="Action.GenericTreeSQLGenerator.Drop"/>
+</entry>
+<entry>
+<key type="#ref" value="242"/>
+<value type="String" value="Drop"/>
+</entry>
+<entry>
+<key type="#ref" value="244"/>
+<value type="String" value="*"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="String" value="Action.GenericTreeSQLGenerator.AlterColumn;*"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="240"/>
+<value type="String" value="Action.GenericTreeSQLGenerator.AlterColumn"/>
+</entry>
+<entry>
+<key type="#ref" value="242"/>
+<value type="String" value="Alter"/>
+</entry>
+<entry>
+<key type="#ref" value="244"/>
+<value type="String" value="*"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="String" value="Action.GenericTreeSQLGenerator.SelectStar;*"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="240"/>
+<value type="String" value="Action.GenericTreeSQLGenerator.SelectStar"/>
+</entry>
+<entry>
+<key type="#ref" value="242"/>
+<value type="String" value="Select *"/>
+</entry>
+<entry>
+<key type="#ref" value="244"/>
+<value type="String" value="*"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="String" value="Action.GenericTreeSQLGenerator.DropColumn;*"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="240"/>
+<value type="String" value="Action.GenericTreeSQLGenerator.DropColumn"/>
+</entry>
+<entry>
+<key type="#ref" value="242"/>
+<value type="String" value="Drop Column"/>
+</entry>
+<entry>
+<key type="#ref" value="244"/>
+<value type="String" value="*"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="String" value="Action.GenericTreeSQLGenerator.Insert;*"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="240"/>
+<value type="String" value="Action.GenericTreeSQLGenerator.Insert"/>
+</entry>
+<entry>
+<key type="#ref" value="242"/>
+<value type="String" value="Insert"/>
+</entry>
+<entry>
+<key type="#ref" value="244"/>
+<value type="String" value="*"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="String" value="Action.GenericTreeSQLGenerator.SelectAll;*"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="240"/>
+<value type="String" value="Action.GenericTreeSQLGenerator.SelectAll"/>
+</entry>
+<entry>
+<key type="#ref" value="242"/>
+<value type="String" value="Select ..."/>
+</entry>
+<entry>
+<key type="#ref" value="244"/>
+<value type="String" value="*"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="String" value="Action.GenericTreeSQLGenerator.Delete;*"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="240"/>
+<value type="String" value="Action.GenericTreeSQLGenerator.Delete"/>
+</entry>
+<entry>
+<key type="#ref" value="242"/>
+<value type="String" value="Delete All"/>
+</entry>
+<entry>
+<key type="#ref" value="244"/>
+<value type="String" value="*"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="String" value="Action.GenericTreeSQLGenerator.SelectWhere;*"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="240"/>
+<value type="String" value="Action.GenericTreeSQLGenerator.SelectWhere"/>
+</entry>
+<entry>
+<key type="#ref" value="242"/>
+<value type="String" value="Select ... Where ..."/>
+</entry>
+<entry>
+<key type="#ref" value="244"/>
+<value type="String" value="*"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="String" value="Action.GenericTreeSQLGenerator.InsertSimple;*"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="240"/>
+<value type="String" value="Action.GenericTreeSQLGenerator.InsertSimple"/>
+</entry>
+<entry>
+<key type="#ref" value="242"/>
+<value type="String" value="Insert mandatory columns"/>
+</entry>
+<entry>
+<key type="#ref" value="244"/>
+<value type="String" value="*"/>
+</entry>
+</map>
+</value>
+</entry>
+<entry>
+<key type="String" value="Action.GenericTreeSQLGenerator.Update;*"/>
+<value type="net.thevpc.dbclient.api.configmanager.DBCMessageInfo">
+<map type="HashMap">
+<entry>
+<key type="#ref" value="240"/>
+<value type="String" value="Action.GenericTreeSQLGenerator.Update"/>
+</entry>
+<entry>
+<key type="#ref" value="242"/>
+<value type="String" value="Update ... Where ..."/>
+</entry>
+<entry>
+<key type="#ref" value="244"/>
+<value type="String" value="*"/>
+</entry>
+</map>
+</value>
+</entry>
+</messages>
+</object>

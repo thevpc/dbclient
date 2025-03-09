@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+copy_plugin () {
+    cp $SCRIPT_DIR/../modules/dbclient-plugins/$1/target/*[0-9].jar $SCRIPT_DIR/plugins
+}
+
+copy_plugin iconset/iconset-java
+copy_plugin iconset/iconset-linux
+copy_plugin iconset/iconset-noicon
+copy_plugin iconset/iconset-tango
+copy_plugin lang/lang-ar
+copy_plugin lang/lang-de
+copy_plugin lang/lang-fr
+copy_plugin lang/lang-nl
+copy_plugin system/dbclient-system
+copy_plugin system/dbclient-update
+copy_plugin tool/tool-server-manager
+copy_plugin tool/tool-box
+copy_plugin tool/tool-import-export
+copy_plugin tool/tool-import-export-excel
+copy_plugin tool/tool-jstsql
+copy_plugin tool/tool-neormf
+copy_plugin tool/tool-record-editor
+copy_plugin tool/tool-search-engine
+copy_plugin cfgsupport/cfgsupport-derby
+copy_plugin dbdriver/dbdriver-derby
+copy_plugin dbdriver/dbdriver-hsql
+copy_plugin dbdriver/dbdriver-mckoi
+copy_plugin dbdriver/dbdriver-mysql
+copy_plugin dbdriver/dbdriver-postgresql
+copy_plugin dbsupport/dbsupport-access
+copy_plugin dbsupport/dbsupport-derby
+copy_plugin dbsupport/dbsupport-hsql
+copy_plugin dbsupport/dbsupport-mckoi
+copy_plugin dbsupport/dbsupport-mssqlserver
+copy_plugin dbsupport/dbsupport-mysql
+copy_plugin dbsupport/dbsupport-oracle
+copy_plugin dbsupport/dbsupport-postgresql
+copy_plugin library/library-derby-server
+copy_plugin library/library-hsql-server
+copy_plugin library/library-javac
+copy_plugin library/library-mckoi-server
+copy_plugin library/library-jexcelapi
+copy_plugin presentation/presentation-infonode
+copy_plugin presentation/presentation-plaf-metal
+copy_plugin presentation/presentation-swinglabs
+copy_plugin artset/artset-blues
+copy_plugin artset/artset-grass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
