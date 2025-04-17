@@ -1,6 +1,4 @@
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.thevpc.dbclient.plugins.tool</groupId>
@@ -23,27 +21,9 @@
 		<!-- ##############################
 			PRIVATE COMPILE DEPENDENCIES 
 		############################## -->
-        <dependency>
-            <groupId>org.vpc.neormf</groupId>
-            <artifactId>neormf-commons</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${dbclient-root-folder}/modules/dbclient-plugins/tool/tool-neormf/src/main/resources/META-INF/lib/neormf-commons.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>org.vpc.neormf</groupId>
-            <artifactId>neormf-jbgen</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${dbclient-root-folder}/modules/dbclient-plugins/tool/tool-neormf/src/main/resources/META-INF/lib/neormf-jbgen.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>org.vpc.neormf</groupId>
-            <artifactId>neormf-wws</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${dbclient-root-folder}/modules/dbclient-plugins/tool/tool-neormf/src/main/resources/META-INF/lib/neormf-wws.jar</systemPath>
-        </dependency>
+        <dependency><groupId>org.vpc.neormf</groupId><artifactId>neormf-commons</artifactId><version>1.0</version><scope>system</scope><systemPath>${dbclient-root-folder}/modules/dbclient-plugins/tool/tool-neormf/src/main/resources/META-INF/lib/neormf-commons.jar</systemPath></dependency>
+        <dependency><groupId>org.vpc.neormf</groupId><artifactId>neormf-jbgen</artifactId><version>1.0</version><scope>system</scope><systemPath>${dbclient-root-folder}/modules/dbclient-plugins/tool/tool-neormf/src/main/resources/META-INF/lib/neormf-jbgen.jar</systemPath></dependency>
+        <dependency><groupId>org.vpc.neormf</groupId><artifactId>neormf-wws</artifactId><version>1.0</version><scope>system</scope><systemPath>${dbclient-root-folder}/modules/dbclient-plugins/tool/tool-neormf/src/main/resources/META-INF/lib/neormf-wws.jar</systemPath></dependency>
 		<!-- ##############################
 			THIRD PARTY COMPILE DEPENDENCIES 
 		############################## -->

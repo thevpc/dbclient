@@ -1,6 +1,4 @@
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.thevpc.dbclient</groupId>
     <artifactId>dbclient-plugin-root</artifactId>
@@ -22,11 +20,7 @@
 		<!-- ##############################
 			PRIVATE COMPILE DEPENDENCIES 
 		############################## -->
-        <dependency>
-            <groupId>net.thevpc.dbclient</groupId>
-            <artifactId>net.thevpc.dbclient.dbclient-core</artifactId>
-            <version>${version.dbclient-core}</version>
-        </dependency>
+        <dependency><groupId>net.thevpc.dbclient</groupId><artifactId>net.thevpc.dbclient.dbclient-core</artifactId><version>${version.dbclient-core}</version></dependency>
 
 		<!-- ##############################
 			THIRD PARTY COMPILE DEPENDENCIES 
@@ -36,12 +30,7 @@
 		<!-- ##############################
 			TEST DEPENDENCIES
 		############################## -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${version.junit}</version>
-            <scope>test</scope>
-        </dependency>
+        <dependency><groupId>junit</groupId><artifactId>junit</artifactId><version>${version.junit}</version><scope>test</scope></dependency>
         
     </dependencies>
     
