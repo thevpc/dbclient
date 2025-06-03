@@ -21,9 +21,9 @@
 		<!-- ##############################
 			PRIVATE COMPILE DEPENDENCIES 
 		############################## -->
-        <dependency><groupId>org.vpc.neormf</groupId><artifactId>neormf-commons</artifactId><version>1.0</version><scope>system</scope><systemPath>${dbclient-root-folder}/modules/dbclient-plugins/tool/tool-neormf/src/main/resources/META-INF/lib/neormf-commons.jar</systemPath></dependency>
-        <dependency><groupId>org.vpc.neormf</groupId><artifactId>neormf-jbgen</artifactId><version>1.0</version><scope>system</scope><systemPath>${dbclient-root-folder}/modules/dbclient-plugins/tool/tool-neormf/src/main/resources/META-INF/lib/neormf-jbgen.jar</systemPath></dependency>
-        <dependency><groupId>org.vpc.neormf</groupId><artifactId>neormf-wws</artifactId><version>1.0</version><scope>system</scope><systemPath>${dbclient-root-folder}/modules/dbclient-plugins/tool/tool-neormf/src/main/resources/META-INF/lib/neormf-wws.jar</systemPath></dependency>
+        <dependency><groupId>net.thevpc.neormf</groupId><artifactId>neormf-commons</artifactId><version>1.0</version></dependency>
+        <dependency><groupId>net.thevpc.neormf</groupId><artifactId>neormf-jbgen</artifactId><version>1.0</version></dependency>
+        <dependency><groupId>net.thevpc.neormf</groupId><artifactId>neormf-wws</artifactId><version>1.0</version></dependency>
 		<!-- ##############################
 			THIRD PARTY COMPILE DEPENDENCIES 
 		############################## -->

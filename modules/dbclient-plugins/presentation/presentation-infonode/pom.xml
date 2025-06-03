@@ -26,11 +26,11 @@
 			THIRD PARTY COMPILE DEPENDENCIES 
 		############################## -->
       
-        <dependency><groupId>net.infonode</groupId><artifactId>idw-gpl</artifactId><version>1.6.1</version><scope>system</scope><systemPath>${dbclient-root-folder}/modules/dbclient-plugins/presentation/presentation-infonode/src/main/resources/META-INF/lib/idw-gpl.jar</systemPath></dependency>
+        <dependency><groupId>net.infonode</groupId><artifactId>idw-gpl</artifactId><version>1.6.1</version></dependency>
       
-        <dependency><groupId>net.infonode</groupId><artifactId>ilf-gpl</artifactId><version>1.6.1</version><scope>system</scope><systemPath>${dbclient-root-folder}/modules/dbclient-plugins/presentation/presentation-infonode/src/main/resources/META-INF/lib/ilf-gpl.jar</systemPath></dependency>
+        <dependency><groupId>net.infonode</groupId><artifactId>ilf-gpl</artifactId><version>1.6.1</version></dependency>
       
-        <dependency><groupId>net.infonode</groupId><artifactId>itp-gpl</artifactId><version>1.6.1</version><scope>system</scope><systemPath>${dbclient-root-folder}/modules/dbclient-plugins/presentation/presentation-infonode/src/main/resources/META-INF/lib/itp-gpl.jar</systemPath></dependency>
+        <dependency><groupId>net.infonode</groupId><artifactId>itp-gpl</artifactId><version>1.6.1</version></dependency>
       
 		<!-- ##############################
 			TEST DEPENDENCIES
