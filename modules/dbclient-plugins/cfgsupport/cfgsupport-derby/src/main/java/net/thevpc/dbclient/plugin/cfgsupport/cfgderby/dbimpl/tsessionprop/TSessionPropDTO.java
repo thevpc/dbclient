@@ -75,7 +75,7 @@ public class TSessionPropDTO implements Cloneable {
      * setter for tspSesId
      */
     public TSessionPropDTO setTspSesId(int value) {
-        dataMap.put(TSessionPropPropertyList.TSP_SES_ID, new Integer(value));
+        dataMap.put(TSessionPropPropertyList.TSP_SES_ID, value);
         return this;
     }
 

@@ -194,11 +194,11 @@ public class TConfigPropFilter {
         newCriteria.joins = sb.length() == 0 ? null : sb.toString();
         int pos = 1;
         for (int i = 0; i < params.size(); i++) {
-            newCriteria.params.put(new Integer(pos), params.get(new Integer(i + 1)));
+            newCriteria.params.put(new Integer(pos), params.get((i + 1)));
             pos++;
         }
         for (int i = 0; i < other.params.size(); i++) {
-            SqlParam p = (SqlParam) other.params.get(new Integer(i + 1));
+            SqlParam p = (SqlParam) other.params.get((i + 1));
             p.setPos(pos);
             newCriteria.params.put(new Integer(pos), p);
             pos++;

@@ -45,7 +45,7 @@ public class TDriverLibDTO implements Cloneable {
      * setter for tdlDrvId
      */
     public TDriverLibDTO setTdlDrvId(int value) {
-        dataMap.put(TDriverLibPropertyList.TDL_DRV_ID, new Integer(value));
+        dataMap.put(TDriverLibPropertyList.TDL_DRV_ID, (value));
         return this;
     }
 
@@ -75,7 +75,7 @@ public class TDriverLibDTO implements Cloneable {
      * setter for tdlIndex
      */
     public TDriverLibDTO setTdlIndex(int value) {
-        dataMap.put(TDriverLibPropertyList.TDL_INDEX, new Integer(value));
+        dataMap.put(TDriverLibPropertyList.TDL_INDEX, (value));
         return this;
     }
 

@@ -78,7 +78,7 @@ public class TSessionPropKey {
                 return tspName;
             }
             case 1: {
-                return new Integer(tspSesId);
+                return tspSesId;
             }
             default: {
                 throw new ArrayIndexOutOfBoundsException(index);

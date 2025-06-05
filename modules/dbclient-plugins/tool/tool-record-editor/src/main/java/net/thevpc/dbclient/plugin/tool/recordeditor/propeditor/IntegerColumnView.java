@@ -40,7 +40,7 @@ public class IntegerColumnView extends NumberColumnView {
     }
 
     public void setValue(Object value) {
-        Integer b = (value instanceof Number) ? new Integer(((Number) value).intValue()) : (value instanceof String) ? new Integer((String) value) : null;
+        Integer b = (value instanceof Number) ? Integer.valueOf(((Number) value).intValue()) : (value instanceof String) ? Integer.parseInt((String) value) : null;
         super.setValue(b);
     }
 

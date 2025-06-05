@@ -75,10 +75,10 @@ public class TDriverLibKey {
     public Object keyPartAt(int index) {
         switch (index) {
             case 0: {
-                return new Integer(tdlDrvId);
+                return (tdlDrvId);
             }
             case 1: {
-                return new Integer(tdlIndex);
+                return (tdlIndex);
             }
             default: {
                 throw new ArrayIndexOutOfBoundsException(index);

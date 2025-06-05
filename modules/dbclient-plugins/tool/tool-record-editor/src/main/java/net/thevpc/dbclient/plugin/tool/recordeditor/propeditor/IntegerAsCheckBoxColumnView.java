@@ -48,7 +48,7 @@ public class IntegerAsCheckBoxColumnView extends IntegerColumnView {
     }
 
     public void setValue(Object value) {
-        Integer b = (value instanceof Number) ? new Integer(((Number) value).intValue()) : (value instanceof String) ? new Integer((String) value) : null;
+        Integer b = (value instanceof Number) ? Integer.valueOf(((Number) value).intValue()) : (value instanceof String) ? Integer.parseInt((String) value) : null;
         ((JCheckBox) getEditComponentDelegate()).setSelected(b != null && b.intValue() != 0);
     }
 
