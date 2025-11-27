@@ -510,14 +510,14 @@ public class DBCSQLEditorImpl extends JEditorPane implements DBCAutoCompleteList
             contextParents.add(null);
             SQLDeclaration[] tokenDeclarations = elementLocation.sqlStatement.getQueryTables();
             DBCSession currentSession = getSession();
-            DBCConnection currentConnexion = currentSession.getConnection();
+            DBCConnection currentConnection = currentSession.getConnection();
             ClassFilter classFilter = new ClassFilter() {
                 public boolean accept(Class clz) {
                     return DBSchema.class.isAssignableFrom(clz) || DBCatalog.class.isAssignableFrom(clz) || DBTable.class.isAssignableFrom(clz);
                 }
             };
             for (SQLDeclaration tokenDeclaration : tokenDeclarations) {
-                DBObject[] dbObjects = currentConnexion.find(
+                DBObject[] dbObjects = currentConnection.find(
                         null, null, null, SystemSQLUtils.maskWildChars(new SQLName(tokenDeclaration.getType()).toSQL()),
                         null,
                         classFilter,
