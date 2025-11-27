@@ -279,29 +279,29 @@ public class DBCConnectionSettingsComponent extends DBCPluggablePanel implements
     }
 
     public void loadConfig() {
-        Boolean bac = session.getConfig().getBooleanProperty("connexion.autoCommit", null);
-        int bhl = session.getConfig().getIntegerProperty("connexion.holdability", -1);
-        Boolean bro = session.getConfig().getBooleanProperty("connexion.readOnly", null);
-        int bti = session.getConfig().getIntegerProperty("connexion.transIsolation", -1);
+        Boolean bac = session.getConfig().getBooleanProperty("connection.autoCommit", null);
+        int bhl = session.getConfig().getIntegerProperty("connection.holdability", -1);
+        Boolean bro = session.getConfig().getBooleanProperty("connection.readOnly", null);
+        int bti = session.getConfig().getIntegerProperty("connection.transIsolation", -1);
         getAutoCommitButton().setValue(bac == null ? -1 : bac ? 1 : 0);
         getHoldabilityButton().setValue(bhl);
         getReadWriteButton().setValue(bro == null ? -1 : bro ? 1 : 0);
         getTransactionButton().setValue(bti);
-        String onOpenScript = session.getConfig().getStringProperty("connexion.script.onopen", null);
-        String onCloseScript = session.getConfig().getStringProperty("connexion.script.onclose", null);
+        String onOpenScript = session.getConfig().getStringProperty("connection.script.onopen", null);
+        String onCloseScript = session.getConfig().getStringProperty("connection.script.onclose", null);
         openScriptEditor.setText(onOpenScript);
         closeScriptEditor.setText(onCloseScript);
     }
 
     public void saveConfig() {
-        session.getConfig().setBooleanProperty("connexion.autoCommit", getAutoCommitButton().getValue() == -1 ? null : getAutoCommitButton().getValue() == 1);
-        session.getConfig().setIntegerProperty("connexion.holdability", getHoldabilityButton().getValue());
-        session.getConfig().setBooleanProperty("connexion.readOnly", getReadWriteButton().getValue() == -1 ? null : getReadWriteButton().getValue() == 1);
-        session.getConfig().setIntegerProperty("connexion.transIsolation", getTransactionButton().getValue());
+        session.getConfig().setBooleanProperty("connection.autoCommit", getAutoCommitButton().getValue() == -1 ? null : getAutoCommitButton().getValue() == 1);
+        session.getConfig().setIntegerProperty("connection.holdability", getHoldabilityButton().getValue());
+        session.getConfig().setBooleanProperty("connection.readOnly", getReadWriteButton().getValue() == -1 ? null : getReadWriteButton().getValue() == 1);
+        session.getConfig().setIntegerProperty("connection.transIsolation", getTransactionButton().getValue());
         String onCloseScript = closeScriptEditor.getText().trim();
         String onOpenScript = openScriptEditor.getText().trim();
-        session.getConfig().setStringProperty("connexion.script.onopen", onOpenScript.length() == 0 ? null : onOpenScript);
-        session.getConfig().setStringProperty("connexion.script.onclose", onCloseScript.length() == 0 ? null : onCloseScript);
+        session.getConfig().setStringProperty("connection.script.onopen", onOpenScript.length() == 0 ? null : onOpenScript);
+        session.getConfig().setStringProperty("connection.script.onclose", onCloseScript.length() == 0 ? null : onCloseScript);
     }
 
     public int getPosition() {
