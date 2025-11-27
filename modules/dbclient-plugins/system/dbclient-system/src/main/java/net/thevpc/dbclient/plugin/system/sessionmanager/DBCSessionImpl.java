@@ -341,8 +341,8 @@ public class DBCSessionImpl extends DBCAbstractPluggable implements DBCSession {
                 }
             }
         });
-        final String onCloseScript = getConfig().getStringProperty("connexion.script.onclose", null);
-        final String onOpenScript = getConfig().getStringProperty("connexion.script.onopen", null);
+        final String onCloseScript = getConfig().getStringProperty("connection.script.onclose", null);
+        final String onOpenScript = getConfig().getStringProperty("connection.script.onopen", null);
 
 
         if (onCloseScript != null && onCloseScript.trim().length() > 0) {
@@ -358,10 +358,10 @@ public class DBCSessionImpl extends DBCAbstractPluggable implements DBCSession {
                 }
             });
         }
-        Boolean bac = getConfig().getBooleanProperty("connexion.autoCommit", null);
-        Integer bhl = getConfig().getIntegerProperty("connexion.holdability", null);
-        Boolean bro = getConfig().getBooleanProperty("connexion.readOnly", null);
-        Integer bti = getConfig().getIntegerProperty("connexion.transIsolation", null);
+        Boolean bac = getConfig().getBooleanProperty("connection.autoCommit", null);
+        Integer bhl = getConfig().getIntegerProperty("connection.holdability", null);
+        Boolean bro = getConfig().getBooleanProperty("connection.readOnly", null);
+        Integer bti = getConfig().getIntegerProperty("connection.transIsolation", null);
 
         if (bro != null) {
             con2.setReadOnly(bro);
