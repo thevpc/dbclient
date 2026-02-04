@@ -177,7 +177,7 @@ public class DBCDefaultSystemPlugin extends DBCAbstractPlugin {
                 "                    <br><u>Params :</u>\n" +
                 "                    <br>user = root\n" +
                 "                    <br>password = root"));
-        v.add(new DBCDriverInfo(v.size(),v.size(),"MSAccess/hxtt",true,"com.hxtt.sql.access.AccessDriver","jdbc:access:{database}","","",new URL[0], "jdbc:access:////home/vpc/example"));
+        v.add(new DBCDriverInfo(v.size(),v.size(),"MSAccess/hxtt",true,"com.hxtt.sql.access.AccessDriver","jdbc:access:{database}","","",new URL[0], "jdbc:access:///"+System.getProperty("user.home")+"/exampledb"));
         v.add(new DBCDriverInfo(v.size(),v.size(),"PostgreSQL",true,"org.postgresql.Driver","jdbc:postgresql://{server}/{database}","postgres","postgres",new URL[0], "jdbc:postgresql://localhost/postgres"));
         v.add(new DBCDriverInfo(v.size(),v.size(),"Derby Network Server",true,"org.apache.derby.jdbc.ClientDriver","jdbc:derby://{server}:{port}/{database};create=true","","",new URL[0], "jdbc:derby://localhost:1527/MyDbTest;create=true\n" +
                 "                    <br><u>exemple :</u>\n" +
