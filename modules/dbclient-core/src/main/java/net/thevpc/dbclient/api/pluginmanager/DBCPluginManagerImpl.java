@@ -127,7 +127,7 @@ public class DBCPluginManagerImpl extends DefaultPluginManager<DBCApplication, D
      */
     @Override
     public void applicationInitializing(ProgressMonitor monitor) {
-        NChronometer chronometer = new NChronometer();
+        NChronometer chronometer = NChronometer.startNow();
         chronometer.start();
         build(monitor);
         chronometer.stop();

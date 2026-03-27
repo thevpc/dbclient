@@ -213,8 +213,7 @@ public final class DBCApplicationImpl implements DBCApplication {
             }
             setWorkingDir(new File(DBCApplication.HOME_WORKING_DIRECTORY));
         }
-        NChronometer chronometer = new NChronometer();
-        chronometer.start();
+        NChronometer chronometer = NChronometer.startNow();
         DBCPluginManager dbcPluginManager = getPluginManager();
         ProgressMonitor[] monitors = ProgressMonitorUtils.split(splashScreen, 4);
         try {
