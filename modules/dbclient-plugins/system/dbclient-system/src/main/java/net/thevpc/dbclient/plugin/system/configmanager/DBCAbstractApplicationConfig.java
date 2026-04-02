@@ -29,6 +29,7 @@ import net.thevpc.common.io.FileUtils;
 import net.thevpc.common.io.IOUtils;
 import net.thevpc.common.prs.xml.XmlUtils;
 import net.thevpc.dbclient.api.configmanager.*;
+import net.thevpc.nuts.io.NIOUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -250,7 +251,7 @@ public abstract class DBCAbstractApplicationConfig extends DBCAbstractConfig imp
             new File(getApplication().getConfigDir(), "dbclient-splash.jpg").delete();
         } else {
             try {
-                String ext = FileUtils.getFileExtension(new File(u.getFile()));
+                String ext = NIOUtils.getFileExtension(new File(u.getFile()));
                 if (ext == null || ext.length() == 0) {
                     ext = "png";
                 }

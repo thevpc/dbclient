@@ -55,7 +55,7 @@ import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
-import net.thevpc.dbclient.api.drivermanager.DBCDriverLibrary;
+
 import net.thevpc.common.prs.log.TBufferedLog;
 import net.thevpc.common.prs.log.TLogPrintStream;
 
@@ -127,7 +127,7 @@ public class DBCPluginManagerImpl extends DefaultPluginManager<DBCApplication, D
      */
     @Override
     public void applicationInitializing(ProgressMonitor monitor) {
-        NChronometer chronometer = NChronometer.startNow();
+        NChronometer chronometer = NChronometer.of();
         chronometer.start();
         build(monitor);
         chronometer.stop();
