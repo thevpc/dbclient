@@ -46,7 +46,7 @@ import net.thevpc.common.swing.dialog.MessageDialogManager;
 import net.thevpc.common.swing.dialog.MessageDialogType;
 import net.thevpc.common.swing.dialog.MessageDiscardContext;
 import net.thevpc.common.swing.util.CancelException;
-import net.thevpc.nuts.time.NChronometer;
+import net.thevpc.nuts.mon.NChronometer;
 import net.thevpc.dbclient.api.configmanager.DBCApplicationConfig;
 import net.thevpc.dbclient.api.configmanager.DBCConfigException;
 import net.thevpc.dbclient.api.configmanager.DBCInitMessageDiscardContext;

@@ -33,7 +33,7 @@ import net.thevpc.common.prs.util.ProgressMonitor;
 import net.thevpc.common.prs.util.ProgressMonitorUtils;
 import net.thevpc.common.prs.util.StepProgressMonitor;
 import net.thevpc.common.swing.prs.PRSManager;
-import net.thevpc.nuts.time.NChronometer;
+import net.thevpc.nuts.mon.NChronometer;
 import net.thevpc.dbclient.api.DBCApplication;
 import net.thevpc.dbclient.api.DBCApplicationView;
 import net.thevpc.dbclient.api.DBCDefaultPlugin;
