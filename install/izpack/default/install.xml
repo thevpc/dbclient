@@ -17,8 +17,8 @@
     -->
     <info>
         <appname>dbclient</appname>
-        <appversion>0.5.8</appversion>
-        <appsubpath>DBClient/DBClient-0.5.8</appsubpath>
+        <appversion>0.5.9</appversion>
+        <appsubpath>DBClient/DBClient-0.5.9</appsubpath>
         <authors>
             <author name="Taha BEN SALAH" email="taha.bensalah@gmail.com"/>
         </authors>

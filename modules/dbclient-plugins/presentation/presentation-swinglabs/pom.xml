@@ -3,13 +3,13 @@
 
     <groupId>net.thevpc.dbclient.plugins.presentation</groupId>
     <artifactId>net.thevpc.dbclient.plugins.presentation-swinglabs</artifactId>
-    <version>0.9.3.14</version>
+    <version>0.5.9</version>
     <packaging>jar</packaging>
     
     <parent>
       <groupId>net.thevpc.dbclient</groupId>
       <artifactId>dbclient-plugin-root</artifactId>
-      <version>1.0</version>
+      <version>0.5.9</version>
       <relativePath>../../../dbclient-plugin-root</relativePath>
     </parent>
 
@@ -21,7 +21,7 @@
 		<!-- ##############################
 			PRIVATE COMPILE DEPENDENCIES 
 		############################## -->
-        <dependency><groupId>net.thevpc.dbclient.plugins.system</groupId><artifactId>net.thevpc.dbclient.plugins.dbclient-system</artifactId><version>[0.5.6,]</version><scope>compile</scope></dependency>
+        <dependency><groupId>net.thevpc.dbclient.plugins.system</groupId><artifactId>net.thevpc.dbclient.plugins.dbclient-system</artifactId><version>0.5.9</version><scope>compile</scope></dependency>
 
 <!--        <dependency>
             <groupId>org.vpc.neormf</groupId>

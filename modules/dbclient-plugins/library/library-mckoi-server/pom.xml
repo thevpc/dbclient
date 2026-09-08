@@ -3,13 +3,13 @@
 
     <groupId>net.thevpc.dbclient.plugins.library</groupId>
     <artifactId>net.thevpc.dbclient.plugins.library-mckoi-server</artifactId>
-    <version>1.0.4</version>
+    <version>0.5.9</version>
     <packaging>jar</packaging>
     
     <parent>
       <groupId>net.thevpc.dbclient</groupId>
       <artifactId>dbclient-plugin-root</artifactId>
-      <version>1.0</version>
+      <version>0.5.9</version>
       <relativePath>../../../dbclient-plugin-root</relativePath>
     </parent>
 

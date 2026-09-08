@@ -883,7 +883,7 @@
 </entry>
 <entry>
 <key type="String" value="Plugin.tool-jstsql.Version"/>
-<value type="String" value="0.5.8"/>
+<value type="String" value="0.5.9"/>
 </entry>
 <entry>
 <key type="String" value="Plugin.dbdriver-hsql.Version"/>
@@ -903,7 +903,7 @@
 </entry>
 <entry>
 <key type="String" value="Plugin.tool-box.Version"/>
-<value type="String" value="0.5.8"/>
+<value type="String" value="0.5.9"/>
 </entry>
 <entry>
 <key type="String" value="Plugin.cfgsupport-derby.InstallStatus"/>
@@ -1027,7 +1027,7 @@
 </entry>
 <entry>
 <key type="String" value="Plugin.dbclient-system.Version"/>
-<value type="String" value="0.5.8"/>
+<value type="String" value="0.5.9"/>
 </entry>
 <entry>
 <key type="String" value="Plugin.dbdriver-mysql.Version"/>
@@ -1107,7 +1107,7 @@
 </entry>
 <entry>
 <key type="String" value="Plugin.search-engine.Version"/>
-<value type="String" value="0.5.8"/>
+<value type="String" value="0.5.9"/>
 </entry>
 <entry>
 <key type="String" value="Plugin.dbsupport-oracle.Version"/>

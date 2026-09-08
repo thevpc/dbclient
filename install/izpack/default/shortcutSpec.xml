@@ -7,7 +7,7 @@
     <programGroup defaultName="DBClient" location="applications"/>
 
     <shortcut
-            name="DBClient 0.5.8"
+            name="DBClient 0.5.9"
             programGroup="yes"
             desktop="no"
             applications="no"
@@ -23,7 +23,7 @@
     </shortcut>
 
     <shortcut
-            name="DBClient 0.5.8 Uninstaller"
+            name="DBClient 0.5.9 Uninstaller"
             programGroup="yes"
             desktop="no"
             applications="no"
@@ -33,7 +33,7 @@
             commandLine=""
             iconFile="%SystemRoot%\system32\SHELL32.dll"
             iconIndex="31"
-            description="This uninstalls DBClient 0.5.8">
+            description="This uninstalls DBClient 0.5.9">
 
         <createForPack name="Core"/>
     </shortcut>

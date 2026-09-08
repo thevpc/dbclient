@@ -3,13 +3,13 @@
 
     <groupId>net.thevpc.dbclient.plugins.tool</groupId>
     <artifactId>net.thevpc.dbclient.plugins.tool-import-export-excel</artifactId>
-    <version>0.5.6</version>
+    <version>0.5.9</version>
     <packaging>jar</packaging>
     
     <parent>
       <groupId>net.thevpc.dbclient</groupId>
       <artifactId>dbclient-plugin-root</artifactId>
-      <version>1.0</version>
+      <version>0.5.9</version>
       <relativePath>../../../dbclient-plugin-root</relativePath>
     </parent>
 
@@ -21,7 +21,7 @@
 		<!-- ##############################
 			PRIVATE COMPILE DEPENDENCIES 
 		############################## -->
-        <dependency><groupId>net.thevpc.dbclient.plugins.tool</groupId><artifactId>net.thevpc.dbclient.plugins.tool-import-export</artifactId><version>0.5.6</version></dependency>
+        <dependency><groupId>net.thevpc.dbclient.plugins.tool</groupId><artifactId>net.thevpc.dbclient.plugins.tool-import-export</artifactId><version>0.5.9</version></dependency>
 
 		<!-- ##############################
 			THIRD PARTY COMPILE DEPENDENCIES 

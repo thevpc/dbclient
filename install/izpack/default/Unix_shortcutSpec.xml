@@ -65,7 +65,7 @@
    </shortcut -->
 
     <shortcut
-            name="DBClient 0.5.8"
+            name="DBClient 0.5.9"
             programGroup="yes"
             desktop="yes"
             applications="no"
@@ -93,7 +93,7 @@
 
 
     <shortcut
-            name="DBClient 0.5.8 Uninstaller"
+            name="DBClient 0.5.9 Uninstaller"
             programGroup="yes"
             desktop="yes"
             applications="no"
@@ -115,7 +115,7 @@
 
             TryExec="java -jar &quot;$INSTALL_PATH/Uninstaller/uninstaller.jar&quot;"
             terminal="false"
-            description="This uninstalls DBClient 0.5.8">
+            description="This uninstalls DBClient 0.5.9">
         <createForPack name="Core"/>
     </shortcut>
 

@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.thevpc.dbclient</groupId>
   <artifactId>net.thevpc.dbclient.dbclient-root</artifactId>
-  <version>1.0</version>
+  <version>0.5.9</version>
   <packaging>pom</packaging>
 	<properties>
       <!-- latest versions that should be referenced in independencies -->
@@ -11,7 +11,7 @@
 		############################## -->
 	  <version.jlauncher>1.4.0</version.jlauncher>
 	  <version.vpc-swingext>2.3.6</version.vpc-swingext>
-	  <version.dbclient-core>0.5.8</version.dbclient-core>
+	  <version.dbclient-core>0.5.9</version.dbclient-core>
 
 
 		<!-- ##############################
